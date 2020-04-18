@@ -18,4 +18,6 @@ Crafty.defineScene("Game", function() {
 	var bucket1 = Crafty.e("Bucket").place(700,GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 6);
 
 	var player = Crafty.e("Player").place(50, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
+
+	makeCameraTrackEntity(player, 50);
 });
