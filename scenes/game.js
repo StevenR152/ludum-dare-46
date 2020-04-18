@@ -1,6 +1,7 @@
 var PLATFORM_HEIGHT = 30;
 var BUCKET_LOCATIONS = [{x:700,y:200}, {x:900,y:200}, {x:200,y:200}];
 var hasBucket = false;
+var facing = "right";
 
 Crafty.defineScene("Game", function() {
 	var floor = Crafty.e("Ground").place(150, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5)

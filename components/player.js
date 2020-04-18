@@ -9,24 +9,42 @@ Crafty.c("Player", {
 		this.twoway(200, 350);
 		this.onHit("Bucket", function(collectBucket) {
 			collectBucket[0].obj.destroy();
-			this.addComponent("Color")
-			this.color("#FAFAD2");
+			if (facing == "right") {
+				this.image("assets/images/bear_bucket_right.png");
+			}
+			else if (facing == "left") {
+				this.image("assets/images/bear_bucket_left.png");
+			}
 			hasBucket = true;
-			console.log("bucket collected in player")
 			Crafty.trigger("collectBucket");
 		});
 		this.bind("KeyDown", function(arrow) {
 				if (arrow.key == Crafty.keys.LEFT_ARROW) {
-					console.log("left press")
-					this.image("assets/images/bear_left.png");
+					facing = "left";
+					if (hasBucket == true) {
+						this.image("assets/images/bear_bucket_left.png");
+					}
+					else {
+						this.image("assets/images/bear_left.png");
+					}
 				} else if (arrow.key == Crafty.keys.RIGHT_ARROW) {
-					console.log("right press")
-					this.image("assets/images/bear_right.png");
+					facing = "right";
+					if (hasBucket == true) {
+						this.image("assets/images/bear_bucket_right.png");
+					}
+					else {
+						this.image("assets/images/bear_right.png");
+					}
 				}
 			})
 		this.onHit("Tree", function(giveBucket) {
 			if (hasBucket == true) {
-				this.removeComponent("Color");
+				if (facing == "right") {
+					this.image("assets/images/bear_right.png");
+				}
+				else if (facing == "left") {
+					this.image("assets/images/bear_left.png");
+				}
 				hasBucket = false;
 				Crafty.trigger("waterTree");
 			}
