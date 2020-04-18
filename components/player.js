@@ -5,7 +5,7 @@ Crafty.c("Player", {
         this.y = GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 6;
         this.w = 314 / 5;
         this.h = 429 / 5;
-		this.gravity("Platform");
+		this.gravity("solid");
 		this.twoway(200, 350);
 		this.onHit("Bucket", function(collectBucket) {
 			collectBucket[0].obj.destroy();
