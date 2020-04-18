@@ -10,6 +10,14 @@ Crafty.c("Player", {
 		this.color("#832");
 		this.onHit("Bucket", function(collectBucket) {
 			collectBucket[0].obj.destroy();
+			this.color("#F32");
+			hasBucket = true;
+		});
+		this.onHit("Tree", function(giveBucket) {
+			if (hasBucket == true) {
+				this.color("#832");
+				hasBucket = false;
+			}
 		});
     },
     place: function(x, y) {
