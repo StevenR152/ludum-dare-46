@@ -8,7 +8,9 @@ Crafty.c("Player", {
 		this.gravity("Platform");
 		this.twoway(200, 350);
 		this.color("#832");
-		this.onHit("Bucket", function() {});
+		this.onHit("Bucket", function(collectBucket) {
+			collectBucket[0].obj.destroy();
+		});
     },
     place: function(x, y) {
         this.x = x;
