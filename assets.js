@@ -9,10 +9,17 @@ var gameAssets = {
             "tileh": 265,
             "map": {"bucket": [0, 0]}
         },
-        "assets/images/Tree.png": {
+        "assets/images/tree_ss.png": {
             "tile": 850,
             "tileh": 989,
-            "map": {"tree": [0, 0]}
+			"paddingX": 1,
+            "map": {
+				"tree_100": [0, 0],
+				"tree_80": [4, 0],
+				"tree_60": [3, 0],
+				"tree_40": [2, 0],
+				"tree_20": [1, 0],
+			}
         },
 		"assets/images/platform.png": {
             "tile": 664,

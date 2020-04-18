@@ -1,14 +1,14 @@
 Crafty.c("Tree", {
 	init: function() {
-        this.addComponent("2D, DOM, Delay, Renderable, tree");
+        this.addComponent("2D, DOM, Delay, Renderable, tree_100");
         this.x = 400;
         this.y = GAME_SCREEN_HEIGHT - 989 / 4 * 6;
         this.w = 850 / 4;
         this.h = 989 / 4;
         this.z = 9;
-        this.delay(this.fadeTree, 4000, -1);
+        this.delay(this.treeDecay, tree_decay_tick, -1); //this.fadeTree (old)
         this.bind("waterTree", function() {
-            this.alpha += 0.25
+            this.treeHeal();
         })
     },
 
@@ -18,7 +18,52 @@ Crafty.c("Tree", {
         return this;
     },
 
-    fadeTree: function () {
-        this.alpha -= 0.10;
-    }
+    // fadeTree: function () {
+    //     this.alpha -= 0.10;
+    // }
+
+	treeDecay: function () {
+		tree_health -= 10;
+		if (tree_health <= 0) {
+			Crafty.trigger("Tree Death");
+			console.log("Game over");
+		}
+		this.treeImgUpdate();
+		return this;
+	},
+
+	treeHeal: function () {
+		tree_health += 25;
+		if (tree_health > 100) {
+			currency += (tree_health - 100);
+			tree_health = 100;
+		}
+		this.treeImgUpdate();
+		return this;
+	},
+
+	treeImgUpdate: function () {
+		console.log(tree_health);
+		this.removeComponent("tree_100");
+		this.removeComponent("tree_80");
+		this.removeComponent("tree_60");
+		this.removeComponent("tree_40");
+		this.removeComponent("tree_20");
+		if (tree_health <= 20) {
+			this.addComponent("tree_20");
+		} else if (tree_health <= 40) {
+			this.addComponent("tree_40");
+		}
+		else if (tree_health <= 60) {
+			this.addComponent("tree_60");
+		}
+		else if (tree_health <= 80) {
+			this.addComponent("tree_80");
+		} else {
+			this.addComponent("tree_100")
+		}
+		this.w = 850 / 4;
+        this.h = 989 / 4;
+		return this;
+	}
 })

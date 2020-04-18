@@ -2,6 +2,9 @@ var PLATFORM_HEIGHT = 30;
 var BUCKET_LOCATIONS = [{x:157,y:230}, {x:309,y:80}, {x:757,y:80}, {x:961,y:230}];
 var hasBucket = false;
 var facing = "right";
+var tree_decay_tick = 4000;
+var currency = 0;
+var tree_health = 100;
 
 Crafty.defineScene("Game", function() {
 	var floor = Crafty.e("Ground");
