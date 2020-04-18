@@ -7,18 +7,18 @@ var gameAssets = {
     "images": [],
     "sprites": {
         "assets/images/bear.png": {
-            "tile": 500,
-            "tileh": 500,
+            "tile": 314,
+            "tileh": 429,
             "map": {"player": [0, 0]}
         },
         "assets/images/bucket.png": {
-            "tile": 500,
-            "tileh": 500,
+            "tile": 228,
+            "tileh": 265,
             "map": {"bucket": [0, 0]}
         },
         "assets/images/Tree.png": {
-            "tile": 1000,
-            "tileh": 1000,
+            "tile": 850,
+            "tileh": 989,
             "map": {"tree": [0, 0]}
         },
     },
