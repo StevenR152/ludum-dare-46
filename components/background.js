@@ -5,13 +5,13 @@ Crafty.c("Background", {
     init: function () {
         this.requires('2D, DOM, Image');
         this.attr({
-            x: -500,
+            x: -5000,
             y: -250 + 80,
             z: -100,
-            w: 1500 * 15,
+            w: 1500 * 25,
             h: 800
         });
-        this.alpha = 0.5;
+        this.alpha = 0.4;
         this.image("assets/images/background.png", "repeat");
     }
 });
