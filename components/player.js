@@ -15,6 +15,13 @@ Crafty.c("Player", {
 			console.log("bucket collected in player")
 			Crafty.trigger("collectBucket");
 		});
+		this.bind("KeyDown", function(arrow) {
+				if (arrow.key == Crafty.keys.LEFT_ARROW) {
+					this.image("images/bear_left.png");
+				} else if (arrow.key == Crafty.keys.RIGHT_ARROW) {
+					this.image("images/bear_right.png");
+				}
+			})
 		this.onHit("Tree", function(giveBucket) {
 			if (hasBucket == true) {
 				this.removeComponent("Color");
