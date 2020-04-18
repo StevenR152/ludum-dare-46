@@ -17,6 +17,7 @@ Crafty.c("Player", {
 			if (hasBucket == true) {
 				this.color("#832");
 				hasBucket = false;
+				Crafty.trigger("waterTree");
 			}
 		});
     },
