@@ -17,9 +17,9 @@ Crafty.c("Player", {
 		});
 		this.bind("KeyDown", function(arrow) {
 				if (arrow.key == Crafty.keys.LEFT_ARROW) {
-					this.image("images/bear_left.png");
+					this.image("assets/images/bear_left.png");
 				} else if (arrow.key == Crafty.keys.RIGHT_ARROW) {
-					this.image("images/bear_right.png");
+					this.image("assets/images/bear_right.png");
 				}
 			})
 		this.onHit("Tree", function(giveBucket) {
