@@ -3,7 +3,7 @@ var BUCKET_LOCATIONS = [{x:700,y:200}, {x:900,y:200}, {x:200,y:200}];
 var hasBucket = false;
 
 Crafty.defineScene("Game", function() {
-	var floor = Crafty.e("Platform").place(150, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5)
+	var floor = Crafty.e("Ground").place(150, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5)
 		.attr({
 			x: -900,
 			y: GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT,
@@ -26,5 +26,6 @@ Crafty.defineScene("Game", function() {
 
 	var player = Crafty.e("Player").place(50, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
 
+	var background = Crafty.e("Background");
 	makeCameraTrackEntity(player, 50);
 });

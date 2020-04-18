@@ -1,12 +1,10 @@
-
-// 
 var gameAssets = {
 	"audio": {
 
     },
     "images": [],
     "sprites": {
-        "assets/images/bear.png": {
+        "assets/images/bear_right.png": {
             "tile": 314,
             "tileh": 429,
             "map": {"player": [0, 0]}
@@ -20,6 +18,16 @@ var gameAssets = {
             "tile": 850,
             "tileh": 989,
             "map": {"tree": [0, 0]}
+        },
+		"assets/images/platform.png": {
+            "tile": 664,
+            "tileh": 326,
+            "map": {"platform": [0, 0]}
+        },
+		"assets/images/ground.png": {
+            "tile": 455,
+            "tileh": 295,
+            "map": {"ground": [0, 0]}
         },
     },
 };
