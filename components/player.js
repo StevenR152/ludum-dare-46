@@ -30,7 +30,7 @@ Crafty.c("Player", {
 		});
 		this.bind("CheckLanding", function(ground) {
 			// disallow landing of player, if player's feet are not above ground
-			console.log(ground)
+			//console.log(ground)
 			if (this.y + this.h > ground.y + ground.h/2) {
 				console.log("Check landing prevented landing")
 				this.canLand = false;
@@ -57,7 +57,7 @@ Crafty.c("Player", {
 			});
 		this.bind("KeyDown", function(checkPos) {
 			if (checkPos.key == Crafty.keys.SPACE) {
-				console.log(this.x, this.y);
+				console.log((this.x + (this.w/4)), (this.y + (this.h/1.2)));
 			} // debug code used for player positioning into console
 		});
 		this.onHit("Tree", function(giveBucket) {

@@ -1,5 +1,5 @@
 var PLATFORM_HEIGHT = 30;
-var BUCKET_LOCATIONS = [{x:700,y:200}, {x:900,y:200}, {x:200,y:200}];
+var BUCKET_LOCATIONS = [{x:157,y:265}, {x:309,y:145}, {x:757,y:145}, {x:961,y:265}];
 var hasBucket = false;
 var facing = "right";
 
