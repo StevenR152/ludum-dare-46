@@ -21,14 +21,5 @@ Crafty.defineScene("Game", function() {
 		})
 		.color("#382");
 
-	var player = Crafty.e("2D, DOM, Color, Twoway, Gravity")
-		.attr({
-			x: 50, 
-			y: GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 6,
-			w: 35,
-			h: 70
-		})
-		.gravity("Platform")
-		.twoway(200, 350)
-		.color("#832");
+	var player = Crafty.e("Player").place(50, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
 });
