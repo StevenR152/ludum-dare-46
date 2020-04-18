@@ -6,7 +6,9 @@ Crafty.c("BucketSpawner", {
 		});
     },
 	spawnNewBucket: function() {
-		return this;
+		Crafty.e("Bucket").place(this.newLocation);
+	},
+	newLocation: function() {
+		return BUCKET_LOCATIONS[Math.floor(Math.random() * BUCKET_LOCATIONS.length))];
 	}
-
 })
