@@ -4,12 +4,7 @@ var hasBucket = false;
 var facing = "right";
 
 Crafty.defineScene("Game", function() {
-	var floor = Crafty.e("Ground").place(150, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5)
-		.attr({
-			x: -900,
-			y: GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT,
-			w: 2700
-		});
+	var floor = Crafty.e("Ground");
 
 	var bucketSpawner = Crafty.e("BucketSpawner");
 
