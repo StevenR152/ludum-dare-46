@@ -42,5 +42,10 @@ var gameAssets = {
 				"bear_bucket_left": [0, 0],
 			},
 		},
+		"assets/images/raindrop.png": {
+            "tile": 71,
+            "tileh": 98,
+            "map": {"raindrop": [0, 0]}
+        },
     },
 };
