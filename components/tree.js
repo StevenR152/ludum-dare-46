@@ -6,7 +6,7 @@ Crafty.c("Tree", {
         this.w = PLATFORM_HEIGHT * 5;
         this.h = PLATFORM_HEIGHT * 5;
 		this.color("#382");
-        this.delay(this.fadeTree, 1000, 20);
+        this.delay(this.fadeTree, 4000, 5000);
     },
 
     place: function(x, y) {
@@ -16,6 +16,6 @@ Crafty.c("Tree", {
     },
 
     fadeTree: function () {
-        this.alpha *= 0.9;
+        this.alpha -= 0.10;
     }
 })
