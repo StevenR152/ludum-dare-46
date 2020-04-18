@@ -4,11 +4,6 @@ var gameAssets = {
     },
     "images": [],
     "sprites": {
-        "assets/images/bear_right.png": {
-            "tile": 314,
-            "tileh": 429,
-            "map": {"player": [0, 0]}
-        },
         "assets/images/bucket.png": {
             "tile": 228,
             "tileh": 265,
@@ -29,5 +24,16 @@ var gameAssets = {
             "tileh": 295,
             "map": {"ground": [0, 0]}
         },
+		"assets/images/bear_ss.png": {
+			"tile": 314,
+			"tileh": 429,
+			"paddingAroundBorder": 1,
+			"map": {
+				"bear_right": [0, 1],
+				"bear_left": [2, 0],
+				"bear_bucket_right": [1, 0],
+				"bear_bucket_left": [0, 0],
+			},
+		},
     },
 };

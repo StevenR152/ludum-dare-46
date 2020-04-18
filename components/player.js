@@ -1,6 +1,6 @@
 Crafty.c("Player", {
 	init: function() {
-        this.addComponent("2D, DOM, Color, Image, Twoway,  Gravity, Collision, player");
+        this.addComponent("2D, DOM, Color, Image, Twoway,  Gravity, Collision, player, bear_right");
         this.x = 50;
         this.y = GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 6;
         this.w = 314 / 5;
@@ -20,10 +20,16 @@ Crafty.c("Player", {
 		this.onHit("Bucket", function(collectBucket) {
 			collectBucket[0].obj.destroy();
 			if (facing == "right") {
-				this.image("assets/images/bear_bucket_right.png");
+				this.addComponent("bear_bucket_right");
+				this.removeComponent("bear_right");
+				this.w = 314 / 5;
+		        this.h = 429 / 5;
 			}
 			else if (facing == "left") {
-				this.image("assets/images/bear_bucket_left.png");
+				this.addComponent("bear_bucket_left");
+				this.removeComponent("bear_left");
+				this.w = 314 / 5;
+		        this.h = 429 / 5;
 			}
 			hasBucket = true;
 			Crafty.trigger("collectBucket");
@@ -40,18 +46,30 @@ Crafty.c("Player", {
 				if (arrow.key == Crafty.keys.LEFT_ARROW) {
 					facing = "left";
 					if (hasBucket == true) {
-						this.image("assets/images/bear_bucket_left.png");
+						this.addComponent("bear_bucket_left");
+						this.removeComponent("bear_bucket_right");
+						this.w = 314 / 5;
+						this.h = 429 / 5;
 					}
 					else {
-						this.image("assets/images/bear_left.png");
+						this.addComponent("bear_left");
+						this.removeComponent("bear_right");
+						this.w = 314 / 5;
+						this.h = 429 / 5;
 					}
 				} else if (arrow.key == Crafty.keys.RIGHT_ARROW) {
 					facing = "right";
 					if (hasBucket == true) {
-						this.image("assets/images/bear_bucket_right.png");
+						this.addComponent("bear_bucket_right");
+						this.removeComponent("bear_bucket_left");
+						this.w = 314 / 5;
+						this.h = 429 / 5;
 					}
 					else {
-						this.image("assets/images/bear_right.png");
+						this.addComponent("bear_right");
+						this.removeComponent("bear_left");
+						this.w = 314 / 5;
+						this.h = 429 / 5;
 					}
 				}
 			});
@@ -63,10 +81,16 @@ Crafty.c("Player", {
 		this.onHit("Tree", function(giveBucket) {
 			if (hasBucket == true) {
 				if (facing == "right") {
-					this.image("assets/images/bear_right.png");
+					this.addComponent("bear_right");
+					this.removeComponent("bear_bucket_right");
+					this.w = 314 / 5;
+					this.h = 429 / 5;
 				}
 				else if (facing == "left") {
-					this.image("assets/images/bear_left.png");
+					this.addComponent("bear_left");
+					this.removeComponent("bear_bucket_left");
+					this.w = 314 / 5;
+					this.h = 429 / 5;
 				}
 				hasBucket = false;
 				Crafty.trigger("waterTree");
