@@ -1,10 +1,10 @@
-Crafty.c("Player", {
+Crafty.c("Tree", {
 	init: function() {
-        this.addComponent("2D, DOM, Color, Twoway, Gravity");
-        this.x = 50;
+        this.addComponent("2D, DOM, Color");
+        this.x = 400;
         this.y = GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 6;
-        this.w = 35;
-        this.h = 70;
+        this.w = PLATFORM_HEIGHT * 5;
+        this.h = PLATFORM_HEIGHT * 5;
 		this.gravity("Platform")
 		this.twoway(200, 350)
 		this.color("#832");

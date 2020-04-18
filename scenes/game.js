@@ -12,14 +12,7 @@ Crafty.defineScene("Game", function() {
 
 	var platform2 = Crafty.e("Platform").place(650, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
 
-	var tree = Crafty.e("2D, DOM, Color, Tree")
-		.attr({
-			x: 400, 
-			y: GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 6,
-			w: PLATFORM_HEIGHT * 5,
-			h: PLATFORM_HEIGHT * 5
-		})
-		.color("#382");
+	var tree = Crafty.e("Tree").place(400, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
 
 	var player = Crafty.e("Player").place(50, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
 });
