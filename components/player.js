@@ -12,6 +12,7 @@ Crafty.c("Player", {
 			collectBucket[0].obj.destroy();
 			this.color("#F32");
 			hasBucket = true;
+			console.log("bucket collected in player")
 			Crafty.trigger("collectBucket");
 		});
 		this.onHit("Tree", function(giveBucket) {
