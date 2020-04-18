@@ -9,6 +9,8 @@ Crafty.defineScene("Game", function() {
 			w: 2700
 		});
 
+	var bucketSpawner = Crafty.e("BucketSpawner");
+
 	var platform1 = Crafty.e("Platform").place(150, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
 
 	var platform2 = Crafty.e("Platform").place(650, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
