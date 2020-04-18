@@ -5,6 +5,7 @@ Crafty.c("Tree", {
         this.y = GAME_SCREEN_HEIGHT - 989 / 4 * 6;
         this.w = 850 / 4;
         this.h = 989 / 4;
+        this.z = 9;
         this.delay(this.fadeTree, 4000, -1);
         this.bind("waterTree", function() {
             this.alpha += 0.25

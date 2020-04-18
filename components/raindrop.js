@@ -3,6 +3,7 @@ Crafty.c("Raindrop", {
         this.addComponent("2D, Collision, Color, DOM, Raindrop, Gravity");
         this.w = 6;
         this.h = 12;
+        this.z = 8;
 		this.color("#0000FF");
 		this.gravity("Ground");
 		this.onHit("solid", function() {
