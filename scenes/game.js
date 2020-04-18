@@ -8,6 +8,7 @@ Crafty.defineScene("Game", function() {
 	var grass = Crafty.e("Grass");
 
 	var bucketSpawner = Crafty.e("BucketSpawner");
+	var raindropSpawner = Crafty.e("RaindropSpawner");
 
 	var platform1 = Crafty.e("Platform").place(100, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 4);
 
