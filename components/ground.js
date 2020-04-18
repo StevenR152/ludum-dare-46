@@ -6,7 +6,7 @@ Crafty.c("Ground", {
         this.w = 20000;
         this.h = 226;
         this.alpha = 0.7;
-        this.image("assets/images/dirt.png", "repeat");
+        // this.image("assets/images/dirt.png", "repeat");
     },
     place: function(x, y) {
         this.x = x;

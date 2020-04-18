@@ -5,7 +5,7 @@ Crafty.c("Grass", {
         this.y = GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT / 2 - 20,
         this.w = 20000;
         this.h = 20;
-        this.image("assets/images/grass.png", "repeat");
+        // this.image("assets/images/grass.png", "repeat");
     },
     place: function(x, y) {
         this.x = x;
