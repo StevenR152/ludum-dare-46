@@ -7,7 +7,6 @@ Crafty.c("BucketSpawner", {
     },
 	spawnNewBucket: function() {
 		var nextLocation = this.newLocation()
-		console.log("spawnNewBucket " + nextLocation.x + nextLocation.y);
 		Crafty.e("Bucket").place(nextLocation.x, nextLocation.y);
 	},
 	newLocation: function() {
