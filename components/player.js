@@ -12,6 +12,7 @@ Crafty.c("Player", {
 			this.addComponent("Color")
 			this.color("#FAFAD2");
 			hasBucket = true;
+			console.log("bucket collected in player")
 			Crafty.trigger("collectBucket");
 		});
 		this.onHit("Tree", function(giveBucket) {
