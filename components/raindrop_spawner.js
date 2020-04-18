@@ -7,6 +7,6 @@ Crafty.c("RaindropSpawner", {
 		});
     },
 	spawnNewRaindrop: function() {
-		Crafty.e("Raindrop").place(300, -250);
-	}, //x and y positions generated (temp method) (Math.floor(Math.random() * 1500) - 500)
+		Crafty.e("Raindrop").place((Math.floor(Math.random() * 1500) - 500), -250);
+	}, //x and y positions generated (temp method)
 })
