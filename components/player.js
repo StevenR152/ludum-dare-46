@@ -36,7 +36,12 @@ Crafty.c("Player", {
 						this.image("assets/images/bear_right.png");
 					}
 				}
-			})
+			});
+		this.bind("KeyDown", function(checkPos) {
+			if (checkPos.key == Crafty.keys.SPACE) {
+				console.log(this.x, this.y);
+			} // debug code used for player positioning into console
+		});
 		this.onHit("Tree", function(giveBucket) {
 			if (hasBucket == true) {
 				if (facing == "right") {
