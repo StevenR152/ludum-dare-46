@@ -5,6 +5,7 @@ var facing = "right";
 
 Crafty.defineScene("Game", function() {
 	var floor = Crafty.e("Ground");
+	var grass = Crafty.e("Grass");
 
 	var bucketSpawner = Crafty.e("BucketSpawner");
 

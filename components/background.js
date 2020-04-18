@@ -11,6 +11,7 @@ Crafty.c("Background", {
             w: 1500 * 15,
             h: 800
         });
+        this.alpha = 0.5;
         this.image("assets/images/background.png", "repeat");
     }
 });

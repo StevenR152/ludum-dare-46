@@ -6,7 +6,7 @@ Crafty.c("Player", {
         this.w = 314 / 5;
         this.h = 429 / 5;
 		this.gravity("solid");
-		this.twoway(200, 350);
+		this.twoway(200, 390);
 		this.onHit("Bucket", function(collectBucket) {
 			collectBucket[0].obj.destroy();
 			if (facing == "right") {
