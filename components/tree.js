@@ -7,6 +7,9 @@ Crafty.c("Tree", {
         this.h = PLATFORM_HEIGHT * 5;
 		this.color("#382");
         this.delay(this.fadeTree, 4000, 5000);
+        this.bind("waterTree", function() {
+            this.alpha += 0.25
+        })
     },
 
     place: function(x, y) {
