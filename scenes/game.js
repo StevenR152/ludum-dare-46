@@ -1,5 +1,5 @@
 var PLATFORM_HEIGHT = 30;
-var BUCKET_LOCATIONS = [{x:200,y:700}, {x:200,y:500}, {x:200,y:200}];
+var BUCKET_LOCATIONS = [{x:700,y:200}, {x:900,y:200}, {x:200,y:200}];
 var hasBucket = false;
 
 Crafty.defineScene("Game", function() {

@@ -1,16 +1,16 @@
 Crafty.c("BucketSpawner", {
 	init: function() {
-		console.log("spawner loaded");
         this.addComponent("BucketSpawner, 2D, Delay");
 		this.bind("collectBucket", function() {
-			this.delay(this.spawnNewBucket, 1000, 1);
+			this.delay(this.spawnNewBucket, 1000, 0);
 		});
     },
 	spawnNewBucket: function() {
-		Crafty.e("Bucket").place(this.newLocation);
+		var nextLocation = this.newLocation()
+		console.log("spawnNewBucket " + nextLocation.x + nextLocation.y);
+		Crafty.e("Bucket").place(nextLocation.x, nextLocation.y);
 	},
 	newLocation: function() {
-		var newLocation = BUCKET_LOCATIONS[Math.floor(Math.random() * BUCKET_LOCATIONS.length)];
-		console.log(newLocation);
+		return BUCKET_LOCATIONS[Math.floor(Math.random() * BUCKET_LOCATIONS.length)];
 	}
 })
