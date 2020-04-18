@@ -14,6 +14,6 @@ Crafty.c("RaindropSpawner", {
 
     spawnNewRaindrop: function() {
     	var x = Math.floor(Math.random() * (this.spawnZoneWidth  + this.spawnZoneWidth/2)) - this.spawnZoneWidth/2;
-		Crafty.e("Raindrop").place(x, -250);
+		Crafty.e("Raindrop").place(x, -1250);
 	}, //x and y positions generated (temp method)
 })

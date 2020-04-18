@@ -15,7 +15,7 @@ Crafty.c("Player", {
          	0 + (this.w/6), this.h - 10
         ]);
 
-		this.twoway(200, 390);
+		this.twoway(300, 390);
 
 		this.onHit("Bucket", function(collectBucket) {
 			collectBucket[0].obj.destroy();
