@@ -6,7 +6,7 @@ Crafty.c("Background", {
         this.requires('2D, DOM, Image');
         this.attr({
             x: -500,
-            y: -250,
+            y: -250 + 80,
             z: -100,
             w: 1500 * 15,
             h: 800
