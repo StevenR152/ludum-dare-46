@@ -1,6 +1,6 @@
 Crafty.c("Player", {
 	init: function() {
-        this.addComponent("2D, DOM, Color, Twoway, Gravity, Collision, player");
+        this.addComponent("2D, DOM, Color, Image, Twoway, Gravity, Collision, player");
         this.x = 50;
         this.y = GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 6;
         this.w = 314 / 5;
@@ -15,6 +15,15 @@ Crafty.c("Player", {
 			console.log("bucket collected in player")
 			Crafty.trigger("collectBucket");
 		});
+		this.bind("KeyDown", function(arrow) {
+				if (arrow.key == Crafty.keys.LEFT_ARROW) {
+					console.log("left press")
+					this.image("assets/images/bear_left.png");
+				} else if (arrow.key == Crafty.keys.RIGHT_ARROW) {
+					console.log("right press")
+					this.image("assets/images/bear_right.png");
+				}
+			})
 		this.onHit("Tree", function(giveBucket) {
 			if (hasBucket == true) {
 				this.removeComponent("Color");

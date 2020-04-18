@@ -4,7 +4,7 @@ var gameAssets = {
     },
     "images": [],
     "sprites": {
-        "assets/images/bear.png": {
+        "assets/images/bear_right.png": {
             "tile": 314,
             "tileh": 429,
             "map": {"player": [0, 0]}
