@@ -1,9 +1,8 @@
 Crafty.c("Bucket", {
 	init: function() {
-        this.addComponent("2D, Canvas, Color");
-        this.w = 30;
-        this.h = 30;
-        this.color("#569");
+        this.addComponent("2D, Canvas, bucket");
+        this.w = 228 / 7;
+        this.h = 265 / 7;
     },
 
     place: function(x, y) {

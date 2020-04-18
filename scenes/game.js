@@ -16,7 +16,7 @@ Crafty.defineScene("Game", function() {
 
 	var platform2 = Crafty.e("Platform").place(650, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
 
-	var tree = Crafty.e("Tree").place(400, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 6);
+	var tree = Crafty.e("Tree").place(400, GAME_SCREEN_HEIGHT - ((989 / 4)) - 10);
 
 	var bucket1 = Crafty.e("Bucket").place(700,GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 6);
 
