@@ -26,7 +26,7 @@ Crafty.c("Tree", {
 		tree_health -= 10;
 		if (tree_health <= 0) {
 			Crafty.trigger("Tree Death");
-			console.log("Game over");
+			Crafty.scene("EndScreen");
 		}
 		this.treeImgUpdate();
 		return this;
@@ -43,7 +43,7 @@ Crafty.c("Tree", {
 	},
 
 	treeImgUpdate: function () {
-		console.log(tree_health);
+		// console.log	(tree_health);
 		this.removeComponent("tree_100");
 		this.removeComponent("tree_80");
 		this.removeComponent("tree_60");

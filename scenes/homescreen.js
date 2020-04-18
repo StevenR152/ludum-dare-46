@@ -1,12 +1,11 @@
 var PLATFORM_HEIGHT = 30;
-var BUCKET_LOCATIONS = [{x:700,y:200}, {x:900,y:200}, {x:200,y:200}];
+
 var hasBucket = false;
 
 Crafty.defineScene("HomeScreen", function() {
 	var floor = Crafty.e("Ground");
 	var grass = Crafty.e("Grass");
 
-	var bucketSpawner = Crafty.e("BucketSpawner");
 	var raindropSpawner = Crafty.e("RaindropSpawner").setSpawnSpreadWidth(900);
 	var platform1 = Crafty.e("Platform").place(225, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
 	var platform2 = Crafty.e("Platform").place(825, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);

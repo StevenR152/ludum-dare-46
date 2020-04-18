@@ -36,9 +36,7 @@ Crafty.c("Player", {
 		});
 		this.bind("CheckLanding", function(ground) {
 			// disallow landing of player, if player's feet are not above ground
-			//console.log(ground)
 			if (this.y + this.h > ground.y + ground.h/2) {
-				console.log("Check landing prevented landing")
 				this.canLand = false;
 			}
 		})

@@ -1,5 +1,22 @@
 var PLATFORM_HEIGHT = 30;
-var BUCKET_LOCATIONS = [{x:157,y:230}, {x:309,y:80}, {x:757,y:80}, {x:961,y:230}];
+var BUCKET_LOCATIONS = [
+	{x:179, y:230},
+	{x:-96, y:170},
+	{x:-300, y:20},
+	{x:47, y:-40},
+	{x:347, y:80},
+	{x:467, y:-70},
+	{x:551, y:-70},
+	{x:737, y:-130},
+	{x:797, y:-130},
+	{x:1031, y:-10},
+	{x:785, y:80},
+	{x:1007, y:230},
+	{x:905, y:230},
+	{x:1277, y:170},
+	{x:1121, y:345},
+	{x:707, y:345}
+];
 var hasBucket = false;
 var facing = "right";
 var tree_decay_tick = 4000;
@@ -7,6 +24,7 @@ var currency = 0;
 var tree_health = 100;
 
 Crafty.defineScene("Game", function() {
+	setInitialGameState();
 	var floor = Crafty.e("Ground");
 	var grass = Crafty.e("Grass");
 
@@ -34,3 +52,10 @@ Crafty.defineScene("Game", function() {
 	var background = Crafty.e("Background");
 	makeCameraTrackEntity(player, 50);
 });
+
+function setInitialGameState() {
+	tree_decay_tick = 4000;
+	tree_health = 100;
+	currency = 0;
+	hasBucket = false;
+}
