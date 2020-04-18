@@ -26,5 +26,6 @@ Crafty.defineScene("Game", function() {
 
 	var player = Crafty.e("Player").place(50, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
 
+	var background = Crafty.e("Background");
 	makeCameraTrackEntity(player, 50);
 });
