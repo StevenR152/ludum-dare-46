@@ -58,5 +58,10 @@ var gameAssets = {
             "tileh": 98,
             "map": {"raindrop": [0, 0]}
         },
+        "assets/images/arrow.png": {
+            "tile": 71,
+            "tileh": 98,
+            "map": {"arrow": [0, 0]}
+        },
     },
 };
