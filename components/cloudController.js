@@ -1,7 +1,7 @@
 Crafty.c("CloudController", {
 	init: function() {
         this.addComponent("Delay");
-        this.delay(this.spawnCloud, 2000, -1);
+        this.delay(this.spawnCloud, 3000, -1);
         this.spawnZoneWidth = 1000;
     },
 
