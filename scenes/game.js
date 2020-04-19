@@ -51,7 +51,10 @@ Crafty.defineScene("Game", function() {
 
 	var tree = Crafty.e("Tree").place(400, GAME_SCREEN_HEIGHT - ((989 / 4)) - 24);
 
+	var arrow = Crafty.e("Arrow").origin("center");
 	var init_bucket = Crafty.e("Bucket").place(321,340);
+	init_bucket.attach(arrow);
+	arrow.attr({x: 318, y: 310});
 
 	var hudCounter = Crafty.e("HudCounter").attr({x:500, y: GAME_SCREEN_HEIGHT - 40});
 	var hudTreeLife = Crafty.e("HudHealth").attr({x:-500 + 100, y: GAME_SCREEN_HEIGHT - 40});
