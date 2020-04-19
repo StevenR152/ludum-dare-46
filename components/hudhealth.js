@@ -8,7 +8,7 @@ Crafty.c("HudHealth", {
         this.textColor('#EEE');
         this.unselectable()
         this.bind("waterTree", this.updateHealth);
-        this.bind("TreeDecayed", this.updateHealth);
+        this.bind("treeDecayed", this.updateHealth);
         this.updateHealth()
         this.textFont({ size: '26px', weight: 'bold' });
     },
@@ -21,4 +21,3 @@ Crafty.c("HudHealth", {
         this.countdownOver = func;
     }
 });
-
