@@ -103,7 +103,7 @@ Crafty.c("Player", {
 		this.onHit("Raindrop", function(collectWater) {
 			if (hasBucket == true) {
 				Crafty.trigger("collectWater");
-				healing_strength = 25;// should add 15 but need to stop it adding it 5-15x per collision
+				healing_strength = 30;// should add 15 but need to stop it adding it 5-15x per collision
 			}
 		})
     },
