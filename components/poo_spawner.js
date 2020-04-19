@@ -1,14 +1,16 @@
 Crafty.c("PooSpawner", {
 	init: function() {
         this.addComponent("PooSpawner, 2D, Delay");
-		this.bind("RandomPoo", function() {
-			this.spawnNewPoo();
-		});
+		this.delay(this.spawnNewPoo, 3000, -1);
     },
+
 	spawnNewPoo: function() {
-		var nextLocation = this.newLocation()
-		Crafty.e("Poo").place(nextLocation.x, nextLocation.y);
+		if(Math.random() < 0.2) {
+			var nextLocation = this.newLocation()
+			Crafty.e("Poo").place(nextLocation.x, nextLocation.y);
+		}
 	},
+
 	newLocation: function() {
 		return SPAWN_LOCATIONS[Math.floor(Math.random() * SPAWN_LOCATIONS.length)];
 	}
