@@ -7,7 +7,7 @@ Crafty.c("HudHealth", {
         this.css('text-shadow', '2px 2px 1px black')
         this.textColor('#EEE');
         this.unselectable()
-        this.bind("waterTree", this.updateHealth);
+        this.bind("emptyBucket", this.updateHealth);
         this.bind("treeDecayed", this.updateHealth);
         this.updateHealth()
         this.textFont({ size: '26px', weight: 'bold' });

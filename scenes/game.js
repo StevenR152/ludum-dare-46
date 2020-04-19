@@ -1,6 +1,6 @@
 var PLATFORM_HEIGHT = 30;
 var DEFAULT_HEALING_STR = 15; // default healing strength value
-var BUCKET_LOCATIONS = [
+var SPAWN_LOCATIONS = [
 	{x:179, y:230},
 	{x:-96, y:170},
 	{x:-300, y:20},
@@ -27,6 +27,7 @@ var healing_strength = DEFAULT_HEALING_STR;
 var raindropsPerMinute = 200;
 var inBucket = {};
 inBucket.water = 0;
+inBucket.poo = 0;
 
 Crafty.defineScene("Game", function() {
 	setInitialGameState();
@@ -34,6 +35,7 @@ Crafty.defineScene("Game", function() {
 	var grass = Crafty.e("Grass");
 
 	var bucketSpawner = Crafty.e("BucketSpawner");
+	var pooSpawner = Crafty.e("PooSpawner");
 	var cloudController = Crafty.e("CloudController");
 
 	var platform1 = Crafty.e("Platform").place(-350, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 12);

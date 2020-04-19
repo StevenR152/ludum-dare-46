@@ -36,6 +36,12 @@ Crafty.c("Player", {
 			Crafty.trigger("collectBucket");
 		});
 
+		this.onHit("Poo", function(collectPoo) {
+			collectPoo[0].obj.destroy();
+			Crafty.trigger("collectPoo");
+			inBucket.poo += 1;
+		});
+
 		this.bind("CheckLanding", function(ground) {
 			// disallow landing of player, if player's feet are not above ground
 			if (this.y + this.h > ground.y + ground.h/2) {
@@ -77,25 +83,13 @@ Crafty.c("Player", {
 			if (debugPlayer.key == Crafty.keys.SPACE) {
 				console.log((this.x + (this.w/4)), + " " + (this.y + (this.h/1.2)));
 				console.log("healing str " + healing_strength);
+				Crafty.trigger("RandomPoo");
 			} // debug code used for player positioning and tree str into console
 		});
 
-		this.onHit("Tree", function(giveBucket) {
-			// if (facing == "right") {
-			// 	this.addComponent("bear_right");
-			// 	this.removeComponent("bear_bucket_right");
-			// 	this.w = 314 / 5;
-			// 	this.h = 429 / 5;
-			// }
-			// else if (facing == "left") {
-			// 	this.addComponent("bear_left");
-			// 	this.removeComponent("bear_bucket_left");
-			// 	this.w = 314 / 5;
-			// 	this.h = 429 / 5;
-			// }
-			// hasBucket = false;
+		this.onHit("Tree", function(emptyBucket) {;
 			if (inBucket.water > 0) {
-				Crafty.trigger("waterTree");
+				Crafty.trigger("emptyBucket");
 				healing_strength = DEFAULT_HEALING_STR; // RESET healing strength
 			}
 		});

@@ -7,7 +7,7 @@ Crafty.c("Tree", {
         this.h = 989 / 4;
         this.z = 9;
         this.delay(this.treeDecay, tree_decay_tick, -1);
-        this.bind("waterTree", function() {
+        this.bind("emptyBucket", function() {
             this.treeHeal();
         })
     },
@@ -34,8 +34,9 @@ Crafty.c("Tree", {
 	},
 
 	treeHeal: function () {
-		healing_strength = 5 * inBucket.water; //per raindrop healing
+		healing_strength = (5 * inBucket.water) + (15 * inBucket.poo); //per raindrop/poo healing
 		inBucket.water = 0;
+		inBucket.poo = 0;
 		tree_health += healing_strength; // healing_strength is variable based on whether there is water in the bucket or not def:10
 		if (tree_health > 120) {
 			currency += (tree_health - 120);
