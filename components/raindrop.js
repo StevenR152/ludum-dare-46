@@ -5,10 +5,7 @@ Crafty.c("Raindrop", {
         this.h = 98 / 6;
         this.z = 8;
         this.vy = 250;
-		//this.color("#0000FF");
-		// this.gravity("Ground");
 		this.onHit("solid", function() {
-			Crafty.trigger("raindropMissed");
 			this.destroy();
 		});
     },

@@ -3,8 +3,10 @@ Crafty.c("RaindropSpawner", {
         this.addComponent("RaindropSpawner, 2D, Delay");
 		this.setSpawnSpreadWidth(1000)
 		this.spawnNewRaindrop();
-		this.bind("raindropMissed", function(rainCollision) {
-			this.delay(this.spawnNewRaindrop, 10, 0);
+		this.delay(this.spawnNewRaindrop,60000/raindropsPerMinute, -1);
+		this.bind("raindropSpeedChange", function() {
+		 this.cancelDelay(this.spawnNewRaindrop);
+		 this.delay(this.spawnNewRaindrop,60000/raindropsPerMinute, -1);
 		});
     },
 

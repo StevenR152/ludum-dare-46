@@ -1,6 +1,6 @@
 Crafty.c("Player", {
 	init: function() {
-        this.addComponent("2D, DOM, Color, Image, Twoway,  Gravity, Collision, player, bear_right");
+        this.addComponent("2D, DOM, Color, Image, Twoway,  Gravity, Collision, player, solid, bear_right");
         this.x = 50;
         this.y = GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 6;
         this.w = 314 / 5;
