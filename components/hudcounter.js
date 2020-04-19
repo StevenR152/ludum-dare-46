@@ -5,7 +5,7 @@ Crafty.c("HudCounter", {
         this.attr({w: 65, h: 100, x: 0, y: 0})
         this.z = 1000;
         this.text("00:00")
-        this.css('text-shadow', '2px 2px 1px black')
+        this.css('text-shadow', '1px 1px 1px black')
         this.textColor('#EEE');
         this.unselectable()
         this.delay(this.updateTimer, 1000, -1);

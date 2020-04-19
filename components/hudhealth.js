@@ -5,7 +5,7 @@ Crafty.c("HudHealth", {
         this.attr({w: 200, h: 100, x: 0, y: 0})
         this.z = 1000;
         this.text("Tree Life:")
-        this.css('text-shadow', '2px 2px 1px black')
+        this.css('text-shadow', '1px 1px 1px black')
         this.textColor('#EEE');
         this.unselectable()
         this.bind("emptyBucket", this.updateHealth);
