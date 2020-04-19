@@ -1,6 +1,12 @@
 Crafty.c("RaindropSpawner", {
 	init: function() {
         this.addComponent("RaindropSpawner, 2D, Delay");
+		let numberSelected = 0;
+  		for (let i = 0; i < ; i++) {
+    		if (selectObject.options[i].selected) {
+      			numberSelected++;
+    		}
+  		}
 		this.setSpawnSpreadWidth(1000)
 		this.spawnNewRaindrop();
 		this.bind("raindropMissed", function(rainCollision) {

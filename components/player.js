@@ -71,11 +71,13 @@ Crafty.c("Player", {
 					}
 				}
 			});
-		this.bind("KeyDown", function(checkPos) {
-			if (checkPos.key == Crafty.keys.SPACE) {
-				console.log((this.x + (this.w/4)), (this.y + (this.h/1.2)));
-			} // debug code used for player positioning into console
+		this.bind("KeyDown", function(debugPlayer) {
+			if (debugPlayer.key == Crafty.keys.SPACE) {
+				console.log((this.x + (this.w/4)), + " " + (this.y + (this.h/1.2)));
+				console.log("healing str " + healing_strength);
+			} // debug code used for player positioning and tree str into console
 		});
+
 		this.onHit("Tree", function(giveBucket) {
 			if (hasBucket == true) {
 				if (facing == "right") {
@@ -91,9 +93,16 @@ Crafty.c("Player", {
 					this.h = 429 / 5;
 				}
 				hasBucket = false;
+				healing_strength = DEFAULT_HEALING_STR; // RESET healing strength
 				Crafty.trigger("waterTree");
 			}
 		});
+		this.onHit("Raindrop", function(collectWater) {
+			if (hasBucket == true) {
+				Crafty.trigger("collectWater");
+				healing_strength += 15;
+			}
+		})
     },
 
     place: function(x, y) {

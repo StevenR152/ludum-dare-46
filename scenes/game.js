@@ -1,4 +1,5 @@
 var PLATFORM_HEIGHT = 30;
+var DEFAULT_HEALING_STR = 10; // default healing strength value
 var BUCKET_LOCATIONS = [
 	{x:179, y:230},
 	{x:-96, y:170},
@@ -22,6 +23,7 @@ var facing = "right";
 var tree_decay_tick = 4000;
 var currency = 0;
 var tree_health = 100;
+var healing_strength = DEFAULT_HEALING_STR;
 
 Crafty.defineScene("Game", function() {
 	setInitialGameState();
@@ -42,7 +44,7 @@ Crafty.defineScene("Game", function() {
 	var platform9 = Crafty.e("Platform").place(700, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 17);
 	var platform10 = Crafty.e("Platform").place(1200, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 7);
 	var platform11 = Crafty.e("Platform").place(1000, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 13);
-	
+
 	var tree = Crafty.e("Tree").place(400, GAME_SCREEN_HEIGHT - ((989 / 4)) - 24);
 
 	var init_bucket = Crafty.e("Bucket").place(321,340);
