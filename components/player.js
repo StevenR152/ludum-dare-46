@@ -42,7 +42,11 @@ Crafty.c("Player", {
 			if (this.y + this.h > ground.y + ground.h/2) {
 				this.canLand = false;
 			}
-		})
+		});
+
+		this.bind("changePlayerSpeed", function() {
+			this.twoway(player_speed, player_jump);
+		});
 
 		this.bind("KeyDown", function(arrow) {
 			if (arrow.key == Crafty.keys.LEFT_ARROW) {
@@ -57,7 +61,6 @@ Crafty.c("Player", {
 		this.bind("KeyDown", function(powerup) {
 			if (powerup.key == Crafty.keys["1"]) {
 				Crafty.trigger("powerupSpeed");
-				this.twoway(player_speed, player_jump);
 			}
 			else if (powerup.key == Crafty.keys["2"]) {
 				Crafty.trigger("powerupJump");
