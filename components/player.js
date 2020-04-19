@@ -15,7 +15,7 @@ Crafty.c("Player", {
          	0 + (this.w/6), this.h - 10
         ]);
 
-		this.twoway(300, 390);
+		this.twoway(player_speed, player_jump);
 
 		this.onHit("Bucket", function(collectBucket) {
 			collectBucket[0].obj.destroy();
@@ -56,13 +56,15 @@ Crafty.c("Player", {
 
 		this.bind("KeyDown", function(powerup) {
 			if (powerup.key == Crafty.keys["1"]) {
-				Crafty.trigger("powerupSpeed")
+				Crafty.trigger("powerupSpeed");
+				this.twoway(player_speed, player_jump);
 			}
 			else if (powerup.key == Crafty.keys["2"]) {
-				Crafty.trigger("powerupJump")
+				Crafty.trigger("powerupJump");
+				this.twoway(player_speed, player_jump);
 			}
 			else if (powerup.key == Crafty.keys["3"]) {
-				Crafty.trigger("powerupRain")
+				Crafty.trigger("powerupRain");
 			}
 		});
 
