@@ -10,10 +10,11 @@ Crafty.c("HudCompostGroup", {
         this.color("brown")
         this.padding = 1;
         
+        this.maxNumberOfEntries = 3;
         this.hudcomposts = [];
 
         this.compostCollectedCounter = 0;
-        this.bind("getCompost", function() {
+        this.bind("getPoo", function() {
             this.compostCollectedCounter += 1;
             this.updateBar();
         })
@@ -24,7 +25,7 @@ Crafty.c("HudCompostGroup", {
     },
 
     fillTheBar: function () {
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < this.maxNumberOfEntries; i++) {
             var hudcompost = Crafty.e("HudCompost")
             this.attach(hudcompost);
             hudcompost.x = this.x + this.padding + (hudcompost.w + this.padding * 17) * i;
@@ -35,7 +36,7 @@ Crafty.c("HudCompostGroup", {
 
     updateBar: function() {
         for (var i = 0; i < this.hudcomposts.length; i++) {
-            this.hudcomposts[i].alpha = 0.3;
+            this.hudcomposts[i].alpha = 0.4;
         }
 
         for (var i = 0; i < this.compostCollectedCounter; i++) {
@@ -46,12 +47,12 @@ Crafty.c("HudCompostGroup", {
 
 Crafty.c("HudCompost", {
     init : function () {
-        this.requires('2D, DOM, raindrop')
+        this.requires('2D, DOM, poo')
         this.attr({
-            w: 71 / 5,
-            h: 98 / 5,
+            w: 20,
+            h: 20,
         })
-        this.alpha = 0.3;
+        this.alpha = 0.4;
         this.z = 1000;
     },
 });
