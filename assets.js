@@ -37,6 +37,11 @@ var gameAssets = {
             "tileh": 295,
             "map": {"ground": [0, 0]}
         },
+        "assets/images/cloud.png": {
+            "tile": 290,
+            "tileh": 230,
+            "map": {"cloud": [0, 0]}
+        },
 		"assets/images/bear_ss.png": {
 			"tile": 314,
 			"tileh": 429,
