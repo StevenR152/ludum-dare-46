@@ -62,9 +62,12 @@ Crafty.c("Player", {
 		});
 
 		this.onHit("Raindrop", function(collectWater) {
-			inBucket.water += 1;
-			this.charImg();
-			collectWater[0].obj.destroy();
+			if (inBucket.water < 5) {
+				inBucket.water += 1;
+				this.charImg();
+				collectWater[0].obj.destroy();
+				Crafty.trigger("getRaindrop");
+			}
 		})
     },
 
