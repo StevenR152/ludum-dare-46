@@ -1,6 +1,6 @@
 Crafty.c("Player", {
 	init: function() {
-        this.addComponent("2D, DOM, Color, Image, Twoway,  Gravity, Collision, player, solid, bear_right");
+        this.addComponent("2D, DOM, Color, Image, Twoway,  Gravity, Collision, player, bear_right");
         this.x = 50;
         this.y = GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 6;
         this.w = 314 / 5;
@@ -32,6 +32,7 @@ Crafty.c("Player", {
 		        this.h = 429 / 5;
 			}
 			hasBucket = true;
+			this.addComponent("solid");
 			Crafty.trigger("collectBucket");
 		});
 
@@ -96,6 +97,7 @@ Crafty.c("Player", {
 				hasBucket = false;
 				healing_strength = DEFAULT_HEALING_STR; // RESET healing strength
 				Crafty.trigger("waterTree");
+				this.removeComponent("solid");
 			}
 		});
 		this.onHit("Raindrop", function(collectWater) {
