@@ -10,6 +10,8 @@ Crafty.defineScene("Loading", function() {
     // Game Assets would be a list of images, but this tutorial doesn't use them.
     // var gameAssets = {};
 
+    var background = Crafty.e("Background");
+    var foreground = Crafty.e("Foreground");
   	Crafty.load(gameAssets, function(){
        setTimeout(function () {
          Crafty.scene('Game');
