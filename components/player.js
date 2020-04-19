@@ -34,7 +34,7 @@ Crafty.c("Player", {
 			hasBucket = true;
 			Crafty.trigger("collectBucket");
 		});
-		
+
 		this.bind("CheckLanding", function(ground) {
 			// disallow landing of player, if player's feet are not above ground
 			if (this.y + this.h > ground.y + ground.h/2) {
@@ -101,7 +101,7 @@ Crafty.c("Player", {
 		this.onHit("Raindrop", function(collectWater) {
 			if (hasBucket == true) {
 				Crafty.trigger("collectWater");
-				healing_strength += 15;
+				healing_strength = 25;// should add 15 but need to stop it adding it 5-15x per collision
 			}
 		})
     },

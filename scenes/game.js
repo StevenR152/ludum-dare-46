@@ -1,5 +1,5 @@
 var PLATFORM_HEIGHT = 30;
-var DEFAULT_HEALING_STR = 10; // default healing strength value
+var DEFAULT_HEALING_STR = 15; // default healing strength value
 var BUCKET_LOCATIONS = [
 	{x:179, y:230},
 	{x:-96, y:170},
