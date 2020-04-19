@@ -68,6 +68,9 @@ Crafty.c("Player", {
 				collectWater[0].obj.destroy();
 				Crafty.trigger("getRaindrop");
 			}
+			else {
+				Crafty.trigger("fullBucket");
+			}
 		})
     },
 
