@@ -65,5 +65,10 @@ var gameAssets = {
             "tileh": 98,
             "map": {"arrow": [0, 0]}
         },
+		"assets/images/game_over.png": {
+			"tile": 1496,
+            "tileh": 1224,
+			"map" : {"gameOver": [0, 0]}
+		}
     },
 };

@@ -27,9 +27,8 @@ Crafty.c("StartBackground", {
 
 Crafty.c("EndBackground", {
     init: function () {
-        this.requires('2D, DOM, Image');
-        this.attr({x: 0, y: 0, w: 624, h: 480});
-        this.image("assets/images/end-screen.png");
+        this.requires('2D, DOM, gameOver');
+        this.attr({x: 0, y: -300, w: 1496/1.6, h: 1224/1.6});
         this.vx -= 1;
     }
 });
