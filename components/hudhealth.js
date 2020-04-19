@@ -3,6 +3,7 @@ Crafty.c("HudHealth", {
         this.requires('2D, DOM, Text, Delay')
         this.totalSeconds = 0;
         this.attr({w: 500, h: 100, x: 200, y: 20})
+        this.z = 1000;
         this.text("Tree Life:")
         this.css('text-shadow', '2px 2px 1px black')
         this.textColor('#EEE');

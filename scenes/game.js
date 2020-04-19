@@ -54,8 +54,8 @@ Crafty.defineScene("Game", function() {
 
 	var init_bucket = Crafty.e("Bucket").place(321,340);
 
-	var hudCounter = Crafty.e("HudCounter").attr({x:500, y:30});
-	var hudTreeLife = Crafty.e("HudHealth").attr({x:-500 + 100, y:30});
+	var hudCounter = Crafty.e("HudCounter").attr({x:500, y: GAME_SCREEN_HEIGHT - 40});
+	var hudTreeLife = Crafty.e("HudHealth").attr({x:-500 + 100, y: GAME_SCREEN_HEIGHT - 40});
 
 	var player = Crafty.e("Player").place(50, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
 
@@ -63,7 +63,7 @@ Crafty.defineScene("Game", function() {
 	player.attach(hudTreeLife);
 
 	var background = Crafty.e("Background");
-	makeCameraTrackEntity(player, 50);
+	makeCameraTrackEntity(player, 120);
 });
 
 function setInitialGameState() {
