@@ -33,7 +33,6 @@ Crafty.c("Player", {
 		        this.h = 429 / 5;
 			}
 			hasBucket = true;
-			this.addComponent("solid");
 			Crafty.trigger("collectBucket");
 		});
 
