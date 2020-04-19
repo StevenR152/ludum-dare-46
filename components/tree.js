@@ -24,9 +24,9 @@ Crafty.c("Tree", {
 
 	treeDecay: function () {
 		tree_health -= 10;
+		Crafty.trigger("treeDecayed");
 		if (tree_health <= 0) {
 			Crafty.trigger("Tree Death");
-			Crafty.trigger("treeDecayed");
 			Crafty.scene("EndScreen");
 		}
 		this.treeImgUpdate();
@@ -50,17 +50,20 @@ Crafty.c("Tree", {
 		this.removeComponent("tree_60");
 		this.removeComponent("tree_40");
 		this.removeComponent("tree_20");
-		if (tree_health <= 20) {
-			this.addComponent("tree_20");
+		this.removeComponent("tree_0");
+		 if (tree_health <= 20) {
+			this.addComponent("tree_0");
 		} else if (tree_health <= 40) {
-			this.addComponent("tree_40");
+			this.addComponent("tree_20");
 		}
 		else if (tree_health <= 60) {
-			this.addComponent("tree_60");
+			this.addComponent("tree_40");
 		}
 		else if (tree_health <= 80) {
-			this.addComponent("tree_80");
-		} else {
+			this.addComponent("tree_60");
+		} else if (tree_health <= 100) {
+			this.addComponent("tree_80")
+		} else if (tree_health <= 120) {
 			this.addComponent("tree_100")
 		}
 		this.w = 850 / 4;
