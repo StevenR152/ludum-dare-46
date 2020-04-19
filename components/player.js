@@ -20,28 +20,16 @@ Crafty.c("Player", {
 		this.onHit("Bucket", function(collectBucket) {
 			collectBucket[0].obj.destroy();
 			var raindropSpawner = Crafty.e("RaindropSpawner");
-
-			var cloudController = Crafty.e("CloudController");
-			if (facing == "right") {
-				this.addComponent("bear_bucket_right");
-				this.removeComponent("bear_right");
-				this.w = 314 / 5;
-		        this.h = 429 / 5;
-			}
-			else if (facing == "left") {
-				this.addComponent("bear_bucket_left");
-				this.removeComponent("bear_left");
-				this.w = 314 / 5;
-		        this.h = 429 / 5;
-			}
 			hasBucket = true;
+			this.charImg();
 			Crafty.trigger("collectBucket");
 		});
 
 		this.onHit("Poo", function(collectPoo) {
 			collectPoo[0].obj.destroy();
-			Crafty.trigger("collectPoo");
 			inBucket.poo += 1;
+			this.charImg();
+			Crafty.trigger("collectPoo");
 		});
 
 		this.bind("CheckLanding", function(ground) {
@@ -53,32 +41,10 @@ Crafty.c("Player", {
 		this.bind("KeyDown", function(arrow) {
 				if (arrow.key == Crafty.keys.LEFT_ARROW) {
 					facing = "left";
-					if (hasBucket == true) {
-						this.addComponent("bear_bucket_left");
-						this.removeComponent("bear_bucket_right");
-						this.w = 314 / 5;
-						this.h = 429 / 5;
-					}
-					else {
-						this.addComponent("bear_left");
-						this.removeComponent("bear_right");
-						this.w = 314 / 5;
-						this.h = 429 / 5;
-					}
+					this.charImg();
 				} else if (arrow.key == Crafty.keys.RIGHT_ARROW) {
 					facing = "right";
-					if (hasBucket == true) {
-						this.addComponent("bear_bucket_right");
-						this.removeComponent("bear_bucket_left");
-						this.w = 314 / 5;
-						this.h = 429 / 5;
-					}
-					else {
-						this.addComponent("bear_right");
-						this.removeComponent("bear_left");
-						this.w = 314 / 5;
-						this.h = 429 / 5;
-					}
+					this.charImg();
 				}
 			});
 		this.bind("KeyDown", function(debugPlayer) {
@@ -92,12 +58,14 @@ Crafty.c("Player", {
 		this.onHit("Tree", function(emptyBucket) {;
 			if (inBucket.water > 0 || inBucket.poo > 0) {
 				Crafty.trigger("emptyBucket");
+				this.charImg();
 				healing_strength = DEFAULT_HEALING_STR; // RESET healing strength
 			}
 		});
 
 		this.onHit("Raindrop", function(collectWater) {
 			inBucket.water += 1;
+			this.charImg();
 			collectWater[0].obj.destroy();
 		})
     },
@@ -106,5 +74,51 @@ Crafty.c("Player", {
         this.x = x;
         this.y = y;
         return this;
-    }
+    },
+
+	charImg: function() {
+		//code controlling the char Sprite state
+		this.removeComponent("bear_bucket_right");
+		this.removeComponent("bear_bucket_full_left");
+		this.removeComponent("bear_bucket_left");
+		this.removeComponent("bear_bucket_full_right");
+		this.removeComponent("bear_right");
+		this.removeComponent("bear_left");
+		if (inBucket.water > 0 || inBucket.poo > 0) {
+			if (facing == "right") {
+				this.addComponent("bear_bucket_full_right");
+				this.w = 314 / 5;
+				this.h = 429 / 5;
+			}
+			else {
+				this.addComponent("bear_bucket_full_left");
+				this.w = 314 / 5;
+				this.h = 429 / 5;
+			}
+		}
+		else if (hasBucket == false) {
+			if (facing == "right") {
+				this.addComponent("bear_right");
+				this.w = 314 / 5;
+				this.h = 429 / 5;
+			}
+			else {
+				this.addComponent("bear_left");
+				this.w = 314 / 5;
+				this.h = 429 / 5;
+			}
+		}
+		else {
+			if (facing == "right") {
+				this.addComponent("bear_bucket_right");
+				this.w = 314 / 5;
+				this.h = 429 / 5;
+			}
+			else {
+				this.addComponent("bear_bucket_left");
+				this.w = 314 / 5;
+				this.h = 429 / 5;
+			}
+		}
+	}
 })
