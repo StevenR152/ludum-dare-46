@@ -34,6 +34,7 @@ Crafty.defineScene("Game", function() {
 	var floor = Crafty.e("Ground");
 	var grass = Crafty.e("Grass");
 
+	var background = Crafty.e("Background");
 	var bucketSpawner = Crafty.e("BucketSpawner");
 	var pooSpawner = Crafty.e("PooSpawner");
 
@@ -52,20 +53,17 @@ Crafty.defineScene("Game", function() {
 	var tree = Crafty.e("Tree").place(400, GAME_SCREEN_HEIGHT - ((989 / 4)) - 24);
 
 	var arrow = Crafty.e("Arrow").origin("center");
-	var init_bucket = Crafty.e("Bucket").place(321,340);
+	var init_bucket = Crafty.e("Bucket").place(311, 85);
 	init_bucket.attach(arrow);
-	arrow.attr({x: 318, y: 310});
+	arrow.attr({x: 309, y: 55});
 
-	var hudCounter = Crafty.e("HudCounter").attr({x:500, y: GAME_SCREEN_HEIGHT - 40});
-	var hudTreeLife = Crafty.e("HudHealth").attr({x:-500 + 100, y: GAME_SCREEN_HEIGHT - 40});
+	var hud = Crafty.e("HUD");
+	var player = Crafty.e("Player");
+	// Attach Hud to player so its location follows player.
+	player.attach(hud);
+	player.place(0, 300);
 
-	var player = Crafty.e("Player").place(50, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
-
-	player.attach(hudCounter);
-	player.attach(hudTreeLife);
-
-	var background = Crafty.e("Background");
-	makeCameraTrackEntity(player, 120);
+	makeCameraTrackEntity(player, 75);
 });
 
 function setInitialGameState() {
