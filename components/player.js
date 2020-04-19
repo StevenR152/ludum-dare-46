@@ -50,9 +50,7 @@ Crafty.c("Player", {
 		this.bind("KeyDown", function(debugPlayer) {
 			if (debugPlayer.key == Crafty.keys.SPACE) {
 				console.log((this.x + (this.w/4)), + " " + (this.y + (this.h/1.2)));
-				console.log("healing str " + healing_strength);
-				Crafty.trigger("RandomPoo");
-			} // debug code used for player positioning and tree str into console
+			} // debug code used for player positioning
 		});
 
 		this.onHit("Tree", function(emptyBucket) {;
