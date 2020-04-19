@@ -3,3 +3,4 @@ Crafty.c("Powerups", {
 	init: function() {
         return this;
     },
+})
