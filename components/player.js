@@ -88,7 +88,7 @@ Crafty.c("Player", {
 		});
 
 		this.onHit("Tree", function(emptyBucket) {;
-			if (inBucket.water > 0) {
+			if (inBucket.water > 0 || inBucket.poo > 0) {
 				Crafty.trigger("emptyBucket");
 				healing_strength = DEFAULT_HEALING_STR; // RESET healing strength
 			}
