@@ -19,6 +19,7 @@ Crafty.c("Player", {
 
 		this.onHit("Bucket", function(collectBucket) {
 			collectBucket[0].obj.destroy();
+			var raindropSpawner = Crafty.e("RaindropSpawner");
 			if (facing == "right") {
 				this.addComponent("bear_bucket_right");
 				this.removeComponent("bear_right");
@@ -81,29 +82,28 @@ Crafty.c("Player", {
 		});
 
 		this.onHit("Tree", function(giveBucket) {
-			if (hasBucket == true) {
-				// if (facing == "right") {
-				// 	this.addComponent("bear_right");
-				// 	this.removeComponent("bear_bucket_right");
-				// 	this.w = 314 / 5;
-				// 	this.h = 429 / 5;
-				// }
-				// else if (facing == "left") {
-				// 	this.addComponent("bear_left");
-				// 	this.removeComponent("bear_bucket_left");
-				// 	this.w = 314 / 5;
-				// 	this.h = 429 / 5;
-				// }
-				// hasBucket = false;
+			// if (facing == "right") {
+			// 	this.addComponent("bear_right");
+			// 	this.removeComponent("bear_bucket_right");
+			// 	this.w = 314 / 5;
+			// 	this.h = 429 / 5;
+			// }
+			// else if (facing == "left") {
+			// 	this.addComponent("bear_left");
+			// 	this.removeComponent("bear_bucket_left");
+			// 	this.w = 314 / 5;
+			// 	this.h = 429 / 5;
+			// }
+			// hasBucket = false;
+			if (inBucket.water > 0) {
 				Crafty.trigger("waterTree");
 				healing_strength = DEFAULT_HEALING_STR; // RESET healing strength
 			}
 		});
+
 		this.onHit("Raindrop", function(collectWater) {
-			if (hasBucket == true) {
-				Crafty.trigger("collectWater");
-				healing_strength = 30;// should add 15 but need to stop it adding it 5-15x per collision
-			}
+			inBucket.water += 1;
+			collectWater[0].obj.destroy();
 		})
     },
 

@@ -5,8 +5,8 @@ Crafty.c("RaindropSpawner", {
 		this.spawnNewRaindrop();
 		this.delay(this.spawnNewRaindrop,60000/raindropsPerMinute, -1);
 		this.bind("raindropSpeedChange", function() {
-		 this.cancelDelay(this.spawnNewRaindrop);
-		 this.delay(this.spawnNewRaindrop,60000/raindropsPerMinute, -1);
+			this.cancelDelay(this.spawnNewRaindrop);
+			this.delay(this.spawnNewRaindrop,60000/raindropsPerMinute, -1);
 		});
     },
 

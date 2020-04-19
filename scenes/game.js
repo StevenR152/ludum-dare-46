@@ -25,6 +25,8 @@ var currency = 0;
 var tree_health = 100;
 var healing_strength = DEFAULT_HEALING_STR;
 var raindropsPerMinute = 200;
+var inBucket = {};
+inBucket.water = 0;
 
 Crafty.defineScene("Game", function() {
 	setInitialGameState();
@@ -32,7 +34,6 @@ Crafty.defineScene("Game", function() {
 	var grass = Crafty.e("Grass");
 
 	var bucketSpawner = Crafty.e("BucketSpawner");
-	var raindropSpawner = Crafty.e("RaindropSpawner");
 
 	var platform1 = Crafty.e("Platform").place(-350, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 12);
 	var platform2 = Crafty.e("Platform").place(-150, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 7);
