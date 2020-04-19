@@ -1,8 +1,8 @@
 Crafty.c("Bucket", {
 	init: function() {
         this.addComponent("2D, DOM, bucket");
-        this.w = 30;
-        this.h = 30;
+        this.w = 20;
+        this.h = 20;
     },
 
     place: function(x, y) {
