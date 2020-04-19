@@ -11,7 +11,7 @@ Crafty.c("Cloud", {
         this.delay(this.spawnRainDrops, 2000, -1);
         this.delay(this.randomMoveSwitch, 1500, -1);
         this.bind("Move", function () {
-            if (this.x > 1200 || this.x < -200) {
+            if (this.x > 1500 || this.x < -400) {
                 this.vx = -1 * this.vx;
             }
         })
