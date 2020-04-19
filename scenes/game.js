@@ -54,8 +54,8 @@ Crafty.defineScene("Game", function() {
 
 	var init_bucket = Crafty.e("Bucket").place(321,340);
 
-	var hudCounter = Crafty.e("HudCounter").attr({x:440, y:60});
-	var hudTreeLife = Crafty.e("HudHealth").attr({x:-440 + 100, y:60});
+	var hudCounter = Crafty.e("HudCounter").attr({x:500, y:30});
+	var hudTreeLife = Crafty.e("HudHealth").attr({x:-500 + 100, y:30});
 
 	var player = Crafty.e("Player").place(50, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
 
