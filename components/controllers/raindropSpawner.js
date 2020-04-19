@@ -9,11 +9,9 @@ Crafty.c("RaindropSpawner", {
 			this.delay(this.spawnNewRaindrop,60000/raindropsPerMinute, -1);
 		});
     },
-
     setSpawnSpreadWidth: function (width) {
     	this.spawnZoneWidth = width;
     },
-
     spawnNewRaindrop: function() {
     	var x = Math.floor(Math.random() * (this.spawnZoneWidth  + this.spawnZoneWidth/2)) - this.spawnZoneWidth/2;
 		Crafty.e("Raindrop").place(x, -550);
