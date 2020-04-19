@@ -1,11 +1,24 @@
 Crafty.c("Player", {
 	init: function() {
-        this.addComponent("2D, DOM, Color, Image, Twoway,  Gravity, Collision, player, bear_right");
+        this.addComponent("2D, DOM, Color, Image, Twoway,  Gravity, Collision, Motion, player, bear_right");
         this.x = 50;
         this.y = GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 6;
         this.w = 314 / 5;
         this.h = 429 / 5;
+        this.vx = 5;
 		this.gravity("solid");
+
+		this.bind('SET_MOVE_RIGHT', function(e) {
+			console.log("RIGHT")
+			console.log(this)
+			this.jump();
+			this.vx = 100;
+		})
+
+		this.bind('SET_MOVE_LEFT', function(e) {
+			console.log("LEFT")
+			this.vx = -100;
+		})
 
 		// This is a rectangle hitbox slightly in from the sprite of the player.
         this.collision([

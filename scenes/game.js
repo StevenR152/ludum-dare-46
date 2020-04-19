@@ -34,6 +34,20 @@ Crafty.defineScene("Game", function() {
 	var floor = Crafty.e("Ground");
 	var grass = Crafty.e("Grass");
 
+    var leftClickableArea = Crafty.e('ScreenClickable')
+    	.color("red")
+    	.attr({x : -500, y : -1000, w : 300, h : 1700})
+    	.bind('Click', function () {
+        	Crafty.trigger("SET_MOVE_LEFT");
+        });
+    var rightClickableArea = Crafty.e('ScreenClickable')
+    	.color("blue")
+    	.attr({x : 350, y : -1000, w : 300, h : 1700})
+    	.bind('Click', function () {
+        	Crafty.trigger("SET_MOVE_RIGHT");
+        });
+    	
+
 	var bucketSpawner = Crafty.e("BucketSpawner");
 	var pooSpawner = Crafty.e("PooSpawner");
 
@@ -63,6 +77,8 @@ Crafty.defineScene("Game", function() {
 
 	player.attach(hudCounter);
 	player.attach(hudTreeLife);
+	player.attach(leftClickableArea);
+	player.attach(rightClickableArea);
 
 	var background = Crafty.e("Background");
 	makeCameraTrackEntity(player, 120);
