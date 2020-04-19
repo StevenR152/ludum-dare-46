@@ -50,17 +50,20 @@ Crafty.c("Tree", {
 		this.removeComponent("tree_60");
 		this.removeComponent("tree_40");
 		this.removeComponent("tree_20");
-		if (tree_health <= 20) {
-			this.addComponent("tree_20");
+		this.removeComponent("tree_0");
+		 if (tree_health <= 20) {
+			this.addComponent("tree_0");
 		} else if (tree_health <= 40) {
-			this.addComponent("tree_40");
+			this.addComponent("tree_20");
 		}
 		else if (tree_health <= 60) {
-			this.addComponent("tree_60");
+			this.addComponent("tree_40");
 		}
 		else if (tree_health <= 80) {
-			this.addComponent("tree_80");
-		} else {
+			this.addComponent("tree_60");
+		} else if (tree_health <= 100) {
+			this.addComponent("tree_80")
+		} else if (tree_health <= 120) {
 			this.addComponent("tree_100")
 		}
 		this.w = 850 / 4;
