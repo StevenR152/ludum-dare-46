@@ -24,7 +24,7 @@ var tree_decay_tick = 4000;
 var currency = 0;
 var tree_health = 100;
 var healing_strength = DEFAULT_HEALING_STR;
-var raindropsPerMinute = 40;
+var raindropsPerMinute = 200;
 
 Crafty.defineScene("Game", function() {
 	setInitialGameState();
