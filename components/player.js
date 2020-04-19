@@ -26,10 +26,15 @@ Crafty.c("Player", {
 		});
 
 		this.onHit("Poo", function(collectPoo) {
-			collectPoo[0].obj.destroy();
-			inBucket.poo += 1;
-			this.charImg();
-			Crafty.trigger("collectPoo");
+			if (inBucket.poo < 3) {
+				collectPoo[0].obj.destroy();
+				inBucket.poo += 1;
+				this.charImg();
+				Crafty.trigger("collectPoo");
+			}
+			else {
+				Crafty.trigger("fullBucket");
+			}
 		});
 
 		this.bind("CheckLanding", function(ground) {
