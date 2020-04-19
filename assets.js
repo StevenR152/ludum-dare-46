@@ -14,6 +14,11 @@ var gameAssets = {
             "tileh": 265,
             "map": {"poo": [0, 0]}
         },
+        "assets/images/poos_icon.png": {
+            "tile": 22,
+            "tileh": 23,
+            "map": {"poos_icon": [0, 0]}
+        },
         "assets/images/tree_ss.png": {
             "tile": 850,
             "tileh": 989,

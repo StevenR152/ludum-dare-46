@@ -36,7 +36,7 @@ Crafty.c("HudCompostGroup", {
 
     updateBar: function() {
         for (var i = 0; i < this.hudcomposts.length; i++) {
-            this.hudcomposts[i].alpha = 0.4;
+            this.hudcomposts[i].alpha = 0.2;
         }
 
         for (var i = 0; i < this.compostCollectedCounter; i++) {
@@ -47,12 +47,12 @@ Crafty.c("HudCompostGroup", {
 
 Crafty.c("HudCompost", {
     init : function () {
-        this.requires('2D, DOM, poo')
+        this.requires('2D, DOM, poos_icon')
         this.attr({
             w: 20,
             h: 20,
         })
-        this.alpha = 0.4;
+        this.alpha = 0.2;
         this.z = 1000;
     },
 });
