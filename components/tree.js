@@ -24,9 +24,9 @@ Crafty.c("Tree", {
 
 	treeDecay: function () {
 		tree_health -= 10;
+		Crafty.trigger("treeDecayed");
 		if (tree_health <= 0) {
 			Crafty.trigger("Tree Death");
-			Crafty.trigger("treeDecayed");
 			Crafty.scene("EndScreen");
 		}
 		this.treeImgUpdate();
