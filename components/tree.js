@@ -54,7 +54,7 @@ Crafty.c("Tree", {
 		this.removeComponent("tree_40");
 		this.removeComponent("tree_20");
 		this.removeComponent("tree_0");
-		if (tree_health <= 20) {
+		if (tree_health <= 10) {
 			this.addComponent("tree_0");
 		}
 		else if (tree_health <= 40) {

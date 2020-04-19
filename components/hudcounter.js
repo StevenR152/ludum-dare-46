@@ -3,6 +3,7 @@ Crafty.c("HudCounter", {
         this.requires('2D, DOM, Text, Delay')
         this.totalSeconds = 0;
         this.attr({w: 50, h: 100, x: 800, y: 20})
+        this.z = 1000;
         // this.fixedPosition(800, 20)
         this.text("00:00")
         this.css('text-shadow', '2px 2px 1px black')
