@@ -26,6 +26,7 @@ var tree_health = 100;
 var healing_strength = DEFAULT_HEALING_STR;
 var raindropsPerMinute = 200;
 var inBucket = {};
+var cloudChance = 0.1;
 inBucket.water = 0;
 inBucket.poo = 0;
 

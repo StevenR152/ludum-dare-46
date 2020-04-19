@@ -5,7 +5,7 @@ Crafty.c("CloudController", {
         this.spawnZoneWidth = 1000;
     },
     spawnCloud: function () {
-        if(Math.random() < 0.1) {
+        if(Math.random() < cloudChance) {
             var x = Math.floor(Math.random() * (this.spawnZoneWidth  + this.spawnZoneWidth/2)) - this.spawnZoneWidth/2;
             var cloud = Crafty.e("Cloud").attr({x:x});
             cloud.y += Math.random() * 70 - 35;
