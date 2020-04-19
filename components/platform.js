@@ -6,7 +6,6 @@ Crafty.c("Platform", {
         this.w = 150;
         this.h = PLATFORM_HEIGHT;
     },
-
     place: function(x, y) {
         this.x = x;
         this.y = y;

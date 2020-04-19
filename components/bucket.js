@@ -4,7 +4,6 @@ Crafty.c("Bucket", {
         this.w = 20;
         this.h = 20;
     },
-
     place: function(x, y) {
         this.x = x;
         this.y = y;

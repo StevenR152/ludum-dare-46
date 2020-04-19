@@ -43,6 +43,7 @@ Crafty.c("Player", {
 				this.canLand = false;
 			}
 		})
+
 		this.bind("KeyDown", function(arrow) {
 			if (arrow.key == Crafty.keys.LEFT_ARROW) {
 				facing = "left";
@@ -64,7 +65,6 @@ Crafty.c("Player", {
 				Crafty.trigger("powerupRain")
 			}
 		});
-
 
 		this.bind("KeyDown", function(debugPlayer) {
 			if (debugPlayer.key == Crafty.keys.SPACE) {
@@ -92,13 +92,11 @@ Crafty.c("Player", {
 			}
 		})
     },
-
     place: function(x, y) {
         this.x = x;
         this.y = y;
         return this;
     },
-
 	charImg: function() {
 		//code controlling the char Sprite state
 		this.removeComponent("bear_bucket_right");

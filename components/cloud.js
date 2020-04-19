@@ -16,13 +16,11 @@ Crafty.c("Cloud", {
             }
         })
     },
-
     place: function(x, y) {
         this.x = x;
         this.y = y;
         return this;
     },
-
     spawnRainDrops: function () {
         if(Math.random() < 0.85) {
            Crafty.e("Raindrop").place(this.x + this.w/2, this.y + this.h);
@@ -34,7 +32,6 @@ Crafty.c("Cloud", {
            Crafty.e("Raindrop").place(this.x + this.w/2 + this.w/4, this.y + this.h);
         }
     },
-
     randomMoveSwitch: function () {
         if(Math.random() < 0.25) {
             this.vx = -1 * this.vx;

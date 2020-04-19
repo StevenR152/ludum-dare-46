@@ -11,17 +11,11 @@ Crafty.c("Tree", {
             this.treeHeal();
         })
     },
-
     place: function(x, y) {
         this.x = x;
         this.y = y;
         return this;
     },
-
-    // fadeTree: function () {
-    //     this.alpha -= 0.10;
-    // }
-
 	treeDecay: function () {
 		tree_health -= 10;
 		Crafty.trigger("treeDecayed");
@@ -32,7 +26,6 @@ Crafty.c("Tree", {
 		this.treeImgUpdate();
 		return this;
 	},
-
 	treeHeal: function () {
 		healing_strength = (5 * inBucket.water) + (15 * inBucket.poo); //per raindrop/poo healing
 		inBucket.water = 0;
@@ -45,7 +38,6 @@ Crafty.c("Tree", {
 		this.treeImgUpdate();
 		return this;
 	},
-
 	treeImgUpdate: function () {
 		// console.log	(tree_health);
 		this.removeComponent("tree_100");

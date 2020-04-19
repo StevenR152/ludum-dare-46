@@ -9,7 +9,6 @@ Crafty.c("Raindrop", {
 			this.destroy();
 		});
     },
-
     place: function(x, y) {
         this.x = x;
         this.y = y;
