@@ -1,22 +1,27 @@
 Crafty.c("HUD", {
     init: function() { 
         this.addComponent("2D, DOM, Color");
-        this.origin("center")
         this.z = 500;
-        this.x = -438;
-        this.w = GAME_SCREEN_WIDTH + 140;
-        this.h = 50;
-        this.y = GAME_SCREEN_HEIGHT - 30;
-        this.color("white")
-        this.alpha = 0.08;
+        this.w = GAME_SCREEN_WIDTH - 15;
+        this.h = 30;
+        this.x = -410;
+        this.y = 130;
+        this.color("black")
+        this.alpha = 0.05;
+        this.padding = 5;
 
-
-		var hudCounter = Crafty.e("HudCounter").attr({x:515, y: GAME_SCREEN_HEIGHT - 20});
+		var hudCounter = Crafty.e("HudCounter")
+        
 		var hudTreeLife = Crafty.e("HudHealth")
 	
-		this.attach(hudTreeLife);
+
+        hudCounter.y = this.y + this.padding;
+        hudCounter.x = this.x + GAME_SCREEN_WIDTH - hudCounter.w;
 		this.attach(hudCounter);
 
-		hudTreeLife.attr({x:-440 + 20, y: GAME_SCREEN_HEIGHT - 20});
+        hudTreeLife.x = this.x + this.padding;
+        hudTreeLife.y = this.y + this.padding;
+		this.attach(hudTreeLife);
+
     },
 })

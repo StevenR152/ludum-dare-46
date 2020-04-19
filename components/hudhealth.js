@@ -2,7 +2,7 @@ Crafty.c("HudHealth", {
     init : function () {
         this.requires('2D, DOM, Text, Delay')
         this.totalSeconds = 0;
-        this.attr({w: 500, h: 100, x: 200, y: 20})
+        this.attr({w: 200, h: 100, x: 0, y: 0})
         this.z = 1000;
         this.text("Tree Life:")
         this.css('text-shadow', '2px 2px 1px black')
@@ -11,7 +11,7 @@ Crafty.c("HudHealth", {
         this.bind("emptyBucket", this.updateHealth);
         this.bind("treeDecayed", this.updateHealth);
         this.updateHealth()
-        this.textFont({ size: '26px', weight: 'bold' });
+        this.textFont({ size: '17px', weight: 'bold' });
     },
 
     updateHealth : function () {

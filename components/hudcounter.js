@@ -2,18 +2,14 @@ Crafty.c("HudCounter", {
     init : function () {
         this.requires('2D, DOM, Text, Delay')
         this.totalSeconds = 0;
-        this.attr({w: 50, h: 100, x: 800, y: 20})
+        this.attr({w: 65, h: 100, x: 0, y: 0})
         this.z = 1000;
-        // this.fixedPosition(800, 20)
         this.text("00:00")
         this.css('text-shadow', '2px 2px 1px black')
         this.textColor('#EEE');
         this.unselectable()
         this.delay(this.updateTimer, 1000, -1);
-        this.textFont({ size: '26px', weight: 'bold' });
-        this.bind("UpdateTime", function () {
-            
-        });
+        this.textFont({ size: '17px', weight: 'bold' });
     },
 
     updateTimer : function () {

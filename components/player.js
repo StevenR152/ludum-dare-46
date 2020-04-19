@@ -1,8 +1,8 @@
 Crafty.c("Player", {
 	init: function() {
         this.addComponent("2D, DOM, Color, Image, Twoway,  Gravity, Collision, player, bear_right");
-        this.x = 50;
-        this.y = GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 6;
+        this.x = 0;
+        this.y = 0;
         this.w = 314 / 5;
         this.h = 429 / 5;
 		this.gravity("solid");
