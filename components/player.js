@@ -20,6 +20,8 @@ Crafty.c("Player", {
 		this.onHit("Bucket", function(collectBucket) {
 			collectBucket[0].obj.destroy();
 			var raindropSpawner = Crafty.e("RaindropSpawner");
+
+			var cloudController = Crafty.e("CloudController");
 			if (facing == "right") {
 				this.addComponent("bear_bucket_right");
 				this.removeComponent("bear_right");

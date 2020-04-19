@@ -36,7 +36,6 @@ Crafty.defineScene("Game", function() {
 
 	var bucketSpawner = Crafty.e("BucketSpawner");
 	var pooSpawner = Crafty.e("PooSpawner");
-	var cloudController = Crafty.e("CloudController");
 
 	var platform1 = Crafty.e("Platform").place(-350, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 12);
 	var platform2 = Crafty.e("Platform").place(-150, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 7);
