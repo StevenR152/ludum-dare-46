@@ -82,22 +82,21 @@ Crafty.c("Player", {
 
 		this.onHit("Tree", function(giveBucket) {
 			if (hasBucket == true) {
-				if (facing == "right") {
-					this.addComponent("bear_right");
-					this.removeComponent("bear_bucket_right");
-					this.w = 314 / 5;
-					this.h = 429 / 5;
-				}
-				else if (facing == "left") {
-					this.addComponent("bear_left");
-					this.removeComponent("bear_bucket_left");
-					this.w = 314 / 5;
-					this.h = 429 / 5;
-				}
-				hasBucket = false;
-				healing_strength = DEFAULT_HEALING_STR; // RESET healing strength
+				// if (facing == "right") {
+				// 	this.addComponent("bear_right");
+				// 	this.removeComponent("bear_bucket_right");
+				// 	this.w = 314 / 5;
+				// 	this.h = 429 / 5;
+				// }
+				// else if (facing == "left") {
+				// 	this.addComponent("bear_left");
+				// 	this.removeComponent("bear_bucket_left");
+				// 	this.w = 314 / 5;
+				// 	this.h = 429 / 5;
+				// }
+				// hasBucket = false;
 				Crafty.trigger("waterTree");
-				this.removeComponent("solid");
+				healing_strength = DEFAULT_HEALING_STR; // RESET healing strength
 			}
 		});
 		this.onHit("Raindrop", function(collectWater) {

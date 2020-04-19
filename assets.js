@@ -4,7 +4,7 @@ var gameAssets = {
     },
     "images": [],
     "sprites": {
-        "assets/images/bucket.png": {
+        "assets/images/bucket_empty.png": {
             "tile": 228,
             "tileh": 265,
             "map": {"bucket": [0, 0]}
