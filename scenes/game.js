@@ -47,10 +47,13 @@ Crafty.defineScene("Game", function() {
 
 	var init_bucket = Crafty.e("Bucket").place(321,340);
 
-	var hudCounter = Crafty.e("HudCounter").attr({x:440, y:60, w:50, h:50});
+	var hudCounter = Crafty.e("HudCounter").attr({x:440, y:60});
+	var hudTreeLife = Crafty.e("HudHealth").attr({x:-440 + 100, y:60});
+
 	var player = Crafty.e("Player").place(50, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
 
 	player.attach(hudCounter);
+	player.attach(hudTreeLife);
 
 	var background = Crafty.e("Background");
 	makeCameraTrackEntity(player, 50);

@@ -7,9 +7,9 @@ Crafty.defineScene("HomeScreen", function() {
 	var grass = Crafty.e("Grass");
 
 	var raindropSpawner = Crafty.e("RaindropSpawner").setSpawnSpreadWidth(900);
-	var platform1 = Crafty.e("Platform").place(225, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
-	var platform2 = Crafty.e("Platform").place(825, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
-	var platform2 = Crafty.e("Platform").place(300, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 9);
+	// var platform1 = Crafty.e("Platform").place(225, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
+	// var platform2 = Crafty.e("Platform").place(825, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
+	// var platform2 = Crafty.e("Platform").place(300, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 9);
 
 	var tree = Crafty.e("Tree").place(400, GAME_SCREEN_HEIGHT - ((989 / 4)) - 24);
 	tree.cancelDelay(tree.fadeTree);

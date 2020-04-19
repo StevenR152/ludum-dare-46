@@ -34,6 +34,7 @@ Crafty.c("Player", {
 			hasBucket = true;
 			Crafty.trigger("collectBucket");
 		});
+		
 		this.bind("CheckLanding", function(ground) {
 			// disallow landing of player, if player's feet are not above ground
 			if (this.y + this.h > ground.y + ground.h/2) {
