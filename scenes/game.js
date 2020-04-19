@@ -64,7 +64,7 @@ Crafty.defineScene("Game", function() {
 
 function setInitialGameState() {
 	tree_decay_tick = 4000;
-	tree_health = 30;
+	tree_health = 100;
 	currency = 0;
 	hasBucket = false;
 }
