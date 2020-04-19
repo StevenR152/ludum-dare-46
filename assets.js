@@ -9,6 +9,11 @@ var gameAssets = {
             "tileh": 265,
             "map": {"bucket": [0, 0]}
         },
+		"assets/images/bucket.png": {
+            "tile": 228,
+            "tileh": 265,
+            "map": {"poo": [0, 0]}
+        },
         "assets/images/tree_ss.png": {
             "tile": 850,
             "tileh": 989,
