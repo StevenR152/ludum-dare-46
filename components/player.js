@@ -66,7 +66,7 @@ Crafty.c("Player", {
 				inBucket.water += 1;
 				this.charImg();
 				collectWater[0].obj.destroy();
-				Crafty.trigger("getRaindrop");
+				Crafty.trigger("Raindrop Update");
 			}
 		})
     },
