@@ -22,8 +22,8 @@ var gameAssets = {
 			}
         },
 		"assets/images/platform.png": {
-            "tile": 664,
-            "tileh": 326,
+            "tile": 1620,
+            "tileh": 324,
             "map": {"platform": [0, 0]}
         },
 		"assets/images/ground.png": {
