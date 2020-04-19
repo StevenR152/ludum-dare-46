@@ -44,14 +44,28 @@ Crafty.c("Player", {
 			}
 		})
 		this.bind("KeyDown", function(arrow) {
-				if (arrow.key == Crafty.keys.LEFT_ARROW) {
-					facing = "left";
-					this.charImg();
-				} else if (arrow.key == Crafty.keys.RIGHT_ARROW) {
-					facing = "right";
-					this.charImg();
-				}
-			});
+			if (arrow.key == Crafty.keys.LEFT_ARROW) {
+				facing = "left";
+				this.charImg();
+			} else if (arrow.key == Crafty.keys.RIGHT_ARROW) {
+				facing = "right";
+				this.charImg();
+			}
+		});
+
+		this.bind("KeyDown", function(powerup) {
+			if (powerup.key == Crafty.keys["1"]) {
+				Crafty.trigger("powerupSpeed")
+			}
+			else if (powerup.key == Crafty.keys["2"]) {
+				Crafty.trigger("powerupJump")
+			}
+			else if (powerup.key == Crafty.keys["3"]) {
+				Crafty.trigger("powerupRain")
+			}
+		});
+
+
 		this.bind("KeyDown", function(debugPlayer) {
 			if (debugPlayer.key == Crafty.keys.SPACE) {
 				console.log((this.x + (this.w/4)), + " " + (this.y + (this.h/1.2)));
