@@ -9,6 +9,7 @@ Crafty.c("HudWaterGroup", {
         this.alpha = 0;
         this.color("blue")
         this.padding = 1;
+        this.waterCollectedCounter = 0;
     },
 
     fillTheBar: function () {

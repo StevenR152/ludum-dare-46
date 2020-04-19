@@ -54,15 +54,17 @@ Crafty.defineScene("Game", function() {
 	var tree = Crafty.e("Tree").place(400, GAME_SCREEN_HEIGHT - ((989 / 4)) - 24);
 
 	var arrow = Crafty.e("Arrow").origin("center");
-	var init_bucket = Crafty.e("Bucket").place(311, 85);
+	var init_bucket = Crafty.e("Bucket").place(180, 238);
+	arrow.x = init_bucket.x - 3;
+	arrow.y = init_bucket.y - 30;
 	init_bucket.attach(arrow);
-	arrow.attr({x: 309, y: 55});
+	// arrow.attr({x: 309, y: 55});
 
 	var hud = Crafty.e("HUD");
 	var player = Crafty.e("Player");
 	// Attach Hud to player so its location follows player.
 	player.attach(hud);
-	player.place(0, 300);
+	player.place(-100, 300);
 
 	makeCameraTrackEntity(player, 75);
 });
