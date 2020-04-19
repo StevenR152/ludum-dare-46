@@ -25,5 +25,11 @@ Crafty.c("HUD", {
         hudWaterGroup.y = this.y + this.padding;
         this.attach(hudWaterGroup);
         hudWaterGroup.fillTheBar();
+
+        var hudCompostGroup = Crafty.e("HudCompostGroup")
+        hudCompostGroup.x = this.x + this.padding + 350;
+        hudCompostGroup.y = this.y + this.padding;
+        this.attach(hudCompostGroup);
+        hudCompostGroup.fillTheBar();
     },
 })

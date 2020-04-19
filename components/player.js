@@ -30,7 +30,7 @@ Crafty.c("Player", {
 				collectPoo[0].obj.destroy();
 				inBucket.poo += 1;
 				this.charImg();
-				Crafty.trigger("collectPoo");
+				Crafty.trigger("getPoo");
 			}
 			else {
 				Crafty.trigger("fullBucket");

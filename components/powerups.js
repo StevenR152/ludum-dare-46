@@ -1,4 +1,4 @@
-// code that handles the Powerups
+// code that handles the powerups
 Crafty.c("Powerups", {
 	init: function() {
         return this;

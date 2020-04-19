@@ -10,6 +10,7 @@ Crafty.c("HudWaterGroup", {
         this.color("blue")
         this.padding = 1;
         
+        this.maxNumberOfEntries = 5;
         this.hudWaters = [];
 
         this.waterCollectedCounter = 0;
@@ -24,7 +25,7 @@ Crafty.c("HudWaterGroup", {
     },
 
     fillTheBar: function () {
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < this.maxNumberOfEntries; i++) {
             var hudWater = Crafty.e("HudWater")
             this.attach(hudWater);
             hudWater.x = this.x + this.padding + (hudWater.w + this.padding * 17) * i;
@@ -35,7 +36,7 @@ Crafty.c("HudWaterGroup", {
 
     updateBar: function() {
         for (var i = 0; i < this.hudWaters.length; i++) {
-            this.hudWaters[i].alpha = 0.3;
+            this.hudWaters[i].alpha = 0.4;
         }
 
         for (var i = 0; i < this.waterCollectedCounter; i++) {
@@ -51,7 +52,7 @@ Crafty.c("HudWater", {
             w: 71 / 5,
             h: 98 / 5,
         })
-        this.alpha = 0.3;
+        this.alpha = 0.4;
         this.z = 1000;
     },
 });
