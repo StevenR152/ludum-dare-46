@@ -26,6 +26,7 @@ Crafty.c("Tree", {
 		tree_health -= 10;
 		if (tree_health <= 0) {
 			Crafty.trigger("Tree Death");
+			Crafty.trigger("TreeDecayed");
 			Crafty.scene("EndScreen");
 		}
 		this.treeImgUpdate();
