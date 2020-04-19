@@ -37,9 +37,9 @@ Crafty.c("Tree", {
 		healing_strength = 10 * inBucket.water;
 		inBucket.water = 0;
 		tree_health += healing_strength; // healing_strength is variable based on whether there is water in the bucket or not def:10
-		if (tree_health > 100) {
-			currency += (tree_health - 100);
-			tree_health = 100;
+		if (tree_health > 120) {
+			currency += (tree_health - 120);
+			tree_health = 120;
 		}
 		this.treeImgUpdate();
 		return this;
