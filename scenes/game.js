@@ -35,6 +35,7 @@ Crafty.defineScene("Game", function() {
 	var grass = Crafty.e("Grass");
 
 	var background = Crafty.e("Background");
+	var foreground = Crafty.e("Foreground");
 	var bucketSpawner = Crafty.e("BucketSpawner");
 	var pooSpawner = Crafty.e("PooSpawner");
 
