@@ -24,6 +24,7 @@ var gameAssets = {
 				"tree_60": [3, 0],
 				"tree_40": [2, 0],
 				"tree_20": [1, 0],
+				"tree_0": [5, 0],
 			}
         },
 		"assets/images/platform.png": {
