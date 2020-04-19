@@ -13,33 +13,33 @@ Crafty.c("HudWaterGroup", {
         this.hudWaters = [];
 
         this.waterCollectedCounter = 0;
-        this.bind("getRaindrop") {
+        this.bind("getRaindrop", function() {
             this.waterCollectedCounter += 1;
             this.updateBar();
-        }
-        this.bind("emptyBucket") {
+        })
+        this.bind("emptyBucket", function() {
             this.waterCollectedCounter = 0;
             this.updateBar();
-        }
+        })
     },
 
     fillTheBar: function () {
-        for (var i = 0; i <= 5; i++) {
+        for (var i = 0; i < 5; i++) {
             var hudWater = Crafty.e("HudWater")
             this.attach(hudWater);
             hudWater.x = this.x + this.padding + (hudWater.w + this.padding * 17) * i;
             hudWater.y = this.y + this.padding;
-            hudWaters.push(hudWater);
+            this.hudWaters.push(hudWater);
         }       
     },
 
     updateBar: function() {
         for (var i = 0; i < this.hudWaters.length; i++) {
-            this.hudWaters[i].alpha = 100;
+            this.hudWaters[i].alpha = 0.3;
         }
 
         for (var i = 0; i < this.waterCollectedCounter; i++) {
-            this.hudWaters[i].alpha = 100;
+            this.hudWaters[i].alpha = 1;
         }
     }
 });
