@@ -11,7 +11,9 @@ Crafty.defineScene("HomeScreen", function() {
 	// var platform2 = Crafty.e("Platform").place(825, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 5);
 	// var platform2 = Crafty.e("Platform").place(300, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 9);
 
+	tree_health = 10;
 	var tree = Crafty.e("Tree").place(400, GAME_SCREEN_HEIGHT - ((989 / 4)) - 24);
+	tree.fadeTree();
 	tree.cancelDelay(tree.fadeTree);
 
 	var startGameButton = Crafty.e("2D, DOM, Color, Mouse")
