@@ -3,6 +3,7 @@ var DEFAULT_HEALING_STR; // default healing strength value
 var POWERUP_TIME; // powerups last this long
 var SPAWN_LOCATIONS;
 var hasBucket;
+var totalSeconds;
 var facing;
 var tree_decay_tick;
 var currency;
@@ -77,7 +78,7 @@ function addStatisticValue(name, value) {
 function increaseStatisticCounter(name) {
 	if(typeof statistics[name] === 'undefined') {
 		statistics[name] = 0;
-	} 
+	}
 	statistics[name] += 1;
 }
 
@@ -139,4 +140,5 @@ function setInitialGameState() {
 	inBucket.water = 0;
 	inBucket.poo = 0;
 	statistics = {};
+	totalSeconds = 0;
 }

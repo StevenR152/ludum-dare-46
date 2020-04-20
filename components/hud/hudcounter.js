@@ -1,7 +1,6 @@
 Crafty.c("HudCounter", {
     init : function () {
         this.requires('2D, DOM, Text, Delay')
-        this.totalSeconds = 0;
         this.attr({w: 65, h: 100, x: 0, y: 0})
         this.z = 1000;
         this.text("00:00")
@@ -14,10 +13,10 @@ Crafty.c("HudCounter", {
 
     updateTimer : function () {
         //calculate time
-        this.totalSeconds += 1;
-        var minutes = parseInt(this.totalSeconds / 60);
-        var seconds = this.totalSeconds % 60;
-        if (this.totalSeconds <= 0) {
+        totalSeconds += 1;
+        var minutes = parseInt(totalSeconds / 60);
+        var seconds = totalSeconds % 60;
+        if (totalSeconds <= 0) {
             if(typeof this.countdownOver !== 'undefined') {
                 this.countdownOver();
             }
@@ -36,4 +35,3 @@ Crafty.c("HudCounter", {
         return this.totalSeconds;
     }
 });
-
