@@ -56,7 +56,7 @@ Crafty.c("Tree", {
 				Crafty.trigger("InstructionText", "Use your apples for power ups ")
 				this.delay(function () {
 	                Crafty.trigger("InstructionText", "Press key 1, 2 or 3 to activate")
-	            }, 1000, -1)
+	            }, 2000, -1)
 			}
 
 			// if(currency > powerupSpeedCost + 50) {
