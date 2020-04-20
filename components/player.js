@@ -19,7 +19,7 @@ Crafty.c("Player", {
 		])
 
 		this.reel("walking_left", 500, [
-		    [0, 0], [1, 0], [0, 1], [0, 0]
+		    [0, 1], [0, 0], [1, 0], [0, 0]
 		])
 		this.twoway(player_speed, player_jump);
 		
