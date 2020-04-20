@@ -10,7 +10,7 @@ Crafty.c("PlayerNotification", {
         // this.css('text-shadow', '2px 2px 5px white')
         this.textColor('#555');
         this.unselectable();
-        this.textFont({ size: '17px', weight: "bold" });
+        this.textFont({ size: '11px', weight: "bold" });
         this.bind("InstructionText", function (message) {
             if(this.messagesReceived[message] != "SEENBEFORE"){
                 this.text(message);
