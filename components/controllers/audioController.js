@@ -3,12 +3,12 @@ Crafty.c("AudioController", {
         this.addComponent("Delay");
     },
 
-    loadTrack : function(trackName, timesToPlay, trackVolume=1.0) {
+    loadTrack : function(trackName, timesToPlay=1, trackVolume=1.0) {
         Crafty.audio.add(trackName);
         this.playTrack(trackName, timesToPlay, trackVolume=1.0);
     },
 
-    playTrack : function(trackName, timesToPlay, trackVolume=1.0) {
+    playTrack : function(trackName, timesToPlay=1, trackVolume=1.0) {
         Crafty.audio.play(trackName, timesToPlay,trackVolume);
     },
 

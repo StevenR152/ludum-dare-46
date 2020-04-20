@@ -29,9 +29,11 @@ Crafty.c("Tree", {
 		Crafty.trigger("treeDecayed");
 		if (tree_health <= 0) {
 			Crafty.trigger("Tree Death");
-			addStatisticValue("finish_time", Crafty("HudCounter").getTotalSeconds())
-			audioController.pauseTrack("bgAudio", 2);
-			audioController.loadTrack("leavesAllGone",1);
+			addStatisticValue("finish_time", Crafty("HudCounter").getTotalSeconds());
+			if (Crafty.audio.isPlaying("bgAudio") == true) {
+				audioController.pauseTrack("bgAudio", 2000);
+			}
+			audioController.loadTrack("leavesAllGone", 1);
 			Crafty.scene("EndScreen", statistics);
 		}
 		this.treeImgUpdate();
