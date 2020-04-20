@@ -78,7 +78,6 @@ var gameAssets = {
 		"assets/images/powerups_ss.png": {
 			"tile": 50,
             "tileh": 50,
-			"paddingAroundBorder": 1,
 			"map" : {
 				"rainPowerupOff": [0, 0],
 				"rainPowerupOn": [1, 0],
