@@ -15,35 +15,7 @@ Crafty.c("Player", {
          	0 + (this.w/6), this.h - 10
         ]);
 
-		this.reel("walking_right_no", 500, [
-		    [0, 2], [4, 1], [1, 2], [4, 1]
-		])
-
-		this.reel("walking_left_no", 500, [
-		    [2, 1], [1, 1], [3, 1], [1, 1]
-		])
-
-		this.reel("walking_right_empty", 500, [
-		    [4, 0], [3, 0], [0, 1], [3, 0]
-		])
-
-		this.reel("walking_left_empty", 500, [
-		    [1, 0], [0, 0], [2, 0], [0, 0]
-		])
-		this.reel("walking_right_water", 500, [
-		    [5, 3], [5, 1], [5, 2], [5, 1]
-		])
-
-		this.reel("walking_left_water", 500, [
-		    [5, 0], [3, 3], [4, 3], [3, 3]
-		])
-		this.reel("pouring_right", 500, [
-		    [0, 3], [1, 3], [2, 3]
-		])
-
-		this.reel("pouring_left", 500, [
-		    [2, 2], [3, 2], [4, 2]
-		])
+		this.setReelSpeed()
 
 		var playerNotification = Crafty.e("PlayerNotification");
 		this.attach(playerNotification);
@@ -61,6 +33,7 @@ Crafty.c("Player", {
 		});
 
 		this.bind("changePlayerSpeed", function() {
+			this.setReelSpeed()
 			this.twoway(player_speed, player_jump);
 		});
     },
@@ -175,11 +148,42 @@ Crafty.c("Player", {
 				this.charImg();
 				collectWater[0].obj.destroy();
 				Crafty.trigger("getRaindrop");
-				audioController.playTrack("dropCatch", 1, 0.5);
+				audioController.playTrack("dropCatch", 1, 0.3);
 			}
 			else {
 				Crafty.trigger("fullBucket");
 			}
 		})
+	},
+	setReelSpeed: function () {
+		this.reel("walking_right_no", char_anim_time, [
+			[0, 2], [4, 1], [1, 2], [4, 1]
+		])
+
+		this.reel("walking_left_no", char_anim_time, [
+			[2, 1], [1, 1], [3, 1], [1, 1]
+		])
+
+		this.reel("walking_right_empty", char_anim_time, [
+			[4, 0], [3, 0], [0, 1], [3, 0]
+		])
+
+		this.reel("walking_left_empty", char_anim_time, [
+			[1, 0], [0, 0], [2, 0], [0, 0]
+		])
+		this.reel("walking_right_water", char_anim_time, [
+			[5, 3], [5, 1], [5, 2], [5, 1]
+		])
+
+		this.reel("walking_left_water", char_anim_time, [
+			[5, 0], [3, 3], [4, 3], [3, 3]
+		])
+		this.reel("pouring_right", char_anim_time, [
+			[0, 3], [1, 3], [2, 3]
+		])
+
+		this.reel("pouring_left", 500, [
+			[2, 2], [3, 2], [4, 2]
+		])
 	}
 })

@@ -9,6 +9,7 @@ Crafty.c("Raindrop", {
 			var splash = Crafty.e("Splash");
 			splash.x = this.x;
 			splash.y = this.y+4;
+			audioController.playTrack("missRain", 1, 0.3);
 			this.destroy()
 		});
     },

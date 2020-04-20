@@ -4,11 +4,13 @@ Crafty.c("AudioController", {
     },
 
     loadTrack : function(trackName, timesToPlay=1, trackVolume=1.0) {
+		console.log(trackVolume);
         Crafty.audio.add(trackName);
-        this.playTrack(trackName, timesToPlay, trackVolume=1.0);
+        this.playTrack(trackName, timesToPlay, trackVolume);
     },
 
     playTrack : function(trackName, timesToPlay=1, trackVolume=1.0) {
+		console.log(trackVolume);
         Crafty.audio.play(trackName, timesToPlay,trackVolume);
     },
 

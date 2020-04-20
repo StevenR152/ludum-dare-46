@@ -21,6 +21,7 @@ var powerupRainCost;
 var powerupSpeedCost;
 var powerupJumpCost;
 var statistics;
+var char_anim_time;
 
 Crafty.defineScene("Game", function() {
 	setInitialGameState();
@@ -158,4 +159,5 @@ function setInitialGameState() {
 	inBucket.poo = 0;
 	statistics = {};
 	totalSeconds = 0;
+	char_anim_time = 500;
 }

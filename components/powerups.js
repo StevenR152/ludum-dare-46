@@ -18,13 +18,14 @@ Crafty.c("Powerups", {
 			if (powerupSpeedCost < currency){
 				Crafty.trigger("InstructionText","Powerups last " + POWERUP_TIME/1000 + " seconds!")
 				player_speed *= 1.6;
+				char_anim_time /= 1.6;
 				powerupSpeed = true;
 				this.delay(this.resetSpeed,POWERUP_TIME, 0);
 				Crafty.trigger("changePlayerSpeed");
 				Crafty.trigger("toggleSpeedPowerup");
 				Crafty.trigger("enableSpeedPowerup");
 				currency -= powerupSpeedCost;
-				audioController.loadTrack("powerupYes", 1);
+				audioController.loadTrack("powerupYes", 1, 0.7);
 			} else {
 				Crafty.trigger("InstructionText", "You need 30 apples for the speed up")
 			}
@@ -43,7 +44,7 @@ Crafty.c("Powerups", {
 				Crafty.trigger("toggleJumpPowerup");
 				Crafty.trigger("enableJumpPowerup");
 				currency -= powerupJumpCost;
-				audioController.loadTrack("powerupYes", 1);
+				audioController.loadTrack("powerupYes", 1, 0.7);
 			} else {
 				Crafty.trigger("InstructionText", "You need 10 apples for higher jump")
 			}
@@ -60,7 +61,7 @@ Crafty.c("Powerups", {
 				Crafty.trigger("toggleRainPowerup");
 				Crafty.trigger("enableRainPowerup");
 				currency -= powerupRainCost;
-				audioController.loadTrack("powerupYes", 1);
+				audioController.loadTrack("powerupYes", 1, 0.7);
 			} else {
 				Crafty.trigger("InstructionText", "You need 50 apples for rain storm")
 			}
@@ -70,21 +71,22 @@ Crafty.c("Powerups", {
 		raindropsPerMinute /= 2;
 		Crafty.trigger("raindropSpeedChange");
 		powerupRain = false;
-		audioController.loadTrack("powerupNo", 1);
+		audioController.loadTrack("powerupNo", 1, 0.7);
 		Crafty.trigger("toggleRainPowerup");
 	},
 	resetSpeed: function() {
 		player_speed /= 1.6;
+		char_anim_time *= 1.6;
 		powerupSpeed = false;
 		Crafty.trigger("changePlayerSpeed");
-		audioController.loadTrack("powerupNo", 1);
+		audioController.loadTrack("powerupNo", 1, 0.7);
 		Crafty.trigger("toggleSpeedPowerup");
 	},
 	resetJump: function() {
 		player_jump /= 1.5;
 		Crafty.trigger("changePlayerSpeed");
 		powerupJump = false;
-		audioController.loadTrack("powerupNo", 1);
+		audioController.loadTrack("powerupNo", 1, 0.7);
 		Crafty.trigger("toggleJumpPowerup");
 	}
 })
