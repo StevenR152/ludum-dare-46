@@ -14,13 +14,13 @@ Crafty.c("HudPowerups", {
 
         var hudJump = Crafty.e("HudJump");
         this.attach(hudJump);
-        hudJump.x = this.x + hudSpeed.w + (this.padding * 15);
+        hudJump.x = this.x + hudSpeed.w + (this.padding * 45);
         hudJump.y = this.y-2;
         this.toggleJumpPowerup(hudJump);
 
         var hudRain = Crafty.e("HudRain");
         this.attach(hudRain);
-        hudRain.x = this.x + (2 * (hudSpeed.w + this.padding * 15));
+        hudRain.x = this.x + (2 * (hudSpeed.w + this.padding * 45));
         hudRain.y = this.y-2;
         this.toggleRainPowerup(hudRain);
 
