@@ -15,32 +15,40 @@ Crafty.c("Powerups", {
     powerupSpeed: function() {
 		//seems reasonable, could take some tweaking or a % increase
 		if (powerupSpeed == false){
-			player_speed *= 1.6;
-			powerupSpeed = true;
-			this.delay(this.resetSpeed,POWERUP_TIME, 0);
-			Crafty.trigger("changePlayerSpeed");
-			Crafty.trigger("toggleSpeedPowerup");
+			if (powerupSpeedCost < currency){
+				player_speed *= 1.6;
+				powerupSpeed = true;
+				this.delay(this.resetSpeed,POWERUP_TIME, 0);
+				Crafty.trigger("changePlayerSpeed");
+				Crafty.trigger("toggleSpeedPowerup");
+				currency -= powerupSpeedCost;
+			}
 		}
     },
     powerupJump: function() {
 		// this will need to become double jump I think
 		// super high jumping is actually making some aspects more difficult
-
 		if (powerupJump == false){
-			player_jump *= 1.5;
-			Crafty.trigger("changePlayerSpeed");
-			powerupJump = true;
-			this.delay(this.resetJump,POWERUP_TIME, 0);
-			Crafty.trigger("toggleJumpPowerup");
+			if (powerupJumpCost < currency){
+				player_jump *= 1.5;
+				Crafty.trigger("changePlayerSpeed");
+				powerupJump = true;
+				this.delay(this.resetJump,POWERUP_TIME, 0);
+				Crafty.trigger("toggleJumpPowerup");
+				currency -= powerupJumpCost;
+			}
 		}
     },
     powerupRain: function() {
 		if (powerupRain == false){
-			powerupRain = true; //could be powerupActive to limit total powerups
-			raindropsPerMinute *= 2;
-			Crafty.trigger("raindropSpeedChange");
-			this.delay(this.resetRainSpeed,POWERUP_TIME, 0);
-			Crafty.trigger("toggleRainPowerup");
+			if (powerupRainCost < currency){
+				powerupRain = true
+				raindropsPerMinute *= 2;
+				Crafty.trigger("raindropSpeedChange");
+				this.delay(this.resetRainSpeed,POWERUP_TIME, 0);
+				Crafty.trigger("toggleRainPowerup");
+				currency -= powerupRainCost;
+			}
 		}
     },
 	resetRainSpeed: function() {

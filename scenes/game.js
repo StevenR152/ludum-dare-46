@@ -33,6 +33,9 @@ var player_jump = 390;
 var powerupRain = false;
 var powerupSpeed = false;
 var powerupJump = false;
+var powerupRainCost = 50;
+var powerupSpeedCost = 30;
+var powerupJumpCost = 10;
 inBucket.water = 0;
 inBucket.poo = 0;
 
