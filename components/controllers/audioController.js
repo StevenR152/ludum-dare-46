@@ -7,7 +7,6 @@ Crafty.c("AudioController", {
 
     loadTrack : function(trackName, timesToPlay) {
         Crafty.audio.add(trackName);
-        console.log("playing a track " + trackName);
         this.playTrack(trackName, timesToPlay);
     },
 

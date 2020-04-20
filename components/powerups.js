@@ -23,6 +23,7 @@ Crafty.c("Powerups", {
 				Crafty.trigger("toggleSpeedPowerup");
 				Crafty.trigger("enableSpeedPowerup");
 				currency -= powerupSpeedCost;
+				audioController.loadTrack("powerupYes", 1);
 			}
 		}
     },
@@ -38,6 +39,7 @@ Crafty.c("Powerups", {
 				Crafty.trigger("toggleJumpPowerup");
 				Crafty.trigger("enableJumpPowerup");
 				currency -= powerupJumpCost;
+				audioController.loadTrack("powerupYes", 1);
 			}
 		}
     },
@@ -51,6 +53,7 @@ Crafty.c("Powerups", {
 				Crafty.trigger("toggleRainPowerup");
 				Crafty.trigger("enableRainPowerup");
 				currency -= powerupRainCost;
+				audioController.loadTrack("powerupYes", 1);
 			}
 		}
     },
@@ -58,18 +61,21 @@ Crafty.c("Powerups", {
 		raindropsPerMinute /= 2;
 		Crafty.trigger("raindropSpeedChange");
 		powerupRain = false;
+		audioController.loadTrack("powerupNo", 1);
 		Crafty.trigger("toggleRainPowerup");
 	},
 	resetSpeed: function() {
 		player_speed /= 1.6;
 		powerupSpeed = false;
 		Crafty.trigger("changePlayerSpeed");
+		audioController.loadTrack("powerupNo", 1);
 		Crafty.trigger("toggleSpeedPowerup");
 	},
 	resetJump: function() {
 		player_jump /= 1.5;
 		Crafty.trigger("changePlayerSpeed");
 		powerupJump = false;
+		audioController.loadTrack("powerupNo", 1);
 		Crafty.trigger("toggleJumpPowerup");
 	}
 })
