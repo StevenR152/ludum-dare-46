@@ -1,6 +1,6 @@
 Crafty.c("Player", {
 	init: function() {
-        this.addComponent("2D, DOM, Color, Image, Twoway,  Gravity, Collision, player, bear_right");
+        this.addComponent("2D, DOM, Color, Image, Twoway,  SpriteAnimation, Gravity, Collision, player, bear_right");
         this.x = 0;
         this.y = 0;
         this.w = 314 / 5;
@@ -14,7 +14,13 @@ Crafty.c("Player", {
          	this.w - (this.w/6), this.h - 10,
          	0 + (this.w/6), this.h - 10
         ]);
+		this.reel("walking_right", 5000, [
+		    [1, 1], [2, 1], [2, 0], [1, 1]
+		])
 
+		this.reel("walking_left", 5000, [
+		    [0, 0], [1, 0], [0, 1], [0, 0]
+		])
 		this.twoway(player_speed, player_jump);
 		
 		this.setKeybinding();
@@ -85,10 +91,24 @@ Crafty.c("Player", {
 		this.bind("KeyDown", function(arrow) {
 			if (arrow.key == Crafty.keys.LEFT_ARROW) {
 				facing = "left";
-				this.charImg();
+				this.animate("walking_left", -1);
+				// this.charImg();
 			} else if (arrow.key == Crafty.keys.RIGHT_ARROW) {
 				facing = "right";
-				this.charImg();
+				this.animate("walking_right", -1);
+;				// this.charImg();
+			}
+		});
+
+		this.bind("KeyUp", function(arrow) {
+			if (arrow.key == Crafty.keys.LEFT_ARROW) {
+				facing = "left";
+				this.pauseAnimation();
+				// this.charImg();
+			} else if (arrow.key == Crafty.keys.RIGHT_ARROW) {
+				facing = "right";
+				this.pauseAnimation();
+;				// this.charImg();
 			}
 		});
 
