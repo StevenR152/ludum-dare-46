@@ -28,6 +28,26 @@ var gameAssets = {
             "tileh": 23,
             "map": {"poos_icon": [0, 0]}
         },
+        "assets/images/rock_1.png": {
+            "tile": 50,
+            "tileh": 50,
+            "map": {"rock": [0, 0]}
+        },
+        "assets/images/rock_2.png": {
+            "tile": 50,
+            "tileh": 50,
+            "map": {"rock2": [0, 0]}
+        },
+        "assets/images/rock_3.png": {
+            "tile": 50,
+            "tileh": 50,
+            "map": {"rock3": [0, 0]}
+        },
+        "assets/images/grass_patch.png": {
+            "tile": 50,
+            "tileh": 50,
+            "map": {"grass_patch": [0, 0]}
+        },
         "assets/images/tree_ss.png": {
             "tile": 850,
             "tileh": 989,
