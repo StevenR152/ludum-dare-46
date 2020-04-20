@@ -103,5 +103,10 @@ var gameAssets = {
             "tileh": 23,
             "map" : {"currency": [0, 0]}
         },
+		"assets/images/splash.png": {
+            "tile": 113,
+            "tileh": 98,
+            "map" : {"splash": [0, 0]}
+		}
     },
-};
+}
