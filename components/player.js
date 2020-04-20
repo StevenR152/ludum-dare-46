@@ -14,11 +14,11 @@ Crafty.c("Player", {
          	this.w - (this.w/6), this.h - 10,
          	0 + (this.w/6), this.h - 10
         ]);
-		this.reel("walking_right", 5000, [
-		    [1, 1], [2, 1], [2, 0], [1, 1]
+		this.reel("walking_right", 500, [
+		    [2, 1], [1, 1], [2, 0], [1, 1]
 		])
 
-		this.reel("walking_left", 5000, [
+		this.reel("walking_left", 500, [
 		    [0, 0], [1, 0], [0, 1], [0, 0]
 		])
 		this.twoway(player_speed, player_jump);
