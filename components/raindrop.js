@@ -1,7 +1,7 @@
 Crafty.c("Raindrop", {
 	init: function() {
         this.addComponent("2D, Collision, Motion, Delay, DOM, SpriteAnimation, raindrop");
-        this.randomscale = Math.floor((Math.random() * 7) -2)
+        this.randomscale = Math.floor((Math.random() * 4) -1)
         this.w = 78 / 6 + this.randomscale;
         this.h = 98 / 6 + this.randomscale;
         this.z = 8;
