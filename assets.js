@@ -87,6 +87,16 @@ var gameAssets = {
 				"jumpPowerupOff": [2, 0],
 				"jumpPowerupOn": [2, 1],
 			}
-		}
+		},
+		"assets/images/titlescreen.png": {
+            "tile": 1496,
+            "tileh": 1224,
+            "map" : {"titleScreen": [0, 0]}
+        },
+        "assets/images/title.png": {
+            "tile": 658,
+            "tileh": 285,
+            "map" : {"title": [0, 0]}
+        }
     },
 };

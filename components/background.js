@@ -33,9 +33,8 @@ Crafty.c("Foreground", {
 
 Crafty.c("StartBackground", {
     init: function () {
-        this.requires('2D, DOM, Image');
-        this.attr({x: 0, y: 0, w: 624, h: 480});
-        this.image("assets/images/title-screen.png");
+        this.requires('2D, DOM, titleScreen');
+        this.attr({x: 0, y: -300, w: 1496/1.6, h: 1224/1.6});
         this.vx -= 1;
     }
 });
