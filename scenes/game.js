@@ -1,43 +1,24 @@
-var PLATFORM_HEIGHT = 30;
-var DEFAULT_HEALING_STR = 15; // default healing strength value
-var POWERUP_TIME = 15000 // powerups last this long
-var SPAWN_LOCATIONS = [
-	{x:179, y:230},
-	{x:-96, y:170},
-	{x:-300, y:20},
-	{x:47, y:-40},
-	{x:347, y:80},
-	{x:467, y:-70},
-	{x:551, y:-70},
-	{x:737, y:-130},
-	{x:797, y:-130},
-	{x:1031, y:-10},
-	{x:785, y:80},
-	{x:1007, y:230},
-	{x:905, y:230},
-	{x:1277, y:170},
-	{x:1121, y:345},
-	{x:707, y:345}
-];
-var hasBucket = false;
-var facing = "right";
-var tree_decay_tick = 5000;
-var currency = 0;
-var tree_health = 100;
-var healing_strength = DEFAULT_HEALING_STR;
-var raindropsPerMinute = 200;
-var inBucket = {};
-var cloudChance = 0.1;
-var player_speed = 300;
-var player_jump = 390;
-var powerupRain = false;
-var powerupSpeed = false;
-var powerupJump = false;
-var powerupRainCost = 50;
-var powerupSpeedCost = 30;
-var powerupJumpCost = 10;
-inBucket.water = 0;
-inBucket.poo = 0;
+var PLATFORM_HEIGHT;
+var DEFAULT_HEALING_STR; // default healing strength value
+var POWERUP_TIME; // powerups last this long
+var SPAWN_LOCATIONS;
+var hasBucket;
+var facing;
+var tree_decay_tick;
+var currency;
+var tree_health;
+var healing_strength;
+var raindropsPerMinute;
+var inBucket;
+var cloudChance;
+var player_speed;
+var player_jump;
+var powerupRain;
+var powerupSpeed;
+var powerupJump;
+var powerupRainCost;
+var powerupSpeedCost;
+var powerupJumpCost;
 
 Crafty.defineScene("Game", function() {
 	setInitialGameState();
@@ -79,12 +60,11 @@ Crafty.defineScene("Game", function() {
 
 	makeCameraTrackEntity(player, 75);
 });
-
 function setInitialGameState() {
-	var PLATFORM_HEIGHT = 30;
-	var DEFAULT_HEALING_STR = 15; // default healing strength value
-	var POWERUP_TIME = 15000 // powerups last this long
-	var SPAWN_LOCATIONS = [
+	PLATFORM_HEIGHT = 30;
+	DEFAULT_HEALING_STR = 15; // default healing strength value
+	POWERUP_TIME = 15000 // powerups last this long
+	SPAWN_LOCATIONS = [
 		{x:179, y:230},
 		{x:-96, y:170},
 		{x:-300, y:20},
@@ -102,23 +82,23 @@ function setInitialGameState() {
 		{x:1121, y:345},
 		{x:707, y:345}
 	];
-	var hasBucket = false;
-	var facing = "right";
-	var tree_decay_tick = 5000;
-	var currency = 0;
-	var tree_health = 100;
-	var healing_strength = DEFAULT_HEALING_STR;
-	var raindropsPerMinute = 200;
-	var inBucket = {};
-	var cloudChance = 0.1;
-	var player_speed = 300;
-	var player_jump = 390;
-	var powerupRain = false;
-	var powerupSpeed = false;
-	var powerupJump = false;
-	var powerupRainCost = 50;
-	var powerupSpeedCost = 30;
-	var powerupJumpCost = 10;
+	hasBucket = false;
+	facing = "right";
+	tree_decay_tick = 5000;
+	currency = 0;
+	tree_health = 100;
+	healing_strength = DEFAULT_HEALING_STR;
+	raindropsPerMinute = 200;
+	inBucket = {};
+	cloudChance = 0.1;
+	player_speed = 300;
+	player_jump = 390;
+	powerupRain = false;
+	powerupSpeed = false;
+	powerupJump = false;
+	powerupRainCost = 50;
+	powerupSpeedCost = 30;
+	powerupJumpCost = 10;
 	inBucket.water = 0;
 	inBucket.poo = 0;
 }
