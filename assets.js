@@ -61,8 +61,8 @@ var gameAssets = {
 			},
 		},
         "assets/images/bear_walking2.png": {
-            "tile": 314,
-            "tileh": 429,
+            "tile": 316,
+            "tileh": 431,
             "paddingAroundBorder": 1,
             "map": {
                 "bear_right": [0,1],
