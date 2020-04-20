@@ -74,6 +74,19 @@ var gameAssets = {
 			"tile": 1496,
             "tileh": 1224,
 			"map" : {"gameOver": [0, 0]}
+		},
+		"assets/images/powerups_ss.png": {
+			"tile": 50,
+            "tileh": 50,
+			"paddingAroundBorder": 1,
+			"map" : {
+				"rainPowerupOff": [0, 0],
+				"rainPowerupOn": [1, 0],
+				"speedPowerupOff": [0, 1],
+				"speedPowerupOn": [1, 1],
+				"jumpPowerupOff": [2, 0],
+				"jumpPowerupOn": [2, 1],
+			}
 		}
     },
 };
