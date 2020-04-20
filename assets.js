@@ -104,7 +104,7 @@ var gameAssets = {
             "tileh": 285,
             "map" : {"title": [0, 0]}
         },
-		"assets/images/appleicon.png": {
+		"assets/images/apple_icon.png": {
             "tile": 22,
             "tileh": 23,
             "map" : {"currency": [0, 0]}
