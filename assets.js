@@ -47,19 +47,19 @@ var gameAssets = {
             "tileh": 230,
             "map": {"cloud": [0, 0]}
         },
-		"assets/images/bear_ss.png": {
-			"tile": 314,
-			"tileh": 429,
-			"paddingAroundBorder": 1,
-			"map": {
-				"bear_right": [1,1],
-				"bear_left": [0,1],
-				"bear_bucket_right": [0,0],
-				"bear_bucket_left": [1,0],
-				"bear_bucket_full_right": [2,1],
-				"bear_bucket_full_left": [2,0],
-			},
-		},
+        "assets/images/bear_walking.png": {
+            "tile": 314,
+            "tileh": 429,
+            "paddingAroundBorder": 1,
+            "map": {
+                "bear_right": [1,1],
+                "bear_left": [0,0],
+                "bear_bucket_right": [1,1],
+                "bear_bucket_left": [0,0],
+                "bear_bucket_full_right": [1,1],
+                "bear_bucket_full_left": [0,0],
+            },
+        },
 		"assets/images/raindrop.png": {
             "tile": 71,
             "tileh": 98,
