@@ -5,8 +5,8 @@ Crafty.defineScene("Loading", function() {
           .text("Loading...")
           .textFont({ size: '20px', weight: 'bold' })
           .textAlign("center")
-          .textColor("#111");
-
+          .textColor("#111")
+          .unselectable();
     // Game Assets would be a list of images, but this tutorial doesn't use them.
     // var gameAssets = {};
 
@@ -14,7 +14,7 @@ Crafty.defineScene("Loading", function() {
     var foreground = Crafty.e("Foreground");
   	Crafty.load(gameAssets, function(){
        setTimeout(function () {
-         Crafty.scene('HomeScreen');
+         Crafty.scene('Game');
        }, 1000);
     },  function () {
       console.log("Crafty Load Issue");
