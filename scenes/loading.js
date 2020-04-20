@@ -12,6 +12,7 @@ Crafty.defineScene("Loading", function() {
 
     var background = Crafty.e("Background");
     var foreground = Crafty.e("Foreground");
+    var audioController = Crafty.e("AudioController");
   	Crafty.load(gameAssets, function(){
        setTimeout(function () {
          Crafty.scene('HomeScreen',
