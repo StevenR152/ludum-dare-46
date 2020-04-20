@@ -9,9 +9,9 @@ var gameAssets = {
             "tileh": 265,
             "map": {"bucket": [0, 0]}
         },
-		"assets/images/bucket.png": {
-            "tile": 228,
-            "tileh": 265,
+		"assets/images/poos.png": {
+            "tile": 72,
+            "tileh": 38,
             "map": {"poo": [0, 0]}
         },
         "assets/images/poos_icon.png": {
@@ -75,7 +75,20 @@ var gameAssets = {
             "tileh": 1224,
 			"map" : {"gameOver": [0, 0]}
 		},
-        "assets/images/titlescreen.png": {
+		"assets/images/powerups_ss.png": {
+			"tile": 50,
+            "tileh": 50,
+			"paddingAroundBorder": 1,
+			"map" : {
+				"rainPowerupOff": [0, 0],
+				"rainPowerupOn": [1, 0],
+				"speedPowerupOff": [0, 1],
+				"speedPowerupOn": [1, 1],
+				"jumpPowerupOff": [2, 0],
+				"jumpPowerupOn": [2, 1],
+			}
+		},
+		"assets/images/titlescreen.png": {
             "tile": 1496,
             "tileh": 1224,
             "map" : {"titleScreen": [0, 0]}

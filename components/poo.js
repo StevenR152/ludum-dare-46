@@ -1,12 +1,12 @@
 Crafty.c("Poo", {
 	init: function() {
         this.addComponent("2D, DOM, poo");
-        this.w = 30;
-        this.h = 30;
+        this.w = 72/2;
+        this.h = 38/2;
     },
     place: function(x, y) {
         this.x = x;
-        this.y = y;
+        this.y = y + 7;
         return this;
     }
 })

@@ -67,7 +67,6 @@ Crafty.defineScene("Game", function() {
 	arrow.x = init_bucket.x - 3;
 	arrow.y = init_bucket.y - 30;
 	init_bucket.attach(arrow);
-	// arrow.attr({x: 309, y: 55});
 
 	var hud = Crafty.e("HUD");
 	var player = Crafty.e("Player");
