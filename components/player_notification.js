@@ -52,13 +52,10 @@ Crafty.c("PlayerNotification", {
         })
 
         this.bind("emptyBucket", function() {
-            Crafty.trigger("InstructionText", "The tree heals some")
-            this.delay(function () {
-                Crafty.trigger("InstructionText", "Keep it alive!")
-            }, 3000, -1)
+            Crafty.trigger("InstructionText", "You help keep it alive!")
         })
 
-        
+
         this.bind("PlayerLeavingGameZone", function() {
             console.log("PlayerLeavingGameZone");
             Crafty.trigger("InstructionText", "Return to the game area")

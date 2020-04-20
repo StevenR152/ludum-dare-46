@@ -17,8 +17,6 @@ Crafty.c("Player", {
 
 		this.setReelSpeed()
 
-		var playerNotification = Crafty.e("PlayerNotification");
-		this.attach(playerNotification);
 
 		this.twoway(player_speed, player_jump);
 

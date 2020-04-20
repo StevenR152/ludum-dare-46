@@ -24,7 +24,7 @@ var statistics;
 var char_anim_time;
 var BGmuted = false;
 
-Crafty.defineScene("Game", function() {
+Crafty.defineScene("Game", function(instructionsOff) {
 	setInitialGameState();
 	var floor = Crafty.e("Ground");
 	var grass = Crafty.e("Grass");
@@ -79,6 +79,12 @@ Crafty.defineScene("Game", function() {
 
 	var hud = Crafty.e("HUD");
 	var player = Crafty.e("Player");
+
+	if(!instructionsOff) {
+		var playerNotification = Crafty.e("PlayerNotification");
+		player.attach(playerNotification);
+	}
+
 	// Attach Hud to player so its location follows player.
 	player.attach(hud);
 	player.place(130, 120);
