@@ -10,6 +10,7 @@ var gameAssets = {
 		"twoSecondTimer" : ["assets/sounds/2sec-count-down-to-apple-eat-or-game-over.wav"],
 		"threeSecondTimer" : ["assets/sounds/3sec-count-down-to-apple-eat-or-game-over.wav"],
 		"leavesAllGone" : ["assets/sounds/leaves-all-gone-chord.wav"],
+		"missRain" : ["assets/sounds/rain-miss-very-soft-pitpat-3.wav"],
     },
     "images": [],
     "sprites": {

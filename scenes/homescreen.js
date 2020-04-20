@@ -2,7 +2,7 @@ Crafty.defineScene("HomeScreen", function() {
 	var gameStartBackground = Crafty.e("StartBackground");
 	gameStartBackground.bind('Click', function() {
 		if (Crafty.audio.isPlaying("bgAudio") == false) {
-			audioController.loadTrack("bgAudio", -1, 0.7);
+			audioController.loadTrack("bgAudio", -1, 0.25);
 		}
 	})
 
@@ -10,7 +10,7 @@ Crafty.defineScene("HomeScreen", function() {
 		.attr({x: GAME_SCREEN_WIDTH-200, y: GAME_SCREEN_HEIGHT-140})
 		.bind('Click', function(MouseEvent){
 			if (Crafty.audio.isPlaying("bgAudio") == false) {
-				audioController.loadTrack("bgAudio", -1, 0.7);
+				audioController.loadTrack("bgAudio", -1, 0.25);
 			}
         	Crafty.scene('Game');
 		});
