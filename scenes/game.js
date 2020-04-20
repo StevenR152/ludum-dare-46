@@ -19,6 +19,7 @@ var powerupJump;
 var powerupRainCost;
 var powerupSpeedCost;
 var powerupJumpCost;
+var statistics;
 
 Crafty.defineScene("Game", function() {
 	setInitialGameState();
@@ -32,6 +33,8 @@ Crafty.defineScene("Game", function() {
 		var pooSpawner = Crafty.e("PooSpawner");
 		var cloudController = Crafty.e("CloudController");
 	});
+
+	setStatisticsListeners();
 	var powerups = Crafty.e("Powerups");
 
 	var platform1 = Crafty.e("Platform").place(-350, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 12);
@@ -62,6 +65,38 @@ Crafty.defineScene("Game", function() {
 
 	makeCameraTrackEntity(player, 75);
 });
+
+
+function addStatisticValue(name, value) {
+	if(typeof statistics[name] === 'undefined') {
+		statistics[name] = value;
+	}
+	statistics[name] += value;
+}
+
+function increaseStatisticCounter(name) {
+	if(typeof statistics[name] === 'undefined') {
+		statistics[name] = 0;
+	} 
+	statistics[name] += 1;
+}
+
+function addTriggerBasedStatCounter(trigger, statistic) {
+	Crafty.bind(trigger, function () {
+		increaseStatisticCounter(statistic);
+	})
+}
+
+function setStatisticsListeners() {
+	addTriggerBasedStatCounter("getRaindrop", "raindrops_collected");
+	addTriggerBasedStatCounter("getPoos", "poos_collected");
+	addTriggerBasedStatCounter("bucketFull", "number_of_full_buckets");
+	addTriggerBasedStatCounter("emptyBucket", "number_of_times_fed_tree");
+	addTriggerBasedStatCounter("enableSpeedPowerup", "number_of_times_powerupSpeed");
+	addTriggerBasedStatCounter("enableJumpPowerup", "number_of_times_powerupJump");
+	addTriggerBasedStatCounter("enableRainPowerup", "number_of_times_powerupRain");
+}
+
 function setInitialGameState() {
 	PLATFORM_HEIGHT = 30;
 	DEFAULT_HEALING_STR = 15; // default healing strength value
@@ -103,4 +138,5 @@ function setInitialGameState() {
 	powerupJumpCost = 10;
 	inBucket.water = 0;
 	inBucket.poo = 0;
+	statistics = {};
 }

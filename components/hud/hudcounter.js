@@ -30,6 +30,10 @@ Crafty.c("HudCounter", {
 
     setCountdownOverAction : function (func) {
         this.countdownOver = func;
+    },
+
+    getTotalSeconds: function () {
+        return this.totalSeconds;
     }
 });
 

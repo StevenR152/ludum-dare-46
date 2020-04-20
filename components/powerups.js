@@ -21,6 +21,7 @@ Crafty.c("Powerups", {
 				this.delay(this.resetSpeed,POWERUP_TIME, 0);
 				Crafty.trigger("changePlayerSpeed");
 				Crafty.trigger("toggleSpeedPowerup");
+				Crafty.trigger("enableSpeedPowerup");
 				currency -= powerupSpeedCost;
 			}
 		}
@@ -35,6 +36,7 @@ Crafty.c("Powerups", {
 				powerupJump = true;
 				this.delay(this.resetJump,POWERUP_TIME, 0);
 				Crafty.trigger("toggleJumpPowerup");
+				Crafty.trigger("enableJumpPowerup");
 				currency -= powerupJumpCost;
 			}
 		}
@@ -47,6 +49,7 @@ Crafty.c("Powerups", {
 				Crafty.trigger("raindropSpeedChange");
 				this.delay(this.resetRainSpeed,POWERUP_TIME, 0);
 				Crafty.trigger("toggleRainPowerup");
+				Crafty.trigger("enableRainPowerup");
 				currency -= powerupRainCost;
 			}
 		}
