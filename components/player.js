@@ -123,6 +123,7 @@ Crafty.c("Player", {
 			var raindropSpawner = Crafty.e("RaindropSpawner");
 			hasBucket = true;
 			this.charImg();
+			audioController.playTrack("bucketGrab", 1, 0.3)
 			Crafty.trigger("collectBucket");
 		});
 
