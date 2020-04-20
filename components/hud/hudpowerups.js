@@ -37,42 +37,33 @@ Crafty.c("HudPowerups", {
     },
     toggleJumpPowerup : function(hudJump) {
         if (powerupJump == true) {
-            hudJump.addComponent("jumpPowerupOn");
-            hudJump.removeComponent("jumpPowerupOff");
+            hudJump.alpha = 1;
         }
         else {
-            hudJump.removeComponent("jumpPowerupOn");
-            hudJump.addComponent("jumpPowerupOff");
+            hudJump.alpha = 0.3;
         }
-        hudJump.attr({w: 25,h: 25})
     },
     toggleSpeedPowerup : function(hudSpeed) {
         if (powerupSpeed == true) {
-            hudSpeed.addComponent("speedPowerupOn");
-            hudSpeed.removeComponent("speedPowerupOff");
+            hudSpeed.alpha = 1;
         }
         else {
-            hudSpeed.removeComponent("speedPowerupOn");
-            hudSpeed.addComponent("speedPowerupOff");
+            hudSpeed.alpha = 0.3;
         }
-        hudSpeed.attr({w: 25,h: 25})
     },
     toggleRainPowerup : function(hudRain) {
         if (powerupRain == true) {
-            hudRain.addComponent("rainPowerupOn");
-            hudRain.removeComponent("rainPowerupOff");
+            hudRain.alpha = 1;
         }
         else {
-            hudRain.removeComponent("rainPowerupOn");
-            hudRain.addComponent("rainPowerupOff");
+            hudRain.alpha = 0.3;
         }
-        hudRain.attr({w: 25,h: 25})
     }
 });
 
 Crafty.c("HudJump", {
     init : function () {
-        this.requires('2D, DOM')
+        this.requires('2D, DOM, jumpPowerup')
         this.attr({
             w: 25,
             h: 25,
@@ -83,7 +74,7 @@ Crafty.c("HudJump", {
 });
 Crafty.c("HudSpeed", {
     init : function () {
-        this.requires('2D, DOM')
+        this.requires('2D, DOM, speedPowerup')
         this.attr({
             w: 25,
             h: 25,
@@ -94,7 +85,7 @@ Crafty.c("HudSpeed", {
 });
 Crafty.c("HudRain", {
     init : function () {
-        this.requires('2D, DOM')
+        this.requires('2D, DOM, rainPowerup')
         this.attr({
             w: 25,
             h: 25,

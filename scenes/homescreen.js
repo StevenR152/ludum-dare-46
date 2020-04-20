@@ -7,7 +7,7 @@ Crafty.defineScene("HomeScreen", function() {
 		.bind('Click', function(MouseEvent){
         	Crafty.scene('Game');
 		});
-	
+
 	var title = Crafty.e("2D, DOM, title")
-		.attr({x: 0, y: 0})
+		.attr({x: 150, y: 0})
 });
