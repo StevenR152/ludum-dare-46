@@ -175,7 +175,7 @@ Crafty.c("Player", {
 				this.charImg();
 				collectWater[0].obj.destroy();
 				Crafty.trigger("getRaindrop");
-				audioController.playTrack("dropCatch", 1);
+				audioController.playTrack("dropCatch", 1, 0.5);
 			}
 			else {
 				Crafty.trigger("fullBucket");
