@@ -61,10 +61,16 @@ Crafty.c("StatsHUD", {
         this.addText(hudCurrency, statistics.apples_grown);
 
         var hudCounter = Crafty.e("StatsHudCounter");
-        hudCounter.x =  this.x + this.padding + 700;
-        hudCounter.y = this.y + this.padding;
+        hudCounter.x =  this.x + this.padding + 400;
+        hudCounter.y = this.y + this.padding - 130;
         this.attach(hudCounter);
-        hudCounter.totalSeconds = 234324;
+        hudCounter.totalSeconds = statistics.finish_time;
         hudCounter.updateTimer()
+
+        var hudTree = Crafty.e("StatsHudTree");
+        hudTree.x = this.x + this.padding + 700;
+        hudTree.y = this.y + this.padding;
+        this.attach(hudTree);
+        this.addText(hudTree, statistics.number_of_times_fed_tree);
     }
 })

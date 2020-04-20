@@ -29,6 +29,7 @@ Crafty.c("Tree", {
 		Crafty.trigger("treeDecayed");
 		if (tree_health <= 0) {
 			Crafty.trigger("Tree Death");
+			addStatisticValue("finish_time", Crafty("HudCounter").getTotalSeconds())
 			Crafty.scene("EndScreen", statistics);
 		}
 		this.treeImgUpdate();

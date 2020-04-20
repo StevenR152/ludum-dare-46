@@ -32,6 +32,19 @@ var gameAssets = {
 				"tree_0": [5, 0],
 			}
         },
+        "assets/images/tree_healthbar.png": {
+            "tile": 50,
+            "tileh": 50,
+            "paddingX": 1,
+            "map": {
+                "tree_health_100": [1, 0],
+                "tree_health_80": [2, 1],
+                "tree_health_60": [2, 0],
+                "tree_health_40": [1, 1],
+                "tree_health_20": [0, 1],
+                "tree_health_0": [0, 0],
+            }
+        },
 		"assets/images/platform.png": {
             "tile": 1620,
             "tileh": 324,

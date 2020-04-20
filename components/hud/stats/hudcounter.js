@@ -9,7 +9,7 @@ Crafty.c("StatsHudCounter", {
         this.textColor('#EEE');
         this.unselectable()
         // this.delay(this.updateTimer, 1000, -1);
-        this.textFont({ size: '17px', weight: 'bold' });
+        this.textFont({ size: '35px', weight: 'bold' });
     },
 
     updateTimer : function () {
