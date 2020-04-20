@@ -12,7 +12,7 @@ Crafty.c("Raindrop", {
 			splash.y = this.y+4;
 			splash.w += this.randomscale;
 			splash.y += this.randomscale;
-			audioController.playTrack("missRain", 1, 0.3);
+			//audioController.playTrack("missRain", 1, 0.3);
 			this.destroy()
 		});
     },

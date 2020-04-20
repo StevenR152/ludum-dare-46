@@ -14,6 +14,11 @@ var gameAssets = {
     },
     "images": [],
     "sprites": {
+		"assets/images/music_note.png": {
+			"tile" : 50,
+			"tileh" :50,
+			"map": {"mutebutton": [0, 0]}
+		},
         "assets/images/bucket_empty.png": {
             "tile": 228,
             "tileh": 265,

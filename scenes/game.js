@@ -22,6 +22,7 @@ var powerupSpeedCost;
 var powerupJumpCost;
 var statistics;
 var char_anim_time;
+var BGmuted = false;
 
 Crafty.defineScene("Game", function() {
 	setInitialGameState();
