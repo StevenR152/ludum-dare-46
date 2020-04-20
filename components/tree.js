@@ -44,10 +44,36 @@ Crafty.c("Tree", {
 		inBucket.water = 0;
 		inBucket.poo = 0;
 		tree_health += healing_strength; // healing_strength is variable based on whether there is water in the bucket or not def:10
+
+		
 		if (tree_health > 100) {
+			Crafty.trigger("InstructionText", "The tree grows you some apples")
 			var increase = (tree_health - 100);
 			currency += increase;
+			
 			addStatisticValue("apples_grown", increase);
+			if (currency >  40) {
+				Crafty.trigger("InstructionText", "Use your apples for power ups")
+			}
+
+			if(currency > powerupSpeedCost + 50) {
+				this.delay(function () {
+	                Crafty.trigger("InstructionText", "Faster movement power up unlocked press 1")
+	            }, 1000, -1)
+			} 
+
+			if( currency >  powerupJump + 70) {
+				this.delay(function () {
+	                Crafty.trigger("InstructionText", "Higher jump unlocked press 2")
+	            }, 1000, -1)
+			}
+
+			if( currency >  powerupRainCost + 100) {
+				this.delay(function () {
+	                Crafty.trigger("InstructionText", "Rain boost unlocked press 3")
+	            }, 1000, -1)
+			}
+
 		}
 		if (tree_health > 120) {
 			tree_health = 120;

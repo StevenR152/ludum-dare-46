@@ -24,6 +24,8 @@ Crafty.c("Powerups", {
 				Crafty.trigger("enableSpeedPowerup");
 				currency -= powerupSpeedCost;
 				audioController.loadTrack("powerupYes", 1);
+			} else {
+				Crafty.trigger("InstructionText", "Collect 30 apples for speed up")
 			}
 		}
     },
@@ -40,6 +42,8 @@ Crafty.c("Powerups", {
 				Crafty.trigger("enableJumpPowerup");
 				currency -= powerupJumpCost;
 				audioController.loadTrack("powerupYes", 1);
+			} else {
+				Crafty.trigger("InstructionText", "Collect 10 apples for high jump")
 			}
 		}
     },
@@ -54,6 +58,8 @@ Crafty.c("Powerups", {
 				Crafty.trigger("enableRainPowerup");
 				currency -= powerupRainCost;
 				audioController.loadTrack("powerupYes", 1);
+			} else {
+				Crafty.trigger("InstructionText", "Collect 50 apples for rain storm")
 			}
 		}
     },

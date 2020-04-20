@@ -14,7 +14,7 @@ Crafty.c("StatsHudTree", {
 Crafty.c("StatsHudTreeImg", {
     //the apple image icon
     init : function () {
-        this.requires('2D, DOM, tree_health_100')
+        this.requires('2D, DOM, tree_100')
         this.attr({
             w: 25,
             h: 25,
