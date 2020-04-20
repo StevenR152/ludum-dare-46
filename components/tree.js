@@ -29,7 +29,7 @@ Crafty.c("Tree", {
 		Crafty.trigger("treeDecayed");
 		if (tree_health <= 0) {
 			Crafty.trigger("Tree Death");
-			Crafty.scene("EndScreen");
+			Crafty.scene("EndScreen", statistics);
 		}
 		this.treeImgUpdate();
 		return this;
@@ -40,7 +40,9 @@ Crafty.c("Tree", {
 		inBucket.poo = 0;
 		tree_health += healing_strength; // healing_strength is variable based on whether there is water in the bucket or not def:10
 		if (tree_health > 100) {
-			currency += (tree_health - 100);
+			var increase = (tree_health - 100);
+			currency += increase;
+			addStatisticValue("apples_grown", increase);
 		}
 		if (tree_health > 120) {
 			tree_health = 120;

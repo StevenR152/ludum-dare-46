@@ -1,4 +1,4 @@
-Crafty.defineScene("EndScreen", function() {
+Crafty.defineScene("EndScreen", function(attributes) {
 	var gameOverBackground = Crafty.e("EndBackground");
 
 	var playAgainGameButton = Crafty.e("2D, DOM, Mouse, restart")
