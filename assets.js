@@ -70,6 +70,16 @@ var gameAssets = {
             "tileh": 98,
             "map": {"arrow": [0, 0]}
         },
+        "assets/images/playbutton.png": {
+            "tile": 165,
+            "tileh": 96,
+            "map": {"playbutton": [0, 0]}
+        },
+        "assets/images/restart.png": {
+            "tile": 165,
+            "tileh": 96,
+            "map": {"restart": [0, 0]}
+        },
 		"assets/images/game_over.png": {
 			"tile": 1496,
             "tileh": 1224,
