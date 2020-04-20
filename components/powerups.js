@@ -18,6 +18,7 @@ Crafty.c("Powerups", {
 			if (powerupSpeedCost < currency){
 				Crafty.trigger("InstructionText","Powerups last " + POWERUP_TIME/1000 + " seconds!")
 				player_speed *= 1.6;
+				char_anim_time /= 1.6;
 				powerupSpeed = true;
 				this.delay(this.resetSpeed,POWERUP_TIME, 0);
 				Crafty.trigger("changePlayerSpeed");
@@ -75,6 +76,7 @@ Crafty.c("Powerups", {
 	},
 	resetSpeed: function() {
 		player_speed /= 1.6;
+		char_anim_time *= 1.6;
 		powerupSpeed = false;
 		Crafty.trigger("changePlayerSpeed");
 		audioController.loadTrack("powerupNo", 1);
