@@ -58,25 +58,6 @@ Crafty.c("Tree", {
 	                Crafty.trigger("InstructionText", "Press key 1, 2 or 3 to activate")
 	            }, 2000, -1)
 			}
-
-			// if(currency > powerupSpeedCost + 50) {
-				// this.delay(function () {
-	   //              Crafty.trigger("InstructionText", "Faster movement power up unlocked press 1")
-	   //          }, 1000, -1)
-			// }
-
-			// if( currency >  powerupJump + 70) {
-			// 	this.delay(function () {
-	  //               Crafty.trigger("InstructionText", "Higher jump unlocked press 2")
-	  //           }, 1000, -1)
-			// }
-
-			// if( currency >  powerupRainCost + 100) {
-			// 	this.delay(function () {
-	  //               Crafty.trigger("InstructionText", "Rain boost unlocked press 3")
-	  //           }, 1000, -1)
-			// }
-
 		}
 		if (tree_health > 120) {
 			tree_health = 120;
