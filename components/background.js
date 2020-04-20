@@ -33,7 +33,7 @@ Crafty.c("Foreground", {
 
 Crafty.c("StartBackground", {
     init: function () {
-        this.requires('2D, DOM, titleScreen');
+        this.requires('2D, DOM, Mouse, titleScreen');
         this.attr({x: -100, y: -310, w: 1496/1.48, h: 1224/1.52});
         this.vx -= 1;
     }

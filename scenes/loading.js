@@ -1,3 +1,4 @@
+var audioController = Crafty.e("AudioController");
 Crafty.defineScene("Loading", function() {
     Crafty.background("#a6d5df");
     Crafty.e("2D, DOM, Text")
@@ -7,12 +8,9 @@ Crafty.defineScene("Loading", function() {
           .textAlign("center")
           .textColor("#111")
           .unselectable();
-    // Game Assets would be a list of images, but this tutorial doesn't use them.
-    // var gameAssets = {};
 
     var background = Crafty.e("Background");
     var foreground = Crafty.e("Foreground");
-    var audioController = Crafty.e("AudioController");
   	Crafty.load(gameAssets, function(){
        setTimeout(function () {
          Crafty.scene('HomeScreen',
