@@ -10,10 +10,12 @@ Crafty.c("HUD", {
         this.alpha = 0.05;
         this.padding = 10;
 
-		var hudCounter = Crafty.e("HudCounter");
-        hudCounter.x = this.x + GAME_SCREEN_WIDTH - hudCounter.w;
-        hudCounter.y = this.y + this.padding;
-		this.attach(hudCounter);
+        this.bind("collectBucket", function() {
+    		var hudCounter = Crafty.e("HudCounter");
+            hudCounter.x = this.x + GAME_SCREEN_WIDTH - hudCounter.w;
+            hudCounter.y = this.y + this.padding;
+    		this.attach(hudCounter);
+        });
 
 		var hudTreeLife = Crafty.e("HudHealth");
         hudTreeLife.x = this.x + this.padding;

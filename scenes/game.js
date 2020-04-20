@@ -28,8 +28,10 @@ Crafty.defineScene("Game", function() {
 	var background = Crafty.e("Background");
 	var foreground = Crafty.e("Foreground");
 	var bucketSpawner = Crafty.e("BucketSpawner");
-	var pooSpawner = Crafty.e("PooSpawner");
-	var cloudController = Crafty.e("CloudController");
+	this.bind("collectBucket", function() {
+		var pooSpawner = Crafty.e("PooSpawner");
+		var cloudController = Crafty.e("CloudController");
+	});
 	var powerups = Crafty.e("Powerups");
 
 	var platform1 = Crafty.e("Platform").place(-350, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 12);
