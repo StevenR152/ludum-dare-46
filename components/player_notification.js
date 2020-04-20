@@ -48,6 +48,20 @@ Crafty.c("PlayerNotification", {
 
         this.bind("getPoo", function() {
             Crafty.trigger("InstructionText", "Fertilise the tree")
+        }) 
+
+        this.bind("PlayerLeavingGameZone", function() {
+            console.log("PlayerLeavingGameZone");
+            Crafty.trigger("InstructionText", "Return to the game area")
+        })
+
+        this.bind("PlayerLeftGameZone", function() {
+            Crafty.trigger("InstructionText", "You have left the game area")
+            console.log("PlayerLeftGameZone");
+
+            this.delay(function () {
+                Crafty.scene("EndScreen", statistics)
+            }, 2000, -1)
         })
 
         this.bind("bucketFull", function() {

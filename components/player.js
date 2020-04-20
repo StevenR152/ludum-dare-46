@@ -102,6 +102,15 @@ Crafty.c("Player", {
 			}
 		});
 
+		this.bind("MotionChange", function () {
+
+			if ( this.x < -1300  || 2200 < this.x ) {
+				Crafty.trigger("PlayerLeftGameZone")
+			} else if ( this.x < -800 || 1700 < this.x ) {
+				Crafty.trigger("PlayerLeavingGameZone")
+			}
+
+		})
 		// this.bind("KeyDown", function(debugPlayer) {
 		// 	if (debugPlayer.key == Crafty.keys.SPACE) {
 		// 		console.log((this.x + (this.w/4)), + " " + (this.y + (this.h/1.2)));

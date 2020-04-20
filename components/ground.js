@@ -1,11 +1,10 @@
 Crafty.c("Ground", {
 	init: function() {
-        this.addComponent("2D, DOM, Image, solid");
-        this.x = -10000;
+        this.addComponent("2D, DOM, solid");
+        this.x = -50000;
         this.y = GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT / 2,
-        this.w = 20000;
+        this.w = 100000;
         this.h = 226;
-        this.alpha = 0.7;
     },
     place: function(x, y) {
         this.x = x;
