@@ -33,7 +33,7 @@ Crafty.c("Tree", {
 			if (Crafty.audio.isPlaying("bgAudio") == true) {
 				audioController.pauseTrack("bgAudio", 2000);
 			}
-			audioController.loadTrack("leavesAllGone", 1);
+			audioController.loadTrack("leavesAllGone", 1, 0.5);
 			Crafty.scene("EndScreen", statistics);
 		}
 		this.treeImgUpdate();
@@ -45,12 +45,12 @@ Crafty.c("Tree", {
 		inBucket.poo = 0;
 		tree_health += healing_strength; // healing_strength is variable based on whether there is water in the bucket or not def:10
 
-		
+
 		if (tree_health > 100) {
 			Crafty.trigger("InstructionText", "The tree grows you some apples")
 			var increase = (tree_health - 100);
 			currency += increase;
-			
+
 			addStatisticValue("apples_grown", increase);
 			if (currency >  40) {
 				Crafty.trigger("InstructionText", "Use your apples for power ups")
@@ -60,7 +60,7 @@ Crafty.c("Tree", {
 				this.delay(function () {
 	                Crafty.trigger("InstructionText", "Faster movement power up unlocked press 1")
 	            }, 1000, -1)
-			} 
+			}
 
 			if( currency >  powerupJump + 70) {
 				this.delay(function () {
