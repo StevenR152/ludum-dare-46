@@ -14,6 +14,7 @@ Crafty.c("Player", {
          	this.w - (this.w/6), this.h - 10,
          	0 + (this.w/6), this.h - 10
         ]);
+
 		this.reel("walking_right", 500, [
 		    [2, 1], [1, 1], [2, 0], [1, 1]
 		])
@@ -21,6 +22,10 @@ Crafty.c("Player", {
 		this.reel("walking_left", 500, [
 		    [0, 1], [0, 0], [1, 0], [0, 0]
 		])
+
+		var playerNotification = Crafty.e("PlayerNotification");
+		this.attach(playerNotification);
+
 		this.twoway(player_speed, player_jump);
 		
 		this.setKeybinding();
@@ -162,6 +167,10 @@ Crafty.c("Player", {
 		});
 
 		this.onHit("Raindrop", function(collectWater) {
+			if (inBucket.water == 4) {
+				Crafty.trigger("bucketFull");
+			}
+
 			if (inBucket.water < 5) {
 				inBucket.water += 1;
 				this.charImg();
