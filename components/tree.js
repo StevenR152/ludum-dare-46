@@ -7,15 +7,21 @@ Crafty.c("Tree", {
         this.h = 989 / 4;
         this.z = 9;
         this.delay(this.treeDecay, tree_decay_tick, -1);
+		this.delay(this.increaseDecay, 15000, -1); // every 15 seconds call trigger
         this.bind("emptyBucket", function() {
             this.treeHeal();
-        })
-    },
+		})
+	},
     place: function(x, y) {
         this.x = x;
         this.y = y;
         return this;
     },
+	increaseDecay: function() {
+		this.cancelDelay(this.treeDecay);
+		tree_decay_tick /= 1.1;
+		this.delay(this.treeDecay,tree_decay_tick, -1);
+	},
 	treeDecay: function () {
 		tree_health -= 10;
 		Crafty.trigger("treeDecayed");

@@ -21,7 +21,7 @@ var SPAWN_LOCATIONS = [
 ];
 var hasBucket = false;
 var facing = "right";
-var tree_decay_tick = 4000;
+var tree_decay_tick = 5000;
 var currency = 0;
 var tree_health = 100;
 var healing_strength = DEFAULT_HEALING_STR;
@@ -81,7 +81,7 @@ Crafty.defineScene("Game", function() {
 });
 
 function setInitialGameState() {
-	tree_decay_tick = 4000;
+	tree_decay_tick = 5000;
 	tree_health = 100;
 	currency = 0;
 	hasBucket = false;
