@@ -69,20 +69,20 @@ Crafty.c("Player", {
 	},
 	setKeybinding: function () {
 		this.bind("KeyDown", function(arrow) {
-			if (arrow.key == Crafty.keys.LEFT_ARROW) {
+			if (arrow.key == Crafty.keys.LEFT_ARROW || arrow.key == Crafty.keys["A"]) {
 				facing = "left";
 				this.charImg();
 			}
-			else if (arrow.key == Crafty.keys.RIGHT_ARROW) {
+			else if (arrow.key == Crafty.keys.RIGHT_ARROW || arrow.key == Crafty.keys["D"]) {
 				facing = "right";
 				this.charImg();
 			}
 		});
 
 		this.bind("KeyUp", function(arrow) {
-			if (arrow.key == Crafty.keys.LEFT_ARROW) {
+			if (arrow.key == Crafty.keys.LEFT_ARROW || arrow.key == Crafty.keys["A"]) {
 				this.pauseAnimation();
-			} else if (arrow.key == Crafty.keys.RIGHT_ARROW) {
+			} else if (arrow.key == Crafty.keys.RIGHT_ARROW || arrow.key == Crafty.keys["D"]) {
 				this.pauseAnimation();
 			}
 		});
