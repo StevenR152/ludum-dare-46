@@ -14,6 +14,12 @@ Crafty.c("AudioController", {
 
     pauseTrack : function(trackName, timeToPause) {
         Crafty.audio.pause(trackName);
-        this.delay(Crafty.audio.unpause(trackName), timeToPause, 0)
-    }
+        this.delay(function () {
+			Crafty.audio.unpause(trackName)
+		}, timeToPause, 0)
+    },
+
+	muteTrack : function(trackName) {
+
+	}
 })
