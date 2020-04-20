@@ -1,3 +1,4 @@
+
 var PLATFORM_HEIGHT = 30;
 var DEFAULT_HEALING_STR = 15; // default healing strength value
 var POWERUP_TIME = 15000 // powerups last this long
@@ -75,7 +76,7 @@ Crafty.defineScene("Game", function() {
 	var player = Crafty.e("Player");
 	// Attach Hud to player so its location follows player.
 	player.attach(hud);
-	player.place(-100, 300);
+	player.place(-100, 250);
 
 	makeCameraTrackEntity(player, 75);
 });
