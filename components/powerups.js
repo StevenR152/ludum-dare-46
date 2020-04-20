@@ -16,6 +16,7 @@ Crafty.c("Powerups", {
 		//seems reasonable, could take some tweaking or a % increase
 		if (powerupSpeed == false){
 			if (powerupSpeedCost < currency){
+				Crafty.trigger("InstructionText","Powerups last " + POWERUP_TIME/1000 + " seconds!")
 				player_speed *= 1.6;
 				powerupSpeed = true;
 				this.delay(this.resetSpeed,POWERUP_TIME, 0);
@@ -25,7 +26,7 @@ Crafty.c("Powerups", {
 				currency -= powerupSpeedCost;
 				audioController.loadTrack("powerupYes", 1);
 			} else {
-				Crafty.trigger("InstructionText", "Collect 30 apples for speed up")
+				Crafty.trigger("InstructionText", "You need 30 apples for the speed up")
 			}
 		}
     },
@@ -34,6 +35,7 @@ Crafty.c("Powerups", {
 		// super high jumping is actually making some aspects more difficult
 		if (powerupJump == false){
 			if (powerupJumpCost < currency){
+				Crafty.trigger("InstructionText","Powerups last " + POWERUP_TIME/1000 + " seconds!")
 				player_jump *= 1.5;
 				Crafty.trigger("changePlayerSpeed");
 				powerupJump = true;
@@ -43,13 +45,14 @@ Crafty.c("Powerups", {
 				currency -= powerupJumpCost;
 				audioController.loadTrack("powerupYes", 1);
 			} else {
-				Crafty.trigger("InstructionText", "Collect 10 apples for high jump")
+				Crafty.trigger("InstructionText", "You need 10 apples for higher jump")
 			}
 		}
     },
     powerupRain: function() {
 		if (powerupRain == false){
 			if (powerupRainCost < currency){
+				Crafty.trigger("InstructionText","Powerups last " + POWERUP_TIME/1000 + " seconds!")
 				powerupRain = true
 				raindropsPerMinute *= 2;
 				Crafty.trigger("raindropSpeedChange");
@@ -59,7 +62,7 @@ Crafty.c("Powerups", {
 				currency -= powerupRainCost;
 				audioController.loadTrack("powerupYes", 1);
 			} else {
-				Crafty.trigger("InstructionText", "Collect 50 apples for rain storm")
+				Crafty.trigger("InstructionText", "You need 50 apples for rain storm")
 			}
 		}
     },
