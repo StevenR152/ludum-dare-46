@@ -33,7 +33,7 @@ Crafty.c("Tree", {
 			if (BGmuted == false) {
 				audioController.pauseTrack("bgAudio", 2000);
 			}
-			audioController.loadTrack("leavesAllGone", 1, 0.5);
+			audioController.loadTrack("leavesAllGone", 1, 0.3);
 			Crafty.scene("EndScreen", statistics);
 		}
 		this.treeImgUpdate();
