@@ -47,17 +47,11 @@ var gameAssets = {
             "tileh": 230,
             "map": {"cloud": [0, 0]}
         },
-        "assets/images/bear_walking.png": {
+        "assets/images/player.png": {
             "tile": 314,
             "tileh": 429,
-            "paddingAroundBorder": 1,
             "map": {
-                "bear_right": [1,1],
-                "bear_left": [0,0],
-                "bear_bucket_right": [1,1],
-                "bear_bucket_left": [0,0],
-                "bear_bucket_full_right": [1,1],
-                "bear_bucket_full_left": [0,0],
+                "bear_right": [4,1],
             },
         },
 		"assets/images/raindrop.png": {
