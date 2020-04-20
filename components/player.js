@@ -15,19 +15,41 @@ Crafty.c("Player", {
          	0 + (this.w/6), this.h - 10
         ]);
 
-		this.reel("walking_right", 500, [
-		    [2, 1], [1, 1], [2, 0], [1, 1]
+		this.reel("walking_right_no", 500, [
+		    [0, 2], [4, 1], [1, 2], [4, 1]
 		])
 
-		this.reel("walking_left", 500, [
-		    [0, 1], [0, 0], [1, 0], [0, 0]
+		this.reel("walking_left_no", 500, [
+		    [2, 1], [1, 1], [3, 1], [1, 1]
+		])
+
+		this.reel("walking_right_empty", 500, [
+		    [4, 0], [3, 0], [0, 1], [3, 0]
+		])
+
+		this.reel("walking_left_empty", 500, [
+		    [1, 0], [0, 0], [2, 0], [0, 0]
+		])
+		this.reel("walking_right_water", 500, [
+		    [5, 3], [5, 1], [5, 2], [5, 1]
+		])
+
+		this.reel("walking_left_water", 500, [
+		    [5, 0], [3, 3], [4, 3], [3, 3]
+		])
+		this.reel("pouring_right", 500, [
+		    [0, 3], [1, 3], [2, 3]
+		])
+
+		this.reel("pouring_left", 500, [
+		    [2, 2], [3, 2], [4, 2]
 		])
 
 		var playerNotification = Crafty.e("PlayerNotification");
 		this.attach(playerNotification);
 
 		this.twoway(player_speed, player_jump);
-		
+
 		this.setKeybinding();
 		this.setCollisionHitActions();
 
@@ -40,7 +62,7 @@ Crafty.c("Player", {
 
 		this.bind("changePlayerSpeed", function() {
 			this.twoway(player_speed, player_jump);
-		});		
+		});
     },
     place: function(x, y) {
         this.x = x;
@@ -49,46 +71,28 @@ Crafty.c("Player", {
     },
 	charImg: function() {
 		//code controlling the char Sprite state
-		this.removeComponent("bear_bucket_right");
-		this.removeComponent("bear_bucket_full_left");
-		this.removeComponent("bear_bucket_left");
-		this.removeComponent("bear_bucket_full_right");
-		this.removeComponent("bear_right");
-		this.removeComponent("bear_left");
 		if (inBucket.water > 0 || inBucket.poo > 0) {
 			if (facing == "right") {
-				this.addComponent("bear_bucket_full_right");
-				this.w = 314 / 5;
-				this.h = 429 / 5;
+				this.animate("walking_right_water", -1);
 			}
 			else {
-				this.addComponent("bear_bucket_full_left");
-				this.w = 314 / 5;
-				this.h = 429 / 5;
+				this.animate("walking_left_water", -1);
 			}
 		}
 		else if (hasBucket == false) {
 			if (facing == "right") {
-				this.addComponent("bear_right");
-				this.w = 314 / 5;
-				this.h = 429 / 5;
+				this.animate("walking_right_no", -1);
 			}
 			else {
-				this.addComponent("bear_left");
-				this.w = 314 / 5;
-				this.h = 429 / 5;
+				this.animate("walking_left_no", -1);
 			}
 		}
 		else {
 			if (facing == "right") {
-				this.addComponent("bear_bucket_right");
-				this.w = 314 / 5;
-				this.h = 429 / 5;
+				this.animate("walking_right_empty", -1);
 			}
 			else {
-				this.addComponent("bear_bucket_left");
-				this.w = 314 / 5;
-				this.h = 429 / 5;
+				this.animate("walking_left_empty", -1);
 			}
 		}
 	},
@@ -96,24 +100,19 @@ Crafty.c("Player", {
 		this.bind("KeyDown", function(arrow) {
 			if (arrow.key == Crafty.keys.LEFT_ARROW) {
 				facing = "left";
-				this.animate("walking_left", -1);
-				// this.charImg();
-			} else if (arrow.key == Crafty.keys.RIGHT_ARROW) {
+				this.charImg();
+			}
+			else if (arrow.key == Crafty.keys.RIGHT_ARROW) {
 				facing = "right";
-				this.animate("walking_right", -1);
-;				// this.charImg();
+				this.charImg();
 			}
 		});
 
 		this.bind("KeyUp", function(arrow) {
 			if (arrow.key == Crafty.keys.LEFT_ARROW) {
-				facing = "left";
 				this.pauseAnimation();
-				// this.charImg();
 			} else if (arrow.key == Crafty.keys.RIGHT_ARROW) {
-				facing = "right";
 				this.pauseAnimation();
-;				// this.charImg();
 			}
 		});
 
