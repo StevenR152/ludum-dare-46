@@ -1,8 +1,6 @@
 Crafty.c("AudioController", {
 	init: function() {
-        // Crafty.bind("Play Sound", function {
-        //     this.loadTrack(trackName, timesToPlay);
-        // });
+        this.addComponent("Delay");
     },
 
     loadTrack : function(trackName, timesToPlay) {
@@ -13,4 +11,9 @@ Crafty.c("AudioController", {
     playTrack : function(trackName, timesToPlay) {
         Crafty.audio.play(trackName, timesToPlay);
     },
+
+    pauseTrack : function(trackName, timeToPause) {
+        Crafty.audio.pause(trackName);
+        this.delay(Crafty.audio.unpause(trackName), timeToPause, 0)
+    }
 })
