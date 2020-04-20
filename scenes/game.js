@@ -51,6 +51,23 @@ Crafty.defineScene("Game", function() {
 	var platform10 = Crafty.e("Platform").place(1200, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 7);
 	var platform11 = Crafty.e("Platform").place(1000, GAME_SCREEN_HEIGHT - PLATFORM_HEIGHT * 13);
 
+
+	Crafty.e("Rock").place(715, 380);
+	Crafty.e("Rock").place(-350, 390);
+	Crafty.e("Rock2").place(25, 410);
+	Crafty.e("Rock3").place(1159, 390);
+	Crafty.e("Rock3").place(-159, 380);
+	Crafty.e("GrassPatch").place(415, 380);
+	Crafty.e("GrassPatch").place(34, 415);
+	Crafty.e("GrassPatch").place(-765, 415);
+	Crafty.e("GrassPatch").place(989, 390);
+	Crafty.e("GrassPatch").place(829, 375);
+	Crafty.e("GrassPatch").place(899, 382);
+	Crafty.e("GrassPatch").place(-259, 380);
+	Crafty.e("GrassPatch").place(-459, 375);
+	Crafty.e("GrassPatch").place(1110, 400);
+	Crafty.e("GrassPatch").place(1510, 400);
+
 	var tree = Crafty.e("Tree").place(400, GAME_SCREEN_HEIGHT - ((989 / 4)) - 24);
 
 	var arrow = Crafty.e("Arrow").origin("center");
