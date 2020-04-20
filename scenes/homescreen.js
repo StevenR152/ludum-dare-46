@@ -8,5 +8,5 @@ Crafty.defineScene("HomeScreen", function() {
 		});
 
 	var title = Crafty.e("2D, DOM, title")
-		.attr({x: 260, y: 0})
+		.attr({x: 200, y: 0})
 });
