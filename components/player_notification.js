@@ -38,18 +38,27 @@ Crafty.c("PlayerNotification", {
 
         this.bind("collectBucket", function() {
             this.delay(function () {
-               Crafty.trigger("InstructionText", "Catch a raindop")
+               Crafty.trigger("InstructionText", "Catch some raindrops")
             }, 1000, -1)
-        })
-
-        this.bind("getRaindrop", function() {
-            Crafty.trigger("InstructionText", "Fill your bucket")
         })
 
         this.bind("getPoo", function() {
             Crafty.trigger("InstructionText", "Fertilise the tree")
         }) 
 
+
+        this.bind("bucketFull", function() {
+            Crafty.trigger("InstructionText", "Water the tree")
+        })
+
+        this.bind("emptyBucket", function() {
+            Crafty.trigger("InstructionText", "The tree heals some")
+            this.delay(function () {
+                Crafty.trigger("InstructionText", "Keep it alive!")
+            }, 3000, -1)
+        })
+
+        
         this.bind("PlayerLeavingGameZone", function() {
             console.log("PlayerLeavingGameZone");
             Crafty.trigger("InstructionText", "Return to the game area")
@@ -62,17 +71,6 @@ Crafty.c("PlayerNotification", {
             this.delay(function () {
                 Crafty.scene("EndScreen", statistics)
             }, 2000, -1)
-        })
-
-        this.bind("bucketFull", function() {
-            Crafty.trigger("InstructionText", "Water the tree")
-        })
-
-        this.bind("emptyBucket", function() {
-            Crafty.trigger("InstructionText", "You partly heal the tree")
-            this.delay(function () {
-                Crafty.trigger("InstructionText", "Keep it alive!")
-            }, 3000, -1)
         })
     }
 })
