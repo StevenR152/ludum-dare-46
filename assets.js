@@ -1,18 +1,19 @@
 var gameAssets = {
 	"audio": {
 		"bgAudio" : ["assets/sounds/music-bearable-apples-v1.mp3"],
-		"jump1" : ["assets/sounds/jump1.wav"],
+		"jumpPowerup" : ["assets/sounds/jump1.wav"],
 		"jump2" : ["assets/sounds/jump2.wav"],
 		"dropCatch" : ["assets/sounds/catch-REAL-dropA-or-rain-powerup.mp3"],
 		"omenSound" : ["assets/sounds/omen-this-just-got-more-challenging.wav"],
 		"powerupNo" : ["assets/sounds/power-up-no.wav"],
-		"powerupYes" : ["assets/sounds/power-up-yes.wav"],
+		"rainPowerup" : ["assets/sounds/power-up-yes.wav"],
 		"twoSecondTimer" : ["assets/sounds/2sec-count-down-to-apple-eat-or-game-over.wav"],
 		"threeSecondTimer" : ["assets/sounds/3sec-count-down-to-apple-eat-or-game-over.wav"],
 		"leavesAllGone" : ["assets/sounds/leaves-all-gone-chord.wav"],
 		"missRain" : ["assets/sounds/rain-miss-very-soft-pitpat-3.wav"],
 		"bucketGrab" : ["assets/sounds/bucket-grab.mp3"],
 		"dropWater" : ["assets/sounds/else-little-splash-water.mp3"],
+		"speedPowerup" : ["assets/sounds/fast-powerup.wav"],
     },
     "images": [],
     "sprites": {
