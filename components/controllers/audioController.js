@@ -19,7 +19,19 @@ Crafty.c("AudioController", {
 		}, timeToPause, 0)
     },
 
-	muteTrack : function(trackName) {
+	stopTrack : function(trackName="all") {
+		if (trackName == "all") {
+			Crafty.audio.stop();
+			Crafty.audio.remove() // memory clear
+		}
+		else {
+			Crafty.audio.stop(trackName);
+			Crafty.audio.remove(trackName) //memory clear
+		}
+	},
 
+	muteToggle : function() {
+		//pretty self explanatory - does this need to be here?
+		Crafty.audio.toggleMute()
 	}
 })

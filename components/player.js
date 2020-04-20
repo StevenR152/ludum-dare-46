@@ -129,11 +129,11 @@ Crafty.c("Player", {
 			}
 		});
 
-		this.bind("KeyDown", function(debugPlayer) {
-			if (debugPlayer.key == Crafty.keys.SPACE) {
-				console.log((this.x + (this.w/4)), + " " + (this.y + (this.h/1.2)));
-			} // debug code used for player positioning
-		});
+		// this.bind("KeyDown", function(debugPlayer) {
+		// 	if (debugPlayer.key == Crafty.keys.SPACE) {
+		// 		console.log((this.x + (this.w/4)), + " " + (this.y + (this.h/1.2)));
+		// 	} // debug code used for player positioning
+		// });
 	},
 	setCollisionHitActions: function () {
 		this.onHit("Bucket", function(collectBucket) {
