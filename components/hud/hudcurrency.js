@@ -1,25 +1,22 @@
 Crafty.c("HudCurrency", {
     init : function () {
-        this.requires('2D, DOM, Text, Color, Delay')
-        this.attr({w: 65, h: 100, x: 0, y: 0})
+        this.requires('2D, DOM, Text, Color');
+        this.attr({w: 65, h: 100, x: 0, y: 0});
         this.z = 1000;
 
-        var hudCurrencyImg = Crafty.e("HudCurrencyImg")
+        var hudCurrencyImg = Crafty.e("HudCurrencyImg");
         this.attach(hudCurrencyImg);
-        hudCurrencyImg.x = this.x + 25;
+        hudCurrencyImg.x = this.x + 30;
         hudCurrencyImg.y = this.y - 3;
-        var hudCurrencyText = Crafty.e("HudCurrencyText")
+
+        var hudCurrencyText = Crafty.e("HudCurrencyText");
         this.attach(hudCurrencyText);
 
-        this.delay(this.updateCurrency, 100, -1);
-    },
-    updateCurrency : function () {
-        //display currency on screen
-        this.text(currency);
     },
 });
 
 Crafty.c("HudCurrencyImg", {
+    //the apple image icon
     init : function () {
         this.requires('2D, DOM, currency')
         this.attr({
@@ -27,13 +24,14 @@ Crafty.c("HudCurrencyImg", {
             h: 23,
         })
         this.z = 1000;
-        this.alpha = 0.7;
+        this.alpha = 0.9;
     }
 });
 
 Crafty.c("HudCurrencyText", {
+    //the currency text
     init : function () {
-        this.requires('2D, DOM, Text')
+        this.requires('2D, DOM, Text, Delay')
         this.attr({
             w: 100,
             h: 23,
@@ -44,5 +42,10 @@ Crafty.c("HudCurrencyText", {
         this.unselectable();
         this.textFont({ size: '17px', weight: 'bold'});
         this.z = 1000;
-    }
+        this.delay(this.updateCurrency,100,-1);
+    },
+    updateCurrency : function () {
+        //display currency on screen
+        this.text(currency);
+    },
 })

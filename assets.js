@@ -79,12 +79,9 @@ var gameAssets = {
 			"tile": 50,
             "tileh": 50,
 			"map" : {
-				"rainPowerupOff": [0, 0],
-				"rainPowerupOn": [1, 0],
-				"speedPowerupOff": [0, 1],
-				"speedPowerupOn": [1, 1],
-				"jumpPowerupOff": [2, 0],
-				"jumpPowerupOn": [2, 1],
+				"rainPowerup": [1, 0],
+				"speedPowerup": [2, 0],
+				"jumpPowerup": [0, 0],
 			}
 		},
 		"assets/images/titlescreen.png": {
