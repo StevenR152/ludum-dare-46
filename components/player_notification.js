@@ -28,7 +28,7 @@ Crafty.c("PlayerNotification", {
         this.alpha -= 0.1;
         return this;
     },
-    
+
     setMessageEvents: function () {
         this.bind("KeyDown", function () {
             this.delay(function () {
@@ -38,7 +38,7 @@ Crafty.c("PlayerNotification", {
 
         this.bind("collectBucket", function() {
             this.delay(function () {
-               Crafty.trigger("InstructionText", "Gather a raindop")
+               Crafty.trigger("InstructionText", "Catch a raindop")
             }, 1000, -1)
         })
 
