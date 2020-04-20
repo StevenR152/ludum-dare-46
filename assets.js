@@ -74,6 +74,16 @@ var gameAssets = {
 			"tile": 1496,
             "tileh": 1224,
 			"map" : {"gameOver": [0, 0]}
-		}
+		},
+        "assets/images/titlescreen.png": {
+            "tile": 1496,
+            "tileh": 1224,
+            "map" : {"titleScreen": [0, 0]}
+        },
+        "assets/images/title.png": {
+            "tile": 658,
+            "tileh": 285,
+            "map" : {"title": [0, 0]}
+        }
     },
 };
