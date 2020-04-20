@@ -36,6 +36,5 @@ Crafty.c("HUD", {
         hudPowerupsGroup.x = this.x + this.padding + 500;
         hudPowerupsGroup.y = this.y + this.padding;
         this.attach(hudPowerupsGroup);
-        hudPowerupsGroup.togglePowerups();
     },
 })

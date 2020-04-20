@@ -19,6 +19,7 @@ Crafty.c("Powerups", {
 			powerupSpeed = true;
 			this.delay(this.resetSpeed,POWERUP_TIME, 0);
 			Crafty.trigger("changePlayerSpeed");
+			Crafty.trigger("toggleSpeedPowerup");
 		}
     },
     powerupJump: function() {
@@ -30,6 +31,7 @@ Crafty.c("Powerups", {
 			Crafty.trigger("changePlayerSpeed");
 			powerupJump = true;
 			this.delay(this.resetJump,POWERUP_TIME, 0);
+			Crafty.trigger("toggleJumpPowerup");
 		}
     },
     powerupRain: function() {
@@ -38,21 +40,25 @@ Crafty.c("Powerups", {
 			raindropsPerMinute *= 2;
 			Crafty.trigger("raindropSpeedChange");
 			this.delay(this.resetRainSpeed,POWERUP_TIME, 0);
+			Crafty.trigger("toggleRainPowerup");
 		}
     },
 	resetRainSpeed: function() {
 		raindropsPerMinute /= 2;
 		Crafty.trigger("raindropSpeedChange");
 		powerupRain = false;
+		Crafty.trigger("toggleRainPowerup");
 	},
 	resetSpeed: function() {
 		player_speed /= 1.6;
-		Crafty.trigger("changePlayerSpeed");
 		powerupSpeed = false;
+		Crafty.trigger("changePlayerSpeed");
+		Crafty.trigger("toggleSpeedPowerup");
 	},
 	resetJump: function() {
 		player_jump /= 1.5;
 		Crafty.trigger("changePlayerSpeed");
 		powerupJump = false;
+		Crafty.trigger("toggleJumpPowerup");
 	}
 })
