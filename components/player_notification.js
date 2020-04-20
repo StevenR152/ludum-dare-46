@@ -1,6 +1,6 @@
 Crafty.c("PlayerNotification", {
 	init: function() {
-        this.requires('2D, DOM, Text, Delay')
+        this.requires('2D, DOM, Text, Delay, Keyboard')
         this.totalSeconds = 0;
         this.attr({w: 200, h: 100, x: -60, y: -35})
         this.z = 1000;
@@ -21,7 +21,7 @@ Crafty.c("PlayerNotification", {
 
         }.bind(this))
         this.setMessageEvents();
-        Crafty.trigger("InstructionText", "Find your bucket")
+        Crafty.trigger("InstructionText", "Arrow keys to move")
     },
 
     decayMessage: function() {
@@ -30,20 +30,32 @@ Crafty.c("PlayerNotification", {
     },
     
     setMessageEvents: function () {
-        this.bind("collectBucket", function() {
-            Crafty.trigger("InstructionText", "Collect some rain")
+        this.bind("KeyDown", function () {
+            this.delay(function () {
+                Crafty.trigger("InstructionText", "Go find your bucket")
+            }, 1000, -1)
         })
+
+        this.bind("collectBucket", function() {
+            this.delay(function () {
+               Crafty.trigger("InstructionText", "Gather a raindop")
+            }, 1000, -1)
+        })
+
         this.bind("getRaindrop", function() {
             Crafty.trigger("InstructionText", "Fill your bucket")
         })
+
         this.bind("getPoo", function() {
             Crafty.trigger("InstructionText", "Fertilise the tree")
         })
+
         this.bind("bucketFull", function() {
             Crafty.trigger("InstructionText", "Water the tree")
         })
+
         this.bind("emptyBucket", function() {
-            Crafty.trigger("InstructionText", "You heal the tree")
+            Crafty.trigger("InstructionText", "You partly heal the tree")
             this.delay(function () {
                 Crafty.trigger("InstructionText", "Keep it alive!")
             }, 3000, -1)

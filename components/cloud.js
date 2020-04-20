@@ -6,10 +6,10 @@ Crafty.c("Cloud", {
         this.w = 290;
         this.h = 230;
         this.vx = 50;
-        this.cloudlifetimeinms = Math.floor(Math.random() * 20000 + 5000);
+        this.cloudlifetimeinms = Math.floor(Math.random() * 15000 + 3000);
         this.delay(this.destroy, this.cloudlifetimeinms, 0);
-        this.delay(this.spawnRainDrops, 2000, -1);
-        this.delay(this.randomMoveSwitch, 1500, -1);
+        this.delay(this.spawnRainDrops, 1500, -1);
+        this.delay(this.randomMoveSwitch, 1000, -1);
         this.bind("Move", function () {
             if (this.x > 1500 || this.x < -400) {
                 this.vx = -1 * this.vx;
@@ -22,13 +22,13 @@ Crafty.c("Cloud", {
         return this;
     },
     spawnRainDrops: function () {
-        if(Math.random() < 0.85) {
+        if(Math.random() < 0.8) {
            Crafty.e("Raindrop").place(this.x + this.w/2, this.y + this.h);
         }
-        if(Math.random() < 0.65) {
+        if(Math.random() < 0.7) {
             Crafty.e("Raindrop").place(this.x + this.w/2 - this.w/4, this.y + this.h);
         }
-        if(Math.random() < 0.65) {
+        if(Math.random() < 0.7) {
            Crafty.e("Raindrop").place(this.x + this.w/2 + this.w/4, this.y + this.h);
         }
     },
