@@ -19,7 +19,7 @@ Crafty.c("Tree", {
     },
 	increaseDecay: function() {
 		this.cancelDelay(this.treeDecay);
-		tree_decay_tick /= 1.1;
+		tree_decay_tick /= 1.08;
 		this.delay(this.treeDecay,tree_decay_tick, -1);
 	},
 	treeDecay: function () {
