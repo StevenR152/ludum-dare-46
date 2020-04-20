@@ -1,14 +1,17 @@
 Crafty.c("Raindrop", {
 	init: function() {
         this.addComponent("2D, Collision, Motion, Delay, DOM, SpriteAnimation, raindrop");
-        this.w = 78 / 6;
-        this.h = 98 / 6;
+        this.randomscale = Math.floor((Math.random() * 7) -2)
+        this.w = 78 / 6 + this.randomscale;
+        this.h = 98 / 6 + this.randomscale;
         this.z = 8;
         this.vy = 250;
 		this.onHit("solid", function() {
 			var splash = Crafty.e("Splash");
 			splash.x = this.x;
 			splash.y = this.y+4;
+			splash.w += this.randomscale;
+			splash.y += this.randomscale;
 			audioController.playTrack("missRain", 1, 0.3);
 			this.destroy()
 		});
