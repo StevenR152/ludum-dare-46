@@ -3,7 +3,7 @@ var gameAssets = {
 		"bgAudio" : ["assets/sounds/music-bearable-apples-v1.mp3"],
 		"jump1" : ["assets/sounds/jump1.wav"],
 		"jump2" : ["assets/sounds/jump2.wav"],
-		"dropCatch" : ["assets/sounds/drop-catch.wav"],
+		"dropCatch" : ["assets/sounds/catch-REAL-dropA-or-rain-powerup.mp3"],
 		"omenSound" : ["assets/sounds/omen-this-just-got-more-challenging.wav"],
 		"powerupNo" : ["assets/sounds/power-up-no.wav"],
 		"powerupYes" : ["assets/sounds/power-up-yes.wav"],

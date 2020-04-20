@@ -40,11 +40,12 @@ Crafty.defineScene("HomeScreen", function() {
 		if (BGmuted == false) {
 			BGmuted = true;
 			this.alpha = 0.2;
+			Crafty.audio.pauseTrack("BGaudio", 0")
 		}
 		else {
 			BGmuted = false;
 			this.alpha = 1;
+			Crafty.audio.playTrack("BGaudio", -1, 0.25")
 		}
-		Crafty.audio.toggleMute()
 	});
 });

@@ -12,11 +12,13 @@ Crafty.c("AudioController", {
         Crafty.audio.play(trackName, timesToPlay,trackVolume);
     },
 
-    pauseTrack : function(trackName, timeToPause) {
+    pauseTrack : function(trackName, timeToPause=0) {
+		if (timeToPause != 0) {
+			this.delay(function () {
+				Crafty.audio.unpause(trackName)
+			}, timeToPause, 0)
+		}
         Crafty.audio.pause(trackName);
-        this.delay(function () {
-			Crafty.audio.unpause(trackName)
-		}, timeToPause, 0)
     },
 
 	stopTrack : function(trackName="all") {
