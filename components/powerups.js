@@ -25,7 +25,7 @@ Crafty.c("Powerups", {
 				Crafty.trigger("toggleSpeedPowerup");
 				Crafty.trigger("enableSpeedPowerup");
 				currency -= powerupSpeedCost;
-				audioController.loadTrack("speedPowerup", 1, 0.7);
+				audioController.loadTrack("speedPowerup", 1, 0.5);
 			} else {
 				Crafty.trigger("InstructionText", "You need 30 apples for the speed up")
 			}
@@ -44,7 +44,7 @@ Crafty.c("Powerups", {
 				Crafty.trigger("toggleJumpPowerup");
 				Crafty.trigger("enableJumpPowerup");
 				currency -= powerupJumpCost;
-				audioController.loadTrack("jumpPowerup", 1, 0.7);
+				audioController.loadTrack("jumpPowerup", 1, 0.5);
 			} else {
 				Crafty.trigger("InstructionText", "You need 10 apples for higher jump")
 			}
@@ -61,7 +61,7 @@ Crafty.c("Powerups", {
 				Crafty.trigger("toggleRainPowerup");
 				Crafty.trigger("enableRainPowerup");
 				currency -= powerupRainCost;
-				audioController.loadTrack("rainPowerup", 1, 0.7);
+				audioController.loadTrack("rainPowerup", 1, 0.5);
 			} else {
 				Crafty.trigger("InstructionText", "You need 50 apples for rain storm")
 			}
@@ -71,7 +71,7 @@ Crafty.c("Powerups", {
 		raindropsPerMinute /= 2;
 		Crafty.trigger("raindropSpeedChange");
 		powerupRain = false;
-		audioController.loadTrack("powerupNo", 1, 0.7);
+		audioController.loadTrack("powerupNo", 1, 0.5);
 		Crafty.trigger("toggleRainPowerup");
 	},
 	resetSpeed: function() {
@@ -79,14 +79,14 @@ Crafty.c("Powerups", {
 		char_anim_time *= 1.6;
 		powerupSpeed = false;
 		Crafty.trigger("changePlayerSpeed");
-		audioController.loadTrack("powerupNo", 1, 0.7);
+		audioController.loadTrack("powerupNo", 1, 0.5);
 		Crafty.trigger("toggleSpeedPowerup");
 	},
 	resetJump: function() {
 		player_jump /= 1.5;
 		Crafty.trigger("changePlayerSpeed");
 		powerupJump = false;
-		audioController.loadTrack("powerupNo", 1, 0.7);
+		audioController.loadTrack("powerupNo", 1, 0.5);
 		Crafty.trigger("toggleJumpPowerup");
 	}
 })
