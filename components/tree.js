@@ -30,7 +30,7 @@ Crafty.c("Tree", {
 		if (tree_health <= 0) {
 			Crafty.trigger("Tree Death");
 			addStatisticValue("finish_time", Crafty("HudCounter").getTotalSeconds());
-			if (Crafty.audio.isPlaying("bgAudio") == true) {
+			if (BGmuted == false) {
 				audioController.pauseTrack("bgAudio", 2000);
 			}
 			audioController.loadTrack("leavesAllGone", 1, 0.5);
