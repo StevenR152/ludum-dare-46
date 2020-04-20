@@ -12,6 +12,7 @@ var gameAssets = {
 		"leavesAllGone" : ["assets/sounds/leaves-all-gone-chord.wav"],
 		"missRain" : ["assets/sounds/rain-miss-very-soft-pitpat-3.wav"],
 		"bucketGrab" : ["assets/sounds/bucket-grab.mp3"],
+		"dropWater" : ["assets/sounds/else-little-splash-water.mp3"],
     },
     "images": [],
     "sprites": {

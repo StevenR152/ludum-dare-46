@@ -1,6 +1,6 @@
 Crafty.c("Player", {
 	init: function() {
-        this.addComponent("2D, DOM, Color, Image, Twoway,  SpriteAnimation, Gravity, Collision, player, bear_right");
+        this.addComponent("2D, DOM, Color, Delay, Image, Twoway,  SpriteAnimation, Gravity, Collision, player, bear_right");
         this.x = 0;
         this.y = 0;
         this.w = 314 / 5;
@@ -141,7 +141,14 @@ Crafty.c("Player", {
 		this.onHit("Tree", function(emptyBucket) {;
 			if (inBucket.water > 0 || inBucket.poo > 0) {
 				Crafty.trigger("emptyBucket");
-				this.charImg();
+				audioController.playTrack("dropWater", 1, 0.03)
+				if (facing == "right") {
+					this.animate("pouring_right");
+				}
+				else {
+					this.animate("pouring_left");
+				}
+				this.delay(this.charImg, 200, 0);
 				healing_strength = DEFAULT_HEALING_STR; // RESET healing strength
 			}
 		});
@@ -186,11 +193,11 @@ Crafty.c("Player", {
 		this.reel("walking_left_water", char_anim_time, [
 			[5, 0], [3, 3], [4, 3], [3, 3]
 		])
-		this.reel("pouring_right", char_anim_time, [
+		this.reel("pouring_right", 150, [
 			[0, 3], [1, 3], [2, 3]
 		])
 
-		this.reel("pouring_left", 500, [
+		this.reel("pouring_left", 150, [
 			[2, 2], [3, 2], [4, 2]
 		])
 	}
