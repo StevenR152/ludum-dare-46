@@ -14,7 +14,7 @@ Crafty.defineScene("Loading", function() {
     var foreground = Crafty.e("Foreground");
   	Crafty.load(gameAssets, function(){
        setTimeout(function () {
-         Crafty.scene('HomeScreen');
+         Crafty.scene('Game');
        }, 1000);
     },  function () {
       console.log("Crafty Load Issue");
