@@ -36,6 +36,9 @@ Crafty.c("PlayerNotification", {
         this.bind("getRaindrop", function() {
             Crafty.trigger("InstructionText", "Fill your bucket")
         })
+        this.bind("getPoo", function() {
+            Crafty.trigger("InstructionText", "Fertilise the tree")
+        })
         this.bind("bucketFull", function() {
             Crafty.trigger("InstructionText", "Water the tree")
         })
