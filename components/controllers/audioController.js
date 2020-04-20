@@ -31,6 +31,7 @@ Crafty.c("AudioController", {
 	},
 
 	muteToggle : function() {
+		//pretty self explanatory - does this need to be here?
 		Crafty.audio.toggleMute()
 	}
 })
