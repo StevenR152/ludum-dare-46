@@ -127,6 +127,7 @@ Crafty.c("Player", {
 
 		this.onHit("Poo", function(collectPoo) {
 			if (inBucket.poo < 3) {
+				audioController.playTrack("pooCollect", 1, 0.05);
 				collectPoo[0].obj.destroy();
 				inBucket.poo += 1;
 				this.charImg();

@@ -14,6 +14,7 @@ var gameAssets = {
 		"bucketGrab" : ["assets/sounds/bucket-grab.mp3"],
 		"dropWater" : ["assets/sounds/else-little-splash-water.mp3"],
 		"speedPowerup" : ["assets/sounds/fast-powerup.wav"],
+		"pooCollect" : ["assets/sounds/poop-grab.mp3"],
     },
     "images": [],
     "sprites": {
