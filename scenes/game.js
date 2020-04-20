@@ -1,4 +1,3 @@
-
 var PLATFORM_HEIGHT = 30;
 var DEFAULT_HEALING_STR = 15; // default healing strength value
 var POWERUP_TIME = 15000 // powerups last this long
@@ -82,8 +81,44 @@ Crafty.defineScene("Game", function() {
 });
 
 function setInitialGameState() {
-	tree_decay_tick = 5000;
-	tree_health = 100;
-	currency = 0;
-	hasBucket = false;
+	var PLATFORM_HEIGHT = 30;
+	var DEFAULT_HEALING_STR = 15; // default healing strength value
+	var POWERUP_TIME = 15000 // powerups last this long
+	var SPAWN_LOCATIONS = [
+		{x:179, y:230},
+		{x:-96, y:170},
+		{x:-300, y:20},
+		{x:47, y:-40},
+		{x:347, y:80},
+		{x:467, y:-70},
+		{x:551, y:-70},
+		{x:737, y:-130},
+		{x:797, y:-130},
+		{x:1031, y:-10},
+		{x:785, y:80},
+		{x:1007, y:230},
+		{x:905, y:230},
+		{x:1277, y:170},
+		{x:1121, y:345},
+		{x:707, y:345}
+	];
+	var hasBucket = false;
+	var facing = "right";
+	var tree_decay_tick = 5000;
+	var currency = 0;
+	var tree_health = 100;
+	var healing_strength = DEFAULT_HEALING_STR;
+	var raindropsPerMinute = 200;
+	var inBucket = {};
+	var cloudChance = 0.1;
+	var player_speed = 300;
+	var player_jump = 390;
+	var powerupRain = false;
+	var powerupSpeed = false;
+	var powerupJump = false;
+	var powerupRainCost = 50;
+	var powerupSpeedCost = 30;
+	var powerupJumpCost = 10;
+	inBucket.water = 0;
+	inBucket.poo = 0;
 }
