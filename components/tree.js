@@ -48,22 +48,22 @@ Crafty.c("Tree", {
 			var increase = (tree_health - 100);
 			currency += increase;
 			addStatisticValue("apples_grown", increase);
-			if(currency > powerupSpeedCost + 30) {
+			if (currency >  20) {
 				Crafty.trigger("InstructionText", "Use your apples for power ups")
+			}
+			if(currency > powerupSpeedCost + 30) {
 				this.delay(function () {
 	                Crafty.trigger("InstructionText", "Faster movement power up unlocked press 1")
 	            }, 1000, -1)
 			} 
 
 			if( currency >  powerupJump + 30) {
-				Crafty.trigger("InstructionText", "Use your apples for power ups")
 				this.delay(function () {
 	                Crafty.trigger("InstructionText", "Higher jump unlocked press 2")
 	            }, 1000, -1)
 			}
 
 			if( currency >  powerupRainCost + 30) {
-				Crafty.trigger("InstructionText", "Use your apples for power ups")
 				this.delay(function () {
 	                Crafty.trigger("InstructionText", "Rain boost unlocked press 3")
 	            }, 1000, -1)
