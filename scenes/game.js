@@ -89,7 +89,7 @@ function addTriggerBasedStatCounter(trigger, statistic) {
 
 function setStatisticsListeners() {
 	addTriggerBasedStatCounter("getRaindrop", "raindrops_collected");
-	addTriggerBasedStatCounter("getPoos", "poos_collected");
+	addTriggerBasedStatCounter("getPoo", "poos_collected");
 	addTriggerBasedStatCounter("bucketFull", "number_of_full_buckets");
 	addTriggerBasedStatCounter("emptyBucket", "number_of_times_fed_tree");
 	addTriggerBasedStatCounter("enableSpeedPowerup", "number_of_times_powerupSpeed");
