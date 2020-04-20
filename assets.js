@@ -96,6 +96,11 @@ var gameAssets = {
             "tile": 658,
             "tileh": 285,
             "map" : {"title": [0, 0]}
-        }
+        },
+		"assets/images/appleicon.png": {
+            "tile": 22,
+            "tileh": 23,
+            "map" : {"currency": [0, 0]}
+        },
     },
 };

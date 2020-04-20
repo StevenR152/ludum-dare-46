@@ -36,5 +36,10 @@ Crafty.c("HUD", {
         hudPowerupsGroup.x = this.x + this.padding + 500;
         hudPowerupsGroup.y = this.y + this.padding;
         this.attach(hudPowerupsGroup);
+
+        var hudCurrency = Crafty.e("HudCurrency");
+        hudCurrency.x = this.x + this.padding + 720;
+        hudCurrency.y = this.y + this.padding;
+		this.attach(hudCurrency);
     },
 })
