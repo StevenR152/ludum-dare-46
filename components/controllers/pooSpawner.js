@@ -4,9 +4,11 @@ Crafty.c("PooSpawner", {
 		this.delay(this.spawnNewPoo, 3000, -1);
     },
 	spawnNewPoo: function() {
-		if(Math.random() < 0.2) {
-			var nextLocation = this.newLocation()
-			Crafty.e("Poo").place(nextLocation.x, nextLocation.y);
+		if (Crafty("Poo").length < 3) {
+			if(Math.random() < 0.2) {
+				var nextLocation = this.newLocation()
+				Crafty.e("Poo").place(nextLocation.x, nextLocation.y);
+			}
 		}
 	},
 	newLocation: function() {
