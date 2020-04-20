@@ -14,8 +14,8 @@ Crafty.defineScene("Loading", function() {
     var foreground = Crafty.e("Foreground");
   	Crafty.load(gameAssets, function(){
        setTimeout(function () {
-         Crafty.scene('Game', 
-         {
+         Crafty.scene('Game',
+         { // debugging code
           raindrops_collected: 12,
           number_of_full_buckets: 20,
           apples_grown: 65,
