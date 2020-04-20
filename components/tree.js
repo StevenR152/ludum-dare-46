@@ -53,26 +53,29 @@ Crafty.c("Tree", {
 
 			addStatisticValue("apples_grown", increase);
 			if (currency >  40) {
-				Crafty.trigger("InstructionText", "Use your apples for power ups")
-			}
-
-			if(currency > powerupSpeedCost + 50) {
+				Crafty.trigger("InstructionText", "Use your apples for power ups ")
 				this.delay(function () {
-	                Crafty.trigger("InstructionText", "Faster movement power up unlocked press 1")
+	                Crafty.trigger("InstructionText", "Press key 1, 2 or 3 to activate")
 	            }, 1000, -1)
 			}
 
-			if( currency >  powerupJump + 70) {
-				this.delay(function () {
-	                Crafty.trigger("InstructionText", "Higher jump unlocked press 2")
-	            }, 1000, -1)
-			}
+			// if(currency > powerupSpeedCost + 50) {
+				// this.delay(function () {
+	   //              Crafty.trigger("InstructionText", "Faster movement power up unlocked press 1")
+	   //          }, 1000, -1)
+			// }
 
-			if( currency >  powerupRainCost + 100) {
-				this.delay(function () {
-	                Crafty.trigger("InstructionText", "Rain boost unlocked press 3")
-	            }, 1000, -1)
-			}
+			// if( currency >  powerupJump + 70) {
+			// 	this.delay(function () {
+	  //               Crafty.trigger("InstructionText", "Higher jump unlocked press 2")
+	  //           }, 1000, -1)
+			// }
+
+			// if( currency >  powerupRainCost + 100) {
+			// 	this.delay(function () {
+	  //               Crafty.trigger("InstructionText", "Rain boost unlocked press 3")
+	  //           }, 1000, -1)
+			// }
 
 		}
 		if (tree_health > 120) {
