@@ -12,8 +12,9 @@ var gameAssets = {
 		"leavesAllGone" : ["assets/sounds/leaves-all-gone-chord.wav"],
 		"missRain" : ["assets/sounds/rain-miss-very-soft-pitpat-3.wav"],
 		"bucketGrab" : ["assets/sounds/bucket-grab.mp3"],
-		"dropWater" : ["assets/sounds/else-little-splash-water.mp3"],
+		"dropWater" : ["assets/sounds/else-little-splash-fertilizer.mp3"],
 		"speedPowerup" : ["assets/sounds/fast-powerup.wav"],
+		"pooCollect" : ["assets/sounds/poop-grab.mp3"],
     },
     "images": [],
     "sprites": {
@@ -60,7 +61,7 @@ var gameAssets = {
         "assets/images/tree_ss.png": {
             "tile": 850,
             "tileh": 989,
-			"paddingX": 1,
+			//"paddingX": 1,
             "map": {
 				"tree_100": [0, 0],
 				"tree_80": [4, 0],
