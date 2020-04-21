@@ -1,6 +1,6 @@
 var gameAssets = {
 	"audio": {
-		"bgAudio" : ["assets/sounds/music-bearable-apples-v1.mp3"],
+		"bgAudio" : ["assets/sounds/music.mp3"],
 		"jumpPowerup" : ["assets/sounds/jump1.wav"],
 		"jump2" : ["assets/sounds/jump2.wav"],
 		"dropCatch" : ["assets/sounds/catch-REAL-dropA-or-rain-powerup.mp3"],
