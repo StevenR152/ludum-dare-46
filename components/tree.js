@@ -57,7 +57,7 @@ Crafty.c("Tree", {
 				Crafty.trigger("InstructionText", "Use your apples for power ups ")
 				this.delay(function () {
 	                Crafty.trigger("InstructionText", "Press key 1, 2 or 3 to activate")
-	            }, 2000, -1)
+	            }, 3000, -1)
 			}
 		}
 		if (tree_health > 120) {

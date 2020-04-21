@@ -13,7 +13,25 @@
 
   </head>
   <body>
-    <div id="game"></div>
+    <div id="wrapper">
+        <div id="game"></div>
+        <div id="instructions">
+            Keep the apple tree alive!
+
+            <h3>Controls</h3>
+
+            Use arrow keys to move.
+            
+            <h3>Power Ups</h3>
+            Keep the tree alive to earn rewards of apples to spend on power ups.
+            <ol>
+                <li>Speed power up (30 apples)</li>
+                <li>Jump power up (10 apples)</li>
+                <li>More Rain power up (50 apples)</li>
+            </ol>
+            
+        </div>
+    </div>
 	<style>
       h2 {
         text-align: center;
@@ -23,7 +41,16 @@
 	        background-color: #EEE;
 	        width: 900px; margin: 50px auto;
 	    }
-	    #game {
+
+        #instructions {
+            width: 95%;
+            height: 280px;
+            margin: 20px auto;
+            padding: 5px;
+            background-color: #EEE;
+        }
+
+	    #wrapper {
 	        box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, .15);
 	    }
     </style>
