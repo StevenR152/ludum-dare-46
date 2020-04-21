@@ -12,7 +12,7 @@ Crafty.c("CloudController", {
             var scale =  Math.random() * 0.2 + 0.8;
             cloud.w *= scale;
             cloud.h *= scale;
-			audioController.playTrack("cloudSpawn", 1, 0.3)
+			audioController.playTrack("cloudSpawn", 1, 0.1)
         }
     }
 })
