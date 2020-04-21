@@ -6,6 +6,7 @@ Crafty.c("Tree", {
         this.w = 850 / 4;
         this.h = 989 / 4;
         this.z = 9;
+		Crafty.trigger("tree_health", "tree_100")
 		this.bind("collectBucket", function() {
 	        this.delay(this.treeDecay, tree_decay_tick, -1);
 			this.delay(this.increaseDecay, 15000, -1); // every 15 seconds call trigger
@@ -75,19 +76,25 @@ Crafty.c("Tree", {
 		this.removeComponent("tree_0");
 		if (tree_health <= 10) {
 			this.addComponent("tree_0");
+			Crafty.trigger("tree_health", "tree_0")
 		}
 		else if (tree_health <= 40) {
 			this.addComponent("tree_20");
+			Crafty.trigger("tree_health", "tree_20")
 		}
 		else if (tree_health <= 60) {
 			this.addComponent("tree_40");
+			Crafty.trigger("tree_health", "tree_40")
 		}
 		else if (tree_health <= 80) {
 			this.addComponent("tree_60");
+			Crafty.trigger("tree_health", "tree_60")
 		} else if (tree_health <= 100) {
 			this.addComponent("tree_80")
+			Crafty.trigger("tree_health", "tree_80")
 		} else if (tree_health <= 120) {
 			this.addComponent("tree_100")
+			Crafty.trigger("tree_health", "tree_100")
 		}
 		this.w = 850 / 4;
         this.h = 989 / 4;
