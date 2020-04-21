@@ -9,7 +9,7 @@ Crafty.defineScene("HomeScreen", function() {
 	var playGameButton = Crafty.e("2D, DOM, Image, Mouse, playbutton")
 		.attr({x: GAME_SCREEN_WIDTH-200, y: GAME_SCREEN_HEIGHT-140})
 		.bind('Click', function(MouseEvent){
-			audioController.playTrack("jump2,", 1, 0.07)
+			audioController.playTrack("jump2,", 1, 0.3)
 			if (Crafty.audio.isPlaying("bgAudio") == false) {
 				audioController.loadTrack("bgAudio", -1, 0.25);
 			}
