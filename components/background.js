@@ -20,7 +20,7 @@ Crafty.c("Foreground", {
     init: function () {
         this.requires('2D, DOM, Image');
         this.attr({
-            x: -50000,
+            x: -50500,
             y: -650,
             z: -100,
             w: 1500 * 100,
