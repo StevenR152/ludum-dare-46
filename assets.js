@@ -16,6 +16,7 @@ var gameAssets = {
 		"speedPowerup" : ["assets/sounds/fast-powerup.wav"],
 		"pooCollect" : ["assets/sounds/poop-grab.mp3"],
 		"cloudSpawn" : ["assets/sounds/cloud-spawn.mp3"],
+		"leavesLost" : ["assets/sounds/leaves-lost.mp3"],
     },
     "images": [],
     "sprites": {
