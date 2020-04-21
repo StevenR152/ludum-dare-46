@@ -77,7 +77,10 @@ Crafty.c("Tree", {
 		if (tree_health <= 10) {
 			this.addComponent("tree_0");
 			Crafty.trigger("tree_health", "tree_0")
-			audioController.playTrack("leavesLost", 1, 0.1)
+			// if (BGmuted == false) {
+			// 	audioController.pauseTrack("bgAudio", 600)
+			// }
+			audioController.playTrack("leavesLost", 1)
 		}
 		else if (tree_health <= 40) {
 			this.addComponent("tree_20");
