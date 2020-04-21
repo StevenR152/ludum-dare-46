@@ -10,6 +10,7 @@ Crafty.defineScene("EndScreen", function(statistics) {
 	var playAgainGameButton = Crafty.e("2D, DOM, Mouse, restart")
 		.attr({x: GAME_SCREEN_WIDTH-250, y: GAME_SCREEN_HEIGHT-200})
 		.bind('Click', function(MouseEvent){
+			audioController.playTrack("jump2,", 1, 0.07)
         	Crafty.scene('Game', true);
 		});
 
