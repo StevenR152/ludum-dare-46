@@ -15,6 +15,7 @@ var gameAssets = {
 		"dropWater" : ["assets/sounds/else-little-splash-fertilizer.mp3"],
 		"speedPowerup" : ["assets/sounds/fast-powerup.wav"],
 		"pooCollect" : ["assets/sounds/poop-grab.mp3"],
+		"cloudSpawn" : ["assets/sounds/cloud-spawn.mp3"],
     },
     "images": [],
     "sprites": {
