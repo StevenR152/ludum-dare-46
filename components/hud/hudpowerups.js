@@ -70,6 +70,10 @@ Crafty.c("HudJump", {
         })
         this.alpha = 0.3;
         this.z = 1000;
+        var HudJumpCost = Crafty.e("HudJumpCost")
+        this.attach(HudJumpCost)
+        HudJumpCost.x = this.x - 15;
+        HudJumpCost.y = this.y + 7;
     },
 });
 Crafty.c("HudSpeed", {
@@ -81,6 +85,10 @@ Crafty.c("HudSpeed", {
         })
         this.alpha = 0.3;
         this.z = 1000;
+        var HudSpeedCost = Crafty.e("HudSpeedCost")
+        this.attach(HudSpeedCost)
+        HudSpeedCost.x = this.x - 15;
+        HudSpeedCost.y = this.y + 7;
     },
 });
 Crafty.c("HudRain", {
@@ -92,5 +100,33 @@ Crafty.c("HudRain", {
         })
         this.alpha = 0.3;
         this.z = 1000;
+        var HudRainCost = Crafty.e("HudRainCost")
+        this.attach(HudRainCost)
+        HudRainCost.x = this.x - 15;
+        HudRainCost.y = this.y + 7;
     },
+});
+Crafty.c("HudSpeedCost", {
+    init : function () {
+        this.requires('2D, DOM, Text')
+        this.css('text-shadow', '1px 1px 1px black')
+        this.textColor('#EEE');
+        this.text(powerupSpeedCost)
+    }
+})
+Crafty.c("HudJumpCost", {
+    init : function () {
+        this.requires('2D, DOM, Text')
+        this.css('text-shadow', '1px 1px 1px black')
+        this.textColor('#EEE');
+        this.text(powerupJumpCost)
+    }
+})
+Crafty.c("HudRainCost", {
+    init : function () {
+        this.requires('2D, DOM, Text')
+        this.css('text-shadow', '1px 1px 1px black')
+        this.textColor('#EEE');
+        this.text(powerupRainCost)
+    }
 })

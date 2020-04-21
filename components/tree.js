@@ -34,7 +34,7 @@ Crafty.c("Tree", {
 			if (BGmuted == false) {
 				audioController.pauseTrack("bgAudio", 2000);
 			}
-			audioController.loadTrack("leavesAllGone", 1, 0.3);
+			audioController.loadTrack("leavesAllGone", 1, 0.1);
 			Crafty.scene("EndScreen", statistics);
 		}
 		this.treeImgUpdate();
@@ -77,6 +77,10 @@ Crafty.c("Tree", {
 		if (tree_health <= 10) {
 			this.addComponent("tree_0");
 			Crafty.trigger("tree_health", "tree_0")
+			// if (BGmuted == false) {
+			// 	audioController.pauseTrack("bgAudio", 600)
+			// }
+			audioController.playTrack("leavesLost", 1)
 		}
 		else if (tree_health <= 40) {
 			this.addComponent("tree_20");

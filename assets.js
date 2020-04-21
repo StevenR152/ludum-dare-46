@@ -1,6 +1,6 @@
 var gameAssets = {
 	"audio": {
-		"bgAudio" : ["assets/sounds/music-bearable-apples-v1.mp3"],
+		"bgAudio" : ["assets/sounds/music.mp3"],
 		"jumpPowerup" : ["assets/sounds/jump1.wav"],
 		"jump2" : ["assets/sounds/jump2.wav"],
 		"dropCatch" : ["assets/sounds/catch-REAL-dropA-or-rain-powerup.mp3"],
@@ -15,6 +15,8 @@ var gameAssets = {
 		"dropWater" : ["assets/sounds/else-little-splash-fertilizer.mp3"],
 		"speedPowerup" : ["assets/sounds/fast-powerup.wav"],
 		"pooCollect" : ["assets/sounds/poop-grab.mp3"],
+		"cloudSpawn" : ["assets/sounds/cloud-spawn.mp3"],
+		"leavesLost" : ["assets/sounds/leaves-lost.mp3"],
     },
     "images": [],
     "sprites": {
